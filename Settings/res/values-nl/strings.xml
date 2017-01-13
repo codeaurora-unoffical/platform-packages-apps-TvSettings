@@ -360,7 +360,7 @@
     <string name="location_reporting" msgid="3054236612250063073">"Locatiemelding"</string>
     <string name="location_history" msgid="2946680949724247804">"Locatiegeschiedenis"</string>
     <string name="location_reporting_desc" msgid="6256424995139430823">"Google gebruikt deze functie in producten als Google Now en Google Maps. Als je Locatierapportage inschakelt, kan elk Google-product dat deze functie gebruikt de meest recente locatiegegevens van je apparaat gebruiken in combinatie met je Google-account."</string>
-    <string name="location_history_desc" msgid="3861249867748294369">"Wanneer \'Locatiegeschiedenis\' voor dit account is ingeschakeld, kan Google de locatiegegevens van je apparaat opslaan voor gebruik door je apps.\n\nGoogle Maps kan je bijvoorbeeld routebeschrijvingen bieden en Google Now kan je informeren over woon-werkverkeer.\n\nJe kunt de locatiegeschiedenis op elk gewenst moment uitschakelen, maar de geschiedenis wordt hierdoor niet verwijderd. Als je je locatiegeschiedenis wilt weergeven en beheren, ga je naar maps.google.com/locationhistory."</string>
+    <string name="location_history_desc" msgid="3861249867748294369">"Wanneer \'Locatiegeschiedenis\' voor dit account is ingeschakeld, kan Google de locatiegegevens van je apparaat opslaan voor gebruik door je apps.\n\nGoogle Maps kan je bijvoorbeeld routebeschrijvingen bieden en Google Now kan je informeren over woon-werkverkeer.\n\nJe kunt de Locatiegeschiedenis op elk gewenst moment uitschakelen, maar de geschiedenis wordt hierdoor niet verwijderd. Als je je Locatiegeschiedenis wilt weergeven en beheren, ga je naar maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"Locatiegeschiedenis verwijderen"</string>
     <string name="delete_location_history_desc" msgid="4142806827237093397">"Hiermee wordt alle Locatiegeschiedenis voor dit apparaat in dit Google-account gewist. Je kunt dit niet ongedaan maken. Sommige apps, waaronder Google Now, werken niet meer."</string>
     <string name="system_services" msgid="7230571820151215779">"Services"</string>
@@ -374,6 +374,7 @@
     <string name="display_options" msgid="5504549024985225774">"Weergaveopties"</string>
     <string name="captions_configure" msgid="5537548915977371014">"Configureren"</string>
     <string name="captions_language" msgid="2835554055388996343">"Taal"</string>
+    <string name="captions_language_default" msgid="8113979489252033676">"Standaard"</string>
     <string name="captions_textsize" msgid="4828195509546070971">"Tekengrootte"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Ondertitelstijl"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Aangepaste opties"</string>
