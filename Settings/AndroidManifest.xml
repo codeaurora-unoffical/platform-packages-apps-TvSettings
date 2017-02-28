@@ -418,14 +418,6 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".accessories.BluetoothConnectionsManager" >
-            <intent-filter>
-                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
-                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
-                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
-            </intent-filter>
-        </receiver>
-
         <receiver android:name=".accessories.BluetoothPairingRequest" >
             <intent-filter>
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
@@ -571,6 +563,21 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".com.android.tv.settings.inputmethod.InputMethodAndSubtypeEnablerActivity"
+                  android:label=""
+                  android:clearTaskOnLaunch="true">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.INPUT_METHOD_SUBTYPE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
 
         <!-- Dummy intent filters for CTS TODO: implement something useful -->
         <activity android:name=".EmptyStubActivity"
