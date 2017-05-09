@@ -13,9 +13,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:state_focused="true"
-        android:color="@color/setup_list_item_background_focused_blue" />
-    <item android:state_focused="false"
-        android:color="@color/setup_list_item_background" />
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.tv.settings">
+    <item
+        settings:state_encrypted="true"
+        android:drawable="@drawable/ic_friction_lock_closed"/>
+    <item
+        settings:state_metered="true"
+        android:drawable="@drawable/ic_friction_money"/>
 </selector>
