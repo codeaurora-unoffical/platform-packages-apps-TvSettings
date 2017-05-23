@@ -177,7 +177,7 @@
     <string name="security_type" msgid="524443802004143058">"نوع الأمان"</string>
     <string name="wps_network" msgid="1052148085426051873">"اتصال عبر WPS"</string>
     <string name="other_network" msgid="3539704463099544488">"شبكة أخرى..."</string>
-    <string name="skip_network" msgid="6380260543776712357">"تخطٍ"</string>
+    <string name="skip_network" msgid="6380260543776712357">"تخطي"</string>
     <string name="wifi_security_type_none" msgid="6622722325237471927">"بدون"</string>
     <string name="wifi_security_type_wep" msgid="3836879161029325671">"WEP"</string>
     <string name="wifi_security_type_wpa" msgid="4948411057925876780">"WPA/WPA2 PSK"</string>
@@ -661,14 +661,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"هل تريد محو جميع المعلومات الشخصية والتطبيقات التي تم تنزيلها؟ لا يمكنك التراجع عن هذا الإجراء!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"محو كل شيء"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"اختيار اسم لجهاز <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"سيساعد الاسم في تعريف جهاز <xliff:g id="DEVICEMODEL">%1$s</xliff:g> عند الوصول إليه من أجهزة أخرى مثل الهاتف أو الجهاز اللوحي أو الكمبيوتر."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"اختر اسمًا لـ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> للمساعدة في التعرف عليه عند الإرسال إليه أو الاتصال به من أجهزة أخرى."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"تلفزيون غرفة المعيشة"</item>
     <item msgid="8122798759665439456">"تلفزيون غرفة العائلة"</item>
     <item msgid="1389347662738182100">"تلفزيون غرفة النوم"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"إدخال اسم مخصص…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"إدخال اسم مخصص…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"إعادة تسمية جهاز <xliff:g id="DEVICEMODEL">%1$s</xliff:g> هذا"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"جهاز <xliff:g id="DEVICEMODEL">%1$s</xliff:g> هذا يحمل الاسم \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" حاليًا"</string>
     <string name="change_setting" msgid="2047402388786162246">"تغيير"</string>

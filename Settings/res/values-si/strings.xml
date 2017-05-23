@@ -641,14 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"ඔබේ සියලු පෞද්ගලික තොරතුරු සහ බාගත කළ යෙදුම් මකන්නද? ඔබට මෙම ක්‍රියාව ආපසු හැරවිය නොහැක!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"සියල්ල මකන්න"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"ඔබේ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> සඳහා නමක් තෝරන්න"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"නමක් ඔබේ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> එයට ඔබේ දුරකථනය, ටැබ්ලට් පරිගණකය, හෝ පරිගණකය වැනි වෙනත් උපාංග වෙතින් පිවිසෙන විට හඳුනා ගැනීමට උදවු වනු ඇත."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"ඔබගේ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> වෙත වෙනත් උපාංගවලින් විකාශය කරන හෝ සබඳින විට එය හඳුනා ගැනීමට උදවු වීමට නමක් දෙන්න."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"සාලයේ TV"</item>
     <item msgid="8122798759665439456">"පවුල් කාමරයේ TV"</item>
     <item msgid="1389347662738182100">"නිදන කාමරයේ TV"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"අභිරුචි නමක් ඇතුලත් කරන්න..."</string>
+    <string name="custom_room" msgid="8655516733933892458">"අභිරුචි නමක් ඇතුළු කරන්න..."</string>
     <string name="device_rename_title" msgid="2629557295786267185">"මෙම <xliff:g id="DEVICEMODEL">%1$s</xliff:g> යළි නම් කරන්න"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"මෙම <xliff:g id="DEVICEMODEL">%1$s</xliff:g> දැනට \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" යනුවෙන් නම් කෙරේ"</string>
     <string name="change_setting" msgid="2047402388786162246">"වෙනස් කරන්න"</string>

@@ -417,7 +417,7 @@
     <string name="system_preferred_engine" msgid="8258210139854655567">"Eelistatud mootor"</string>
     <string name="system_speech_rate" msgid="8099856582088545576">"Kõne kiirus"</string>
     <string name="system_play_sample" msgid="7187293932891811148">"Esita näidis"</string>
-    <string name="system_install_voice_data" msgid="8920883886563714355">"Hääleandmete installimine"</string>
+    <string name="system_install_voice_data" msgid="8920883886563714355">"Häälandmete installimine"</string>
     <string name="system_general" msgid="3535958631591158282">"Üldine"</string>
     <string name="system_debugging" msgid="7204447785851191331">"Silumine"</string>
     <string name="system_input" msgid="6164987320529039626">"Sisend"</string>
@@ -641,14 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Kas kustutada kõik teie isiklikud andmed ja allalaaditud rakendused? Seda toimingut ei saa tagasi võtta."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Kustuta kõik"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Valige seadme <xliff:g id="DEVICEMODEL">%1$s</xliff:g> nimi"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Nimi aitab tuvastada seadme <xliff:g id="DEVICEMODEL">%1$s</xliff:g>, kui hangite sellele juurdepääsu muust seadmest, nagu telefon, tahvelarvuti või arvuti."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Andke seadmele <xliff:g id="DEVICEMODEL">%1$s</xliff:g> nimi, et seda oleks lihtsam tuvastada, kui sellesse üle kannate või teiste seadmete kaudu sellega ühenduse loote."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"Elutoa teler"</item>
     <item msgid="8122798759665439456">"Peretoa teler"</item>
     <item msgid="1389347662738182100">"Magamistoa teler"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Sisestage kohandatud nimi ..."</string>
+    <string name="custom_room" msgid="8655516733933892458">"Sisestage kohandatud nimi …"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Seadme <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ümbernimetamine"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Selle seadme <xliff:g id="DEVICEMODEL">%1$s</xliff:g> nimi on praegu „<xliff:g id="DEVICENAME">%2$s</xliff:g>”"</string>
     <string name="change_setting" msgid="2047402388786162246">"Muuda"</string>

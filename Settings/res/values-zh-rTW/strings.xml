@@ -439,7 +439,7 @@
     <string name="system_select_debug_app" msgid="8592021815119618485">"選取偵錯應用程式"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"等待偵錯程式"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"透過 USB 驗證應用程式"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"檢查透過 ADB/ADT 安裝的應用程式是否出現任何有害行為"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"檢查透過 ADB/ADT 安裝的應用程式是否具有有害行為"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi-Fi 詳細資訊紀錄"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"啟用 Wi-Fi 詳細資訊紀錄設定"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"顯示觸控回應"</string>
@@ -641,14 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"確定要清除所有個人資訊和已下載的應用程式嗎？這項操作執行後將無法復原！"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"全部清除"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"選擇 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 的名稱"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"當您透過手機、平板電腦或電腦等其他裝置存取 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 時，可藉由名稱快速找到這個裝置。"</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"為你的 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 命名，以便在透過其他裝置投放內容或連線時識別這個裝置。"</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"客廳電視"</item>
     <item msgid="8122798759665439456">"起居室電視"</item>
     <item msgid="1389347662738182100">"臥室電視"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"輸入自訂名稱…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"輸入自訂名稱…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"重新命名這個 <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"這個 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 目前的名稱為「<xliff:g id="DEVICENAME">%2$s</xliff:g>」"</string>
     <string name="change_setting" msgid="2047402388786162246">"變更"</string>

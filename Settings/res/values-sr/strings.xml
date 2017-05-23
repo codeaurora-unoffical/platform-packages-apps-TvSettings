@@ -646,14 +646,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Желите ли да избришете све личне податке и преузете апликације? Не можете да опозовете ову радњу!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Избриши све"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Изаберите назив за <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Назив ће вам помоћи да препознате <xliff:g id="DEVICEMODEL">%1$s</xliff:g> када му приступате са других уређаја, попут телефона, таблета или рачунара."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Дајте назив уређају <xliff:g id="DEVICEMODEL">%1$s</xliff:g> да бисте могли да га идентификујете при пребацивању или повезивању са другим уређајима."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"ТВ у дневној соби"</item>
     <item msgid="8122798759665439456">"ТВ у соби за породицу"</item>
     <item msgid="1389347662738182100">"ТВ у спаваћој соби"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Унесите прилагођен назив..."</string>
+    <string name="custom_room" msgid="8655516733933892458">"Унесите прилагођени назив…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Преименујте <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> тренутно има назив „<xliff:g id="DEVICENAME">%2$s</xliff:g>“"</string>
     <string name="change_setting" msgid="2047402388786162246">"Промени"</string>

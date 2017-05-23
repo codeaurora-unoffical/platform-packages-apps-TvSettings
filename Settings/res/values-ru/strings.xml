@@ -265,7 +265,7 @@
     <string name="storage_forget_wall_of_text" msgid="8953451024930539678">"Подключите диск заново, чтобы получить доступ к приложениям и другим данным на нем. Если это невозможно и диск недоступен, выберите \"Удалить данные\".\n\nПосле этого все данные, хранившиеся на диске, будут утеряны.\n\nВы сможете скачать приложения снова, однако их данные восстановить не удастся."</string>
     <string name="storage_device_storage_section" msgid="7797805634316822741">"Память устройства"</string>
     <string name="storage_removable_storage_section" msgid="3264955106565590076">"Съемный накопитель"</string>
-    <string name="storage_reset_section" msgid="7324235036547192861">"Сброс настроек"</string>
+    <string name="storage_reset_section" msgid="7324235036547192861">"Сброс"</string>
     <string name="storage_mount_success" msgid="4624254886950093443">"Подключено: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_mount_failure" msgid="2469026716895846633">"Ошибка подключения: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_mount_adopted" msgid="3360994581083675640">"USB-накопитель снова подключен"</string>
@@ -651,14 +651,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Удалить всю личную информацию и загруженные приложения без возможности восстановления?"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Удалить всё"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Укажите название для устройства <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Укажите название для устройства <xliff:g id="DEVICEMODEL">%1$s</xliff:g>, чтобы вам было удобнее подключаться к нему с телефона, планшета или компьютера."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Дайте название устройству <xliff:g id="DEVICEMODEL">%1$s</xliff:g>, чтобы быстрее найти его, когда вам нужно будет к нему подключиться."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"Телевизор в гостиной"</item>
     <item msgid="8122798759665439456">"Телевизор в большой комнате"</item>
     <item msgid="1389347662738182100">"Телевизор в спальне"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Другое помещение…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Укажите другое помещение…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Переименовать устройство <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Название устройства <xliff:g id="DEVICEMODEL">%1$s</xliff:g> – \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="change_setting" msgid="2047402388786162246">"Изменить"</string>

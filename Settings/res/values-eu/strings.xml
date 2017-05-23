@@ -641,14 +641,14 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Informazio pertsonal guztia eta deskargatutako aplikazioak ezabatu nahi dituzu? Ezin izango duzu ekintza hori desegin."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Ezabatu guztia"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Aukeratu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> gailuaren izena"</string>
-    <string name="select_device_name_description" msgid="2697127827643821315">"Izenarekin errazago identifikatuko duzu <xliff:g id="DEVICEMODEL">%1$s</xliff:g> gailua beste gailu batzuetatik atzitze duzunean, adibidez, telefonotik, tabletatik edo ordenagailutik."</string>
+    <string name="select_device_name_description" msgid="6890879006777364213">"Eman izena <xliff:g id="DEVICEMODEL">%1$s</xliff:g> gailuari, edukia igortzeko edo beste gailu batzuetatik hartara konektatzeko garaian identifikatu ahal izateko."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
     <item msgid="7449352861592960712">"Egongelako telebista"</item>
     <item msgid="8122798759665439456">"Jolas-gelako telebista"</item>
     <item msgid="1389347662738182100">"Logelako telebista"</item>
   </string-array>
-    <string name="custom_room" msgid="8991561978321502549">"Idatzi izen pertsonalizatua…"</string>
+    <string name="custom_room" msgid="8655516733933892458">"Idatzi izen pertsonalizatua…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Aldatu izena <xliff:g id="DEVICEMODEL">%1$s</xliff:g> gailu honi"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"\"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" izena du <xliff:g id="DEVICEMODEL">%1$s</xliff:g> gailu honek"</string>
     <string name="change_setting" msgid="2047402388786162246">"Aldatu"</string>
