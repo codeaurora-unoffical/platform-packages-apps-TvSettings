@@ -34,6 +34,10 @@
         <item name="android:fragmentCloseExitAnimation">@anim/setup_fragment_close_out</item>
     </style>
 
+    <style name="SetupWindowAnimationStyle" parent="SettingsWindowAnimationStyle">
+        <item name="android:activityCloseExitAnimation">@null</item>
+    </style>
+
     <!-- Default Settings theme -->
     <style name="Theme.Settings" parent="@style/Theme.Leanback">
         <item name="android:windowBackground">@color/settings_background</item>
@@ -43,6 +47,7 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Leanback</item>
         <item name="wifi_signal">@drawable/wifi_signal</item>
         <item name="wifi_signal_color">?android:attr/colorAccent</item>
+        <item name="wifi_friction">@drawable/wifi_friction</item>
         <item name="wps_color">@color/normal</item>
     </style>
 
@@ -51,6 +56,7 @@
         <item name="wps_color">@color/setup_list_item</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/SetupWindowAnimationStyle</item>
     </style>
 
     <style name="Theme.Settings.Transparent">
@@ -200,12 +206,6 @@
 
     <style name="Setup.Action.TextInput">
         <item name="android:fontFamily">sans-serif-condensed</item>
-        <item name="android:textColor">@color/list_item</item>
-        <item name="android:textSize">@dimen/setup_list_item_text_size</item>
-    </style>
-
-    <style name="Setup.Action.TextInput">
-        <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:background">@drawable/setup_text_input_underline</item>
         <item name="android:textCursorDrawable">@drawable/setup_text_input_cursor</item>
         <item name="android:textColor">@color/setup_list_item_focused</item>
@@ -223,43 +223,45 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_alignParentStart">true</item>
         <item name="android:layout_alignParentTop">true</item>
-        <item name="android:paddingLeft">0dp</item>
-        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
         <item name="android:paddingTop">@dimen/setup_action_vertical_offset</item>
         <item name="android:paddingBottom">@dimen/setup_action_vertical_offset_bottom</item>
         <item name="android:clipToPadding">false</item>
     </style>
 
     <style name="Setup.GuidedActionItemContainer" parent="@style/Widget.Leanback.GuidedActionItemContainerStyle">
-        <item name="android:layout_gravity">start|top</item>
+        <item name="android:layout_gravity">start</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:background">@color/setup_list_item_background</item>
+        <item name="android:layout_height">@dimen/setup_list_item_height</item>
+        <item name="android:background">@drawable/setup_list_item_background</item>
         <item name="android:paddingTop">0dp</item>
-        <item name="android:paddingStart">0dp</item>
-        <item name="android:paddingBottom">@dimen/setup_list_item_container_shadow_padding</item>
-        <item name="android:paddingEnd">@dimen/setup_list_item_container_shadow_padding</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingStart">@dimen/setup_list_item_padding</item>
+        <item name="android:paddingEnd">@dimen/setup_list_item_padding</item>
         <item name="android:clipToPadding">false</item>
         <item name="android:clipChildren">false</item>
         <item name="android:minHeight">0dp</item>
     </style>
 
     <style name="Setup.GuidedActionItemContent" parent="@style/Widget.Leanback.GuidedActionItemContentStyle">
-        <item name="android:layout_height">@dimen/setup_list_item_height</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:duplicateParentState">true</item>
-        <item name="android:background">@drawable/setup_list_item_background</item>
         <item name="android:elevation">@dimen/setup_elevation</item>
-        <item name="android:paddingStart">@dimen/setup_list_item_padding</item>
-        <item name="android:paddingEnd">@dimen/setup_list_item_padding</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
     </style>
 
     <style name="Setup.GuidedActionItemTitle" parent="@style/Widget.Leanback.GuidedActionItemTitleStyle">
         <item name="android:duplicateParentState">true</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:focusable">true</item>
         <item name="android:focusableInTouchMode">true</item>
         <item name="android:gravity">start|center_vertical</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
         <item name="android:singleLine">true</item>
         <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:textSize">@dimen/setup_list_item_text_size</item>
