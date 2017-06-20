@@ -24,20 +24,44 @@ import android.support.annotation.NonNull;
 import android.support.v17.leanback.app.GuidedStepFragment;
 import android.support.v17.leanback.widget.GuidanceStylist;
 import android.support.v17.leanback.widget.GuidedAction;
+import android.support.v17.leanback.widget.GuidedActionsStylist;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.name.setup.DeviceNameFlowStartActivity;
+import com.android.tv.settings.util.GuidedActionsAlignUtil;
 
 import java.util.List;
 
+/**
+ * Fragment responsible for adding new device name.
+ */
 public class DeviceNameSetCustomFragment extends GuidedStepFragment {
 
     private GuidedAction mEditAction;
 
     public static DeviceNameSetCustomFragment newInstance() {
         return new DeviceNameSetCustomFragment();
+    }
+
+    @Override
+    public GuidanceStylist onCreateGuidanceStylist() {
+        return GuidedActionsAlignUtil.createGuidanceStylist();
+    }
+
+    @Override
+    public GuidedActionsStylist onCreateActionsStylist() {
+        return GuidedActionsAlignUtil.createGuidedActionsStylist();
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+        View view = super.onCreateView(inflater, container, savedInstanceState);
+        return GuidedActionsAlignUtil.createView(view, this);
     }
 
     @NonNull
@@ -60,8 +84,8 @@ public class DeviceNameSetCustomFragment extends GuidedStepFragment {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onResume() {
+        super.onResume();
         openInEditMode(mEditAction);
     }
 
@@ -77,6 +101,9 @@ public class DeviceNameSetCustomFragment extends GuidedStepFragment {
         if (TextUtils.isGraphic(name)) {
             DeviceManager.setDeviceName(getActivity(), name.toString());
             getActivity().setResult(Activity.RESULT_OK);
+            // Remove background drawable so this action is not shown as focused with blue empty box
+            // before this fragment is gone.
+            getActionItemView(0).findViewById(R.id.guidedactions_item_content).setBackground(null);
 
             // Set the flag for the appropriate exit animation for setup.
             if (getActivity() instanceof DeviceNameFlowStartActivity) {
