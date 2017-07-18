@@ -368,6 +368,10 @@
     <string name="system_services" msgid="7230571820151215779">"Үйлчилгээ"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"Үйлчилгээний тохиргоо"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Өндөр ялгаралтай текст"</string>
+    <string name="accessibility_shortcut" msgid="6726361991387558828">"Хүртээмжийн товчлол"</string>
+    <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"Хүртээмжийн товчлолыг идэвхжүүлэх"</string>
+    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Товчлолын үйлчилгээ"</string>
+    <string name="accessibility_shortcut_description" msgid="3241203131630578108">"Товчлолыг асаасан үед хүртээмжийн онцлогийг нүүр хуудсан дээр 3 секунд дарж эхлүүлэх боломжтой"</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"Титрүүд"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Видеон дээрх текст титрийн тохиргоо"</string>
     <string name="captions_display" msgid="735692527287125548">"Дэлгэц"</string>
