@@ -101,7 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Izstrādātājiem paredzētās opcijas"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Nav"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Lietojums un diagnostika"</string>
-    <string name="device_tutorials" msgid="5879039536629898133">"Ierīces pamācības"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Pamācības"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Sistēmas atjauninājums"</string>
     <string name="about_preference" msgid="4131396784531360434">"Par"</string>
     <string name="device_name" msgid="2670488158531273028">"Ierīces nosaukums"</string>
@@ -369,6 +369,10 @@
     <string name="system_services" msgid="7230571820151215779">"Pakalpojumi"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"Pakalpojumu iestatījumi"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Liela kontrasta teksts"</string>
+    <string name="accessibility_shortcut" msgid="6726361991387558828">"Pieejamības īsinājumtaustiņš"</string>
+    <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"Iespējot pieejamības īsinājumtaustiņu"</string>
+    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Īsinājumtaustiņa pakalpojums"</string>
+    <string name="accessibility_shortcut_description" msgid="3241203131630578108">"Kad pieejamības īsinājumtaustiņš ir ieslēgts, 3 sekundes turiet nospiestu sākuma un atlasīšanas pogu."</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"Subtitri"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Videoklipa slēgto parakstu teksta pārklājuma iestatījumi"</string>
     <string name="captions_display" msgid="735692527287125548">"Displejs"</string>
@@ -408,7 +412,7 @@
     <string name="color_magenta" msgid="6395786485839439122">"Fuksīnsarkana"</string>
     <string name="system_accessibility_status" msgid="6150600992901856367">"Iespējot"</string>
     <string name="system_accessibility_config" msgid="3216531917536720277">"Konfigurācija"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Vai izmantot pakalpojumu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"Izmantot <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"Pakalpojumā <xliff:g id="SERVICE">%1$s</xliff:g> var tikt apkopots viss jūsu ievadītais teksts, izņemot paroles. Tas attiecas arī uz personas datiem, piemēram, kredītkartes numuru."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"Vai apturēt pakalpojuma <xliff:g id="SERVICE">%1$s</xliff:g> darbību?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"Atlasot “Labi”, pakalpojuma <xliff:g id="SERVICE">%1$s</xliff:g> darbība tiks pārtraukta."</string>

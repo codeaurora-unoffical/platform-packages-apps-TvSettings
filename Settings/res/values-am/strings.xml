@@ -101,7 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"የገንቢ አማራጮች"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ምንም"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"አጠቃቀም እና ምርመራ"</string>
-    <string name="device_tutorials" msgid="5879039536629898133">"የመሣሪያ አጋዥ ስልጠናዎች"</string>
+    <string name="tutorials" msgid="3731493987558093244">"አጋዥ ሥልጠናዎች"</string>
     <string name="about_system_update" msgid="7282772247661356586">"የስርዓት ዝማኔ"</string>
     <string name="about_preference" msgid="4131396784531360434">"ስለ"</string>
     <string name="device_name" msgid="2670488158531273028">"የመሣሪያ ስም"</string>
@@ -368,6 +368,10 @@
     <string name="system_services" msgid="7230571820151215779">"አገልግሎቶች"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"የአገልግሎት ቅንብሮች"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"ከፍተኛ ንጽጽር ጽሁፍ"</string>
+    <string name="accessibility_shortcut" msgid="6726361991387558828">"የተደራሽነት አቋራጭ"</string>
+    <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"የተደራሽነት አቋራጭ ያንቁ"</string>
+    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"የአቋራጭ አገልግሎት"</string>
+    <string name="accessibility_shortcut_description" msgid="3241203131630578108">"አቋራጩ ሲበራ፣ የተደራሽነት ባህሪውን ለማስጀመር ሁለቱንም መነሻ ለ3 ሰከንዶች ተጭነው መያዝ ይችላሉ"</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"መግለጫ ፅሑፎች"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"በቪዲዮ ላይ ያለ የዝግ ጽሑፍ ተደራቢ ቅንብሮች"</string>
     <string name="captions_display" msgid="735692527287125548">"ማሳያ"</string>
@@ -588,7 +592,7 @@
     <string name="pin_enter_unlock_program" msgid="52453773316071511">"ይህንን ፕሮግራም ለመመልከት ፒን ያስገቡ"</string>
     <string name="pin_enter_pin" msgid="821552376577935497">"ፒን ያስገቡ"</string>
     <string name="pin_enter_new_pin" msgid="4788218421265924211">"አዲስ ፒን ያዘጋጁ"</string>
-    <string name="pin_enter_again" msgid="1510456697040826496">"አደሱን ፒን ደግመው ያስገቡ"</string>
+    <string name="pin_enter_again" msgid="1510456697040826496">"አዲሱን ፒን ደግመው ያስገቡ"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"የድሮውን ፒን ያስገቡ"</string>
     <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"የተሳሳተ ፒን 5 ጊዜ አስገብተዋል።በ\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> ሰከንዶች ውስጥ እንደገና ይሞክሩ።"</string>
     <string name="pin_toast_wrong" msgid="4628358195224633248">"የተሳሳተ ፒን፣ እንደገና ይሞክሩ"</string>

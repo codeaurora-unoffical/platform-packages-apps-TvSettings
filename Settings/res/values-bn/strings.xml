@@ -101,7 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"বিকাশকারীর বিকল্পগুলি"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"কিছুই নয়"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"ব্যবহার ও ডায়াগনস্টিক"</string>
-    <string name="device_tutorials" msgid="5879039536629898133">"ডিভাইস টিউটোরিয়াল"</string>
+    <string name="tutorials" msgid="3731493987558093244">"টিউটোরিয়াল"</string>
     <string name="about_system_update" msgid="7282772247661356586">"সিস্টেম আপডেট"</string>
     <string name="about_preference" msgid="4131396784531360434">"সম্পর্কে"</string>
     <string name="device_name" msgid="2670488158531273028">"ডিভাইস নাম"</string>
@@ -368,6 +368,10 @@
     <string name="system_services" msgid="7230571820151215779">"পরিষেবাগুলি"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"পরিষেবা সেটিংস"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"উচ্চ কনট্রাস্ট যুক্ত পাঠ্য"</string>
+    <string name="accessibility_shortcut" msgid="6726361991387558828">"অ্যাক্সেসযোগ্যতার শর্টকাট"</string>
+    <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"অ্যাক্সেসযোগ্যতা শর্টকাট সক্ষম করুন"</string>
+    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"শর্টকাট পরিষেবা"</string>
+    <string name="accessibility_shortcut_description" msgid="3241203131630578108">"যখন শর্টকাটটি চালু থাকবে, কোনো অ্যাক্সেসযোগ্যতা বৈশিষ্ট্য চালু করতে আপনি উভয় হোম ও নির্বাচন বোতামকে ৩ সেকেন্ডের জন্য টিপে ধরতে পারেন।"</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"ক্যাপশন"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"ভিডিওতে ক্লোজড ক্যাপশনিং পাঠ্য ওভারলের জন্য সেটিংস"</string>
     <string name="captions_display" msgid="735692527287125548">"প্রদর্শন"</string>

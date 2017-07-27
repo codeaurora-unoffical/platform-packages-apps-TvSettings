@@ -101,7 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Forritunarkostir"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Ekkert"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Notkun og greining"</string>
-    <string name="device_tutorials" msgid="5879039536629898133">"Leiðsögn um tæki"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Leiðsögn"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Kerfisuppfærsla"</string>
     <string name="about_preference" msgid="4131396784531360434">"Um"</string>
     <string name="device_name" msgid="2670488158531273028">"Heiti tækis"</string>
@@ -368,6 +368,10 @@
     <string name="system_services" msgid="7230571820151215779">"Þjónusta"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"Stillingar þjónustu"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Texti með miklum birtuskilum"</string>
+    <string name="accessibility_shortcut" msgid="6726361991387558828">"Flýtileið aðgengisstillingar"</string>
+    <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"Virkja flýtileið aðgengisstillingar"</string>
+    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Flýtileiðarþjónusta"</string>
+    <string name="accessibility_shortcut_description" msgid="3241203131630578108">"Þegar kveikt er á flýtileiðinni geturðu ýtt á heimahnappinn og valhnappinn í þrjár sekúndur til að opna aðgengiseiginleika"</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"Skjátextar"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Stillingar skjátexta á myndefni"</string>
     <string name="captions_display" msgid="735692527287125548">"Skjár"</string>

@@ -73,9 +73,9 @@
     <string name="accessory_unpairing" msgid="7568241162181184667">"Gerät wird entkoppelt..."</string>
     <string name="accessory_connected" msgid="2156489304110030393">"Verbunden"</string>
     <string name="accessory_change_name" msgid="8958916008739792785">"Namen ändern"</string>
-    <string name="accessory_change_name_title" msgid="4630819456923061184">"Neuen Namen für dieses Zubehör eingeben"</string>
+    <string name="accessory_change_name_title" msgid="4630819456923061184">"Neuen Namen eingeben"</string>
     <string name="accessories_add_title" msgid="6940361421891873321">"Suche nach Zubehör…"</string>
-    <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"Ihre Bluetooth-Geräte müssen sich im Kopplungsmodus befinden, damit Sie die Kopplung durchführen können."</string>
+    <string name="accessories_add_bluetooth_inst" msgid="5892952745770640383">"Deine Bluetooth-Geräte müssen sich im Kopplungsmodus befinden, damit du die Kopplung durchführen kannst."</string>
     <string name="accessories_autopair_msg" msgid="8618829246837821752">"Ein Gerät wurde gefunden. Die Kopplung wird in <xliff:g id="COUNTDOWN">%1$s</xliff:g> Sekunden automatisch durchgeführt."</string>
     <string name="error_action_not_supported" msgid="300552308104354666">"Diese Aktion wird nicht unterstützt."</string>
     <string name="bluetooth_pairing_request" msgid="4523088117471287665">"Bluetooth-Kopplungsanfrage"</string>
@@ -101,7 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Entwickleroptionen"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Keine"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"Nutzung &amp; Diagnose"</string>
-    <string name="device_tutorials" msgid="5879039536629898133">"Geräteanleitungen"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Anleitungen"</string>
     <string name="about_system_update" msgid="7282772247661356586">"System aktualisieren"</string>
     <string name="about_preference" msgid="4131396784531360434">"Info"</string>
     <string name="device_name" msgid="2670488158531273028">"Gerätename"</string>
@@ -160,7 +160,7 @@
     <string name="title_mac_address" msgid="3428401680168668544">"MAC-Adresse"</string>
     <string name="title_signal_strength" msgid="205478650262078041">"Signalstärke"</string>
     <string name="title_ip_address" msgid="4533523100923004711">"IP-Adresse"</string>
-    <string name="title_ssid" msgid="4858945903642469730">"Namen des WLAN-Netzwerks eingeben"</string>
+    <string name="title_ssid" msgid="4858945903642469730">"Name des WLAN-Netzwerks"</string>
     <string name="title_internet_connection" msgid="8710084774588697646">"Internetverbindung"</string>
     <string name="connected" msgid="7563100162902079938">"Verbunden"</string>
     <string name="not_connected" msgid="6858480380326923017">"Nicht verbunden"</string>
@@ -319,7 +319,7 @@
     <string name="learn_more_action" msgid="7015991954404958779">"Weitere Informationen"</string>
     <string name="wifi_wps_retry_scan" msgid="6171190323753080808">"Wiederholen"</string>
     <string name="wifi_wps_title" msgid="1872305810119408482">"WPS-Router suchen..."</string>
-    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Wählen Sie die Schaltfläche \"Wi-Fi Protected Setup\" auf Ihrem Router aus.\nEventuell lautet sie auch \"WPS\" oder ist durch das Symbol links gekennzeichnet."</string>
+    <string name="wifi_wps_instructions" msgid="3618110962669110034">"Wähle die Schaltfläche \"Wi-Fi Protected Setup\" auf deinem Router aus.\nEventuell lautet sie auch \"WPS\" oder ist durch das Symbol links gekennzeichnet."</string>
     <string name="wifi_wps_onstart_pin" msgid="594985182235834825">"Geben Sie die PIN <xliff:g id="NUMBER">%1$s</xliff:g> auf Ihrem WLAN-Router ein."</string>
     <string name="wifi_wps_onstart_pin_description" msgid="4206001352944024353">"Nach Eingabe der PIN kann die Einrichtung bis zu 2 Minuten dauern."</string>
     <string name="wifi_wps_failed_generic" msgid="8934636373182298397">"Kein WLAN-Router gefunden"</string>
@@ -368,6 +368,10 @@
     <string name="system_services" msgid="7230571820151215779">"Dienste"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"Diensteinstellungen"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Text mit hohem Kontrast"</string>
+    <string name="accessibility_shortcut" msgid="6726361991387558828">"Verknüpfung für Bedienungshilfen"</string>
+    <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"Verknüpfung für Bedienungshilfen aktivieren"</string>
+    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Verknüpfter Dienst"</string>
+    <string name="accessibility_shortcut_description" msgid="3241203131630578108">"Wenn die Verknüpfung aktiviert ist, kannst du die Startbildschirmtaste und die Auswahltaste drei Sekunden lang gedrückt halten, um eine Bedienungshilfe zu starten"</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"Untertitel"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Einstellungen für Untertitel-Overlays in einem Video"</string>
     <string name="captions_display" msgid="735692527287125548">"Anzeige"</string>
@@ -408,7 +412,7 @@
     <string name="system_accessibility_status" msgid="6150600992901856367">"Aktivieren"</string>
     <string name="system_accessibility_config" msgid="3216531917536720277">"Konfiguration"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="8200707259067035823">"<xliff:g id="SERVICE">%1$s</xliff:g> verwenden?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"<xliff:g id="SERVICE">%1$s</xliff:g> kann den gesamten von Ihnen eingegebenen Text erfassen, einschließlich personenbezogener Daten wie Kreditkartennummern, jedoch keine Passwörter."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="1102358356500113060">"<xliff:g id="SERVICE">%1$s</xliff:g> kann den gesamten eingegebenen Text erfassen, einschließlich personenbezogener Daten wie Kreditkartennummern, jedoch keine Passwörter."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="963297812889694832">"<xliff:g id="SERVICE">%1$s</xliff:g> beenden?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="6714782635926048678">"Durch Auswählen von \"OK\" wird <xliff:g id="SERVICE">%1$s</xliff:g> beendet."</string>
     <string name="system_accessibility_tts_output" msgid="8905477795536714590">"Text-in-Sprache"</string>
@@ -480,7 +484,7 @@
     <string name="security_unknown_sources_title" msgid="769762478057744545">"Unbekannte Herkunft"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"Installation von Apps aus anderen Quellen als dem Play Store zulassen"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"Apps mit unbekannter Herkunft zulassen"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Apps mit unbekannter Herkunft können gefährlich für Ihr Gerät und Ihre personenbezogenen Daten sein. Sie stimmen zu, dass Sie die Verantwortung für alle Schäden an Ihrem Gerät und jegliche Datenverluste tragen, die aus der Verwendung dieser Apps entstehen können."</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"Apps mit unbekannter Herkunft können gefährlich für dein Gerät und deine personenbezogenen Daten sein. Du stimmst zu, dass du die Verantwortung für alle Schäden an deinem Gerät und jegliche Datenverluste trägst, die aus der Verwendung dieser Apps entstehen können."</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"Apps überprüfen"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"Installation schädlicher Apps blockieren oder Warnung senden"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"Nie"</string>
@@ -604,7 +608,7 @@
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Updates deinstallieren"</string>
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Alle Updates für diese Android-System-App werden deinstalliert."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Deaktivieren"</string>
-    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Möchten Sie diese App deaktivieren?"</string>
+    <string name="device_apps_app_management_disable_desc" msgid="1295507373252301108">"Möchtest du diese App deaktivieren?"</string>
     <string name="device_apps_app_management_enable" msgid="3246823119203444608">"Aktivieren"</string>
     <string name="device_apps_app_management_enable_desc" msgid="7490219375247065314">"Möchten Sie diese App aktivieren?"</string>
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Genutzter Speicherplatz"</string>
@@ -637,7 +641,7 @@
     <string name="privacy_backup_account" msgid="9059939814827165020">"Zu sicherndes Konto"</string>
     <string name="privacy_automatic_restore" msgid="1409885318093199628">"Automatische Wiederherstellung"</string>
     <string name="factory_reset_device" msgid="7422459553658815011">"Gerät zurücksetzen"</string>
-    <string name="factory_reset_description" msgid="5381170999141355891">"Hiermit werden alle Daten, einschließlich Ihres Google-Kontos, Ihrer System- und App-Daten und -Einstellungen sowie Ihrer heruntergeladenen Apps, aus dem internen Speicher Ihres Geräts gelöscht."</string>
+    <string name="factory_reset_description" msgid="5381170999141355891">"Hiermit werden alle Daten, einschließlich deines Google-Kontos, deiner System- und App-Daten und -Einstellungen sowie deine heruntergeladenen Apps aus dem internen Speicher Ihres Geräts gelöscht."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Alle personenbezogenen Daten und heruntergeladenen Apps löschen? Dieser Vorgang kann nicht rückgängig gemacht werden."</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Alles löschen"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"Namen für <xliff:g id="DEVICEMODEL">%1$s</xliff:g> auswählen"</string>

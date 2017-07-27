@@ -101,7 +101,7 @@
     <string name="system_developer_options" msgid="3237985523474863638">"Gəlişdirici seçimləri"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"Heç bir"</string>
     <string name="system_diagnostic" msgid="7269638365915225701">"İstifadə və Diaqnostika"</string>
-    <string name="device_tutorials" msgid="5879039536629898133">"Cihaz təlimatı"</string>
+    <string name="tutorials" msgid="3731493987558093244">"Təlimatlar"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Sistem güncəlləşdirməsi"</string>
     <string name="about_preference" msgid="4131396784531360434">"Haqqında"</string>
     <string name="device_name" msgid="2670488158531273028">"Cihaz adı"</string>
@@ -368,6 +368,10 @@
     <string name="system_services" msgid="7230571820151215779">"Xidmətlər"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"Xidmət ayarları"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Yüksək kontrastlı mətn"</string>
+    <string name="accessibility_shortcut" msgid="6726361991387558828">"Əlçatımlılıq qısayolu"</string>
+    <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"Əlçatımlılıq qısayolunu aktiv edin"</string>
+    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Qısayol xidməti"</string>
+    <string name="accessibility_shortcut_description" msgid="3241203131630578108">"Qısayol aktiv olduqda əsas və seçin düymələrinə 3 saniyə basmaqla əlçatımlılıq funksiyasını başladın"</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"Başlıqlar"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Videoda mətn qatı qapalı subtitrlər üçün ayarlar"</string>
     <string name="captions_display" msgid="735692527287125548">"Ekran"</string>

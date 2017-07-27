@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2017 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,29 +14,45 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.system;
+package com.android.tv.settings.device.apps.specialaccess;
 
 import android.app.Fragment;
 
 import com.android.tv.settings.BaseSettingsFragment;
 import com.android.tv.settings.TvSettingsActivity;
+import com.android.tv.settings.system.SecurityFragment;
 
-public class AccessibilityActivity extends TvSettingsActivity {
+/**
+ * Wrapper activity for {@link ManageExternalSources}
+ */
+public class ManageExternalSourcesActivity extends TvSettingsActivity {
 
     @Override
     protected Fragment createSettingsFragment() {
-        return SettingsFragment.newInstance();
+        if (SecurityFragment.isRestrictedProfileInEffect(this)) {
+            finish();
+            return null;
+        } else {
+            return SettingsFragment.newInstance();
+        }
     }
 
+    /**
+     * Wrapper fragment for ManageExternalSources
+     */
     public static class SettingsFragment extends BaseSettingsFragment {
 
+        /**
+         * @return new instance of {@link SettingsFragment}
+         */
         public static SettingsFragment newInstance() {
             return new SettingsFragment();
         }
 
         @Override
         public void onPreferenceStartInitialScreen() {
-            startPreferenceFragment(AccessibilityFragment.newInstance());
+            final ManageExternalSources fragment = new ManageExternalSources();
+            startPreferenceFragment(fragment);
         }
     }
 }
