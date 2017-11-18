@@ -75,6 +75,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
     private static final String KEY_SPEECH_SETTINGS = "speech";
     private static final String KEY_SEARCH_SETTINGS = "search";
     private static final String KEY_ACCOUNTS_CATEGORY = "accounts";
+    private static final String KEY_HDMI_CEC_PREF = "hdmi_cec";
 
     private AuthenticatorHelper mAuthenticatorHelper;
     private BluetoothAdapter mBtAdapter;
@@ -88,6 +89,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
     private Preference mAddAccessory;
     private Preference mNetworkPref;
     private Preference mSoundsPref;
+    private Preference mHdmiCecPref;
 
     private final BroadcastReceiver mBCMReceiver = new BroadcastReceiver() {
         @Override
@@ -137,6 +139,7 @@ public class MainFragment extends LeanbackPreferenceFragment {
         if (inputPref != null) {
             inputPref.setVisible(mInputSettingNeeded);
         }
+        mHdmiCecPref = findPreference(KEY_HDMI_CEC_PREF);
     }
 
     @Override
