@@ -148,8 +148,6 @@
     <string name="license_title" msgid="4482927105870812604">"مجوز"</string>
     <string name="terms_title" msgid="8480859222932736291">"شرایط و مقررات"</string>
     <string name="webview_license_title" msgid="8843666223583780825">"مجوز وب‌نمای سیستم"</string>
-    <string name="wallpaper_attributions" msgid="8622098625739634898">"تصاویر زمینه"</string>
-    <string name="wallpaper_attributions_values" msgid="1565931506291182879">"ارائه‌دهندگان تصویر ماهواره‌ای:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="6926038943588801452">"ضعیف"</item>
     <item msgid="5986166866411161790">"متوسط"</item>
@@ -615,7 +613,7 @@
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"پاک کردن داده‌ها"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"همه داده‌های این برنامه به صورت دائمی حذف می‌شود.\nاین شامل تمام فایل‌ها، تنظیمات، حساب‌ها، پایگاه‌های داده و دیگر موارد می‌شود."</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"پاک کردن پیش‌فرض‌ها"</string>
-    <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"راه‌اندازی این برنامه برای برخی اقدامات"</string>
+    <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"راه‌اندازی این برنامه برای برخی کنش‌ها"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"هیچ پیش‌فرضی تنظیم نشده است"</string>
     <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"پاک کردن حافظه پنهان"</string>
     <string name="device_apps_app_management_notifications" msgid="7291960671957440729">"اعلان‌ها"</string>

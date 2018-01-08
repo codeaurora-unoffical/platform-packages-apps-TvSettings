@@ -36,6 +36,7 @@
     <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
     <application
         android:icon="@drawable/logo_settings_color_48dp"
         android:label="@string/settings_app_name"
@@ -589,7 +590,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".device.apps.specialaccess.ManageExternalSourcesActivity"
+        <activity android:name=".device.apps.specialaccess.ExternalSourcesActivity"
                 android:label="@string/install_other_apps"
                 android:theme="@style/Theme.Settings.Transparent"
                 android:taskAffinity="">
@@ -633,6 +634,18 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <!-- FileProvider to share a generated license html file.
+             Note that "com.android.settings.files" is set here as its authorities because a Uri
+             permission grant should be allowed to share a file with an external browser but it is
+             allowed only for Settings' authorities in ActivityManagerService.  -->
+        <provider android:name="android.support.v4.content.FileProvider"
+                  android:authorities="com.android.settings.files"
+                  android:grantUriPermissions="true"
+                  android:exported="false">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                       android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>
