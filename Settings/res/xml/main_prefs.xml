@@ -57,6 +57,11 @@
             android:title="@string/device_storage_reset"
             android:fragment="com.android.tv.settings.device.StorageResetFragment" />
         <Preference
+            android:icon="@drawable/ic_input"
+            android:key="hdmi_cec"
+            android:title="@string/hdmi_cec_preference"
+            android:fragment="com.android.tv.settings.system.HdmiCecFragment" />
+        <Preference
             android:icon="@drawable/ic_info_outline"
             android:key="about_device"
             android:title="@string/about_preference"
