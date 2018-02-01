@@ -27,10 +27,11 @@ import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceManager;
 import android.support.v7.preference.TwoStatePreference;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.settingslib.wifi.AccessPointPreference;
 import com.android.tv.settings.R;
-import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -39,7 +40,7 @@ import java.util.Set;
 /**
  * Fragment for controlling network connectivity
  */
-public class NetworkFragment extends ObservableLeanbackPreferenceFragment implements
+public class NetworkFragment extends SettingsPreferenceFragment implements
         ConnectivityListener.Listener, ConnectivityListener.WifiNetworkListener,
         AccessPoint.AccessPointListener {
 
@@ -140,6 +141,17 @@ public class NetworkFragment extends ObservableLeanbackPreferenceFragment implem
         switch (preference.getKey()) {
             case KEY_WIFI_ENABLE:
                 mConnectivityListener.setWifiEnabled(mEnableWifiPref.isChecked());
+                if (mMetricsFeatureProvider != null) {
+                    if (mEnableWifiPref.isChecked()) {
+                        mMetricsFeatureProvider.action(getContext(),
+                                MetricsProto.MetricsEvent.ACTION_WIFI_ON);
+                    } else {
+                        // Log if user was connected at the time of switching off.
+                        mMetricsFeatureProvider.action(getContext(),
+                                MetricsProto.MetricsEvent.ACTION_WIFI_OFF,
+                                mConnectivityListener.isWifiConnected());
+                    }
+                }
                 return true;
             case KEY_WIFI_COLLAPSE:
                 final boolean collapse = !mWifiNetworksCategory.isCollapsed();
@@ -277,4 +289,8 @@ public class NetworkFragment extends ObservableLeanbackPreferenceFragment implem
         ((AccessPointPreference) accessPoint.getTag()).onLevelChanged();
     }
 
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.SETTINGS_NETWORK_CATEGORY;
+    }
 }

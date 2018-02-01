@@ -20,6 +20,8 @@
     <string name="launcher_settings_app_name" msgid="5782771766725939392">"ക്രമീകരണം"</string>
     <string name="launcher_network_app_name" msgid="5107150533945388559">"നെറ്റ്‌വർക്ക്"</string>
     <string name="launcher_restricted_profile_app_name" msgid="671448012575234643">"നിയന്ത്രിത പ്രൊഫൈൽ"</string>
+    <!-- no translation found for header_category_suggestions (6732367439328586933) -->
+    <skip />
     <string name="header_category_device" msgid="4855983928659541345">"ഉപകരണം"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"മുൻഗണനകൾ"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"വിദൂര നിയന്ത്രണവും ആക്‌സസറികളും"</string>
@@ -203,6 +205,8 @@
     <string name="wifi_forget_network" msgid="7302755141573045803">"നെറ്റ്‌വർക്ക് മറക്കുക"</string>
     <string name="wifi_forget_network_description" msgid="3328285160018330334">"സംരക്ഷിച്ച ഒരു പാസ്‌വേഡ് ഉൾപ്പടെ, ഈ നെറ്റ്‌വർക്കിലേക്ക് കണക്‌റ്റുചെയ്യാൻ ഉപയോഗിച്ച വിവരങ്ങളെ ഇത് മായ്ക്കുന്നു"</string>
     <string name="wifi_action_ok" msgid="5932500664228395779">"ശരി"</string>
+    <string name="wifi_setup_action_dont_change_network" msgid="5136210803832000656">"തുടരുക"</string>
+    <string name="wifi_setup_action_change_network" msgid="4320731433166354508">"നെറ്റ്‍വര്‍ക്ക് മാറ്റുക"</string>
     <string name="wifi_action_change_network" msgid="5196215981075986148">"മാറ്റുക"</string>
     <string name="wifi_action_dont_change_network" msgid="1449920958930251977">"മാറ്റരുത്"</string>
     <string name="wifi_action_advanced_yes" msgid="8586473568311558982">"ശരി"</string>
@@ -231,6 +235,7 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"സാധുതയുള്ളൊരു പോർട്ട് നൽകുക.\nഉദാഹരണം: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"ഒഴിവാക്കിയ ഡൊമെയ്നുകളുടെ കോമയാൽ വേർതിരിച്ച ലിസ്‌റ്റ് നൽകുക അല്ലെങ്കിൽ ശൂന്യമായി വിടുക.\nഉദാഹരണം: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"സാധുതയുള്ളൊരു ഹോസ്‌റ്റ്‌നെയിം നൽകുക.\nഉദാഹരണം: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"<xliff:g id="SSID">%1$s</xliff:g>-ലേക്ക് കണ‌ക്‌റ്റ് ചെയ്‌തു"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"നെറ്റ്‌വർക്ക് കണക്‌റ്റുചെയ്‌തു"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"നെറ്റ്‌വർക്ക് കണക്‌റ്റുചെയ്‌തിട്ടില്ല"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="7583498018733069053">"<xliff:g id="SSID">%1$s</xliff:g> എന്നതിലേക്ക് ഇതിനകം കണക്‌റ്റുചെയ്തിരിക്കുന്നു. മറ്റൊരു നെറ്റ്‌വർക്കിലേക്ക് കണക്‌റ്റുചെയ്യണോ?"</string>
@@ -323,6 +328,12 @@
     <string name="wifi_wps_failed_wep" msgid="9158670824165143348">"വൈഫൈ റൂട്ടർ സുരക്ഷാ ക്രമീകരണം (WEP) പിന്തുണയ്ക്കുന്നില്ല"</string>
     <string name="wifi_wps_failed_tkip" msgid="1712545345594227319">"വൈഫൈ റൂട്ടർ സുരക്ഷാ ക്രമീകരണം (TKIP) പിന്തുണയ്ക്കുന്നില്ല"</string>
     <string name="wifi_wps_failed_overlap" msgid="3091222818050940041">"മറ്റൊരു WPS സെഷൻ പുരോഗതിയിലാണ്. അൽപ്പസമയത്തിനകം വീണ്ടും ശ്രമിക്കുക."</string>
+    <!-- no translation found for wifi_wps_start_title (7448016607208427187) -->
+    <skip />
+    <!-- no translation found for wifi_wps_action_push_button (3295053933961963105) -->
+    <skip />
+    <!-- no translation found for wifi_wps_action_pin_entry (3921490121142056571) -->
+    <skip />
     <string name="system_date" msgid="2767108116769558081">"തീയതി"</string>
     <string name="system_time" msgid="6726022312605226285">"സമയം"</string>
     <string name="system_set_date" msgid="2437586307768561116">"തീയതി സജ്ജീകരിക്കുക"</string>
@@ -642,7 +653,7 @@
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"നിങ്ങളുടെ എല്ലാ വ്യക്തിഗത വിവരങ്ങളും ഡൗൺലോഡുചെയ്‌ത അപ്ലിക്കേഷനുകളും മായ്ക്കണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാനാവില്ല!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"എല്ലാം മായ്ക്കുക"</string>
     <string name="select_device_name_title" msgid="5165800500130943604">"നിങ്ങളുടെ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> മോഡലിനായി ഒരു പേര് തിരഞ്ഞെടുക്കുക"</string>
-    <string name="select_device_name_description" msgid="6890879006777364213">"കാസ്റ്റ് ചെയ്യുമ്പോഴോ മറ്റ് ഉപകരണങ്ങളിൽ നിന്ന് കണക്റ്റുചെയ്യുമ്പോഴോ തിരിച്ചറിയുന്നതിന് നിങ്ങളുടെ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ഉപകരണത്തിനൊരു പേര് നൽകുക."</string>
+    <string name="select_device_name_description" msgid="4939767901420114190">"കാസ്റ്റ് ചെയ്യുമ്പോഴോ മറ്റ് ഉപകരണങ്ങളിൽ നിന്ന് കണക്‌റ്റ് ചെയ്യുമ്പോഴോ തിരിച്ചറിയുന്നതിന് നിങ്ങളുടെ ഉപകരണത്തിനൊരു പേര് നൽകുക."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android ടിവി"</item>
     <item msgid="7449352861592960712">"ലിവിംഗ് റൂം ടിവി"</item>
@@ -680,4 +691,10 @@
     <string name="manage_notification_access_title" msgid="2051765294087620434">"അറിയിപ്പ് ആക്സസ്"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"ഇൻസ്‌റ്റാൾ ചെയ്ത ആപ്പുകളൊന്നും അറിയിപ്പ് ആക്‌സസ് അഭ്യർത്ഥിച്ചിട്ടില്ല."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"കോൺടാക്റ്റ് പേരുകളും നിങ്ങൾ സ്വീകരിക്കുന്ന സന്ദേശ ടെക്സ്റ്റുകളും പോലുള്ള വ്യക്തിഗത വിവരങ്ങൾ ഉൾപ്പെടെ, എല്ലാ അറിയിപ്പുകളും ഈ ആപ്പുകൾക്ക് വായിക്കാനാകും. കൂടാതെ അറിയിപ്പുകൾ ഒഴിവാക്കാനോ അവയിലടങ്ങിയിരിക്കുന്ന പ്രവർത്തന ബട്ടണുകൾ ട്രിഗർ ചെയ്യാനോ ഇവയ്ക്ക് കഴിയും."</string>
+    <!-- no translation found for system_alert_window_settings (2069031369694448339) -->
+    <skip />
+    <!-- no translation found for permit_draw_overlay (2400084757761408906) -->
+    <skip />
+    <!-- no translation found for allow_overlay_description (1946279120428813474) -->
+    <skip />
 </resources>

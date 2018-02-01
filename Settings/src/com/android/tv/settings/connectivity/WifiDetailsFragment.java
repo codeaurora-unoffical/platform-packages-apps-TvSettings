@@ -28,16 +28,17 @@ import android.support.v17.leanback.widget.GuidedAction;
 import android.support.v7.preference.Preference;
 import android.text.TextUtils;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
-import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.List;
 
 /**
  * Fragment for displaying the details of a single wifi network
  */
-public class WifiDetailsFragment extends ObservableLeanbackPreferenceFragment
+public class WifiDetailsFragment extends SettingsPreferenceFragment
         implements ConnectivityListener.Listener, ConnectivityListener.WifiNetworkListener {
 
     private static final String ARG_ACCESS_POINT_STATE = "apBundle";
@@ -65,6 +66,11 @@ public class WifiDetailsFragment extends ObservableLeanbackPreferenceFragment
         final Bundle apBundle = new Bundle();
         accessPoint.saveWifiState(apBundle);
         args.putParcelable(ARG_ACCESS_POINT_STATE, apBundle);
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.WIFI_NETWORK_DETAILS;
     }
 
     @Override

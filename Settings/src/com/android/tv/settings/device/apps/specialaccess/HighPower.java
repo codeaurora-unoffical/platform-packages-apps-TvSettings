@@ -25,16 +25,17 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.TwoStatePreference;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.fuelgauge.PowerWhitelistBackend;
 import com.android.tv.settings.R;
-import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
 /**
  * Fragment for managing power save whitelist
  */
 @Keep
-public class HighPower extends ObservableLeanbackPreferenceFragment implements
+public class HighPower extends SettingsPreferenceFragment implements
         ManageApplicationsController.Callback {
 
     private final PowerWhitelistBackend mPowerWhitelistBackend =
@@ -56,6 +57,11 @@ public class HighPower extends ObservableLeanbackPreferenceFragment implements
                             return true;
                         }
                     });
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.APPLICATIONS_HIGH_POWER_APPS;
+    }
 
     @Override
     public void onAttach(Context context) {
