@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,16 +16,22 @@
 
 package com.android.tv.settings.testutils;
 
-import android.net.wifi.WifiManager;
+import android.os.UserManager;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 
-@Implements(value = WifiManager.class, inheritImplementationMethods = true)
-public class TvShadowWifiManager extends org.robolectric.shadows.ShadowWifiManager {
+@Implements(value = UserManager.class, inheritImplementationMethods = true)
+public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager {
+
+    private boolean mAdminUser;
+
+    public void setIsAdminUser(boolean isAdminUser) {
+        mAdminUser = isAdminUser;
+    }
 
     @Implementation
-    public int getVerboseLoggingLevel() {
-        return 0;
+    public boolean isAdminUser() {
+        return mAdminUser;
     }
 }

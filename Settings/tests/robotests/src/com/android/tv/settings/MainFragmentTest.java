@@ -24,37 +24,46 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.robolectric.Shadows.shadowOf;
+import static org.robolectric.shadow.api.Shadow.extract;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.os.UserManager;
 import android.support.v7.preference.Preference;
 import android.telephony.SignalStrength;
 
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.connectivity.ConnectivityListener;
+import com.android.tv.settings.testutils.ShadowUserManager;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowPackageManager;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(manifest = TestConfig.MANIFEST_PATH, sdk = TestConfig.SDK_VERSION)
+@RunWith(TvSettingsRobolectricTestRunner.class)
+@Config(shadows = {ShadowUserManager.class})
 public class MainFragmentTest {
 
     @Spy
     private MainFragment mMainFragment;
 
+    private ShadowUserManager mUserManager;
+
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+        mUserManager = extract(RuntimeEnvironment.application.getSystemService(UserManager.class));
+        mUserManager.setIsAdminUser(true);
+
         doReturn(RuntimeEnvironment.application).when(mMainFragment).getContext();
     }
 
@@ -62,6 +71,19 @@ public class MainFragmentTest {
     public void testUpdateDeveloperOptions_developerDisabled() {
         DevelopmentSettingsEnabler
                 .setDevelopmentSettingsEnabled(RuntimeEnvironment.application, false);
+        final Preference developerPref = mock(Preference.class);
+        doReturn(developerPref).when(mMainFragment).findPreference(MainFragment.KEY_DEVELOPER);
+        mMainFragment.updateDeveloperOptions();
+        verify(developerPref, atLeastOnce()).setVisible(false);
+        verify(developerPref, never()).setVisible(true);
+    }
+
+    @Test
+    public void testUpdateDeveloperOptions_notAdmin() {
+        DevelopmentSettingsEnabler
+                .setDevelopmentSettingsEnabled(RuntimeEnvironment.application, true);
+        mUserManager.setIsAdminUser(false);
+
         final Preference developerPref = mock(Preference.class);
         doReturn(developerPref).when(mMainFragment).findPreference(MainFragment.KEY_DEVELOPER);
         mMainFragment.updateDeveloperOptions();
@@ -95,8 +117,12 @@ public class MainFragmentTest {
         final ApplicationInfo applicationInfo = new ApplicationInfo();
         applicationInfo.flags = ApplicationInfo.FLAG_SYSTEM;
         activityInfo.applicationInfo = applicationInfo;
-        shadowOf(RuntimeEnvironment.application.getPackageManager()).addResolveInfoForIntent(
-                intent, resolveInfo);
+        final ShadowPackageManager shadowPackageManager = shadowOf(
+                RuntimeEnvironment.application.getPackageManager());
+        final PackageInfo castPackageInfo = new PackageInfo();
+        castPackageInfo.packageName = "com.test.CastPackage";
+        shadowPackageManager.addPackage(castPackageInfo);
+        shadowPackageManager.addResolveInfoForIntent(intent, resolveInfo);
 
         mMainFragment.updateCastSettings();
 
