@@ -31,14 +31,14 @@ import android.util.Log;
 import com.android.internal.util.ArrayUtils;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
-import com.android.tv.settings.core.lifecycle.ObservableLeanbackPreferenceFragment;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.Comparator;
 
 /**
  * Base class for managing app ops
  */
-public abstract class ManageAppOp extends ObservableLeanbackPreferenceFragment
+public abstract class ManageAppOp extends SettingsPreferenceFragment
         implements ManageApplicationsController.Callback {
     private static final String TAG = "ManageAppOps";
 
