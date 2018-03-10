@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,18 +32,19 @@ import com.android.tv.settings.connectivity.util.StateMachine;
 import java.util.List;
 
 /**
- * State responsible for showing WPS error message.
+ * State responsible for showing the save failure page.
  */
-public class WpsErrorState implements State {
+public class SaveFailedState implements State {
+    private final FragmentActivity mActivity;
     private Fragment mFragment;
-    private FragmentActivity mActivity;
-    public WpsErrorState(FragmentActivity activity) {
+
+    public SaveFailedState(FragmentActivity activity) {
         mActivity = activity;
     }
 
     @Override
     public void processForward() {
-        mFragment = new WpsErrorFragment();
+        mFragment = new SaveFailedFragment();
         FragmentChangeListener listener = (FragmentChangeListener) mActivity;
         if (listener != null) {
             listener.onFragmentChange(mFragment, true);
@@ -52,11 +53,8 @@ public class WpsErrorState implements State {
 
     @Override
     public void processBackward() {
-        mFragment = new WpsErrorFragment();
-        FragmentChangeListener listener = (FragmentChangeListener) mActivity;
-        if (listener != null) {
-            listener.onFragmentChange(mFragment, false);
-        }
+        StateMachine sm = ViewModelProviders.of(mActivity).get(StateMachine.class);
+        sm.back();
     }
 
     @Override
@@ -65,17 +63,15 @@ public class WpsErrorState implements State {
     }
 
     /**
-     * Fragment for showing failure reason of WPS connection.
+     * Fragment that needs user to enter dns1.
      */
-    public static class WpsErrorFragment extends WifiConnectivityGuidedStepFragment {
-        private WpsFlowInfo mWpsInfo;
+    public static class SaveFailedFragment extends WifiConnectivityGuidedStepFragment {
         private StateMachine mStateMachine;
 
         @Override
         public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            String title = mWpsInfo.getErrorMessage();
             return new GuidanceStylist.Guidance(
-                    title,
+                    getString(R.string.title_wifi_could_not_save),
                     null,
                     null,
                     null);
@@ -83,9 +79,6 @@ public class WpsErrorState implements State {
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
-            mWpsInfo = ViewModelProviders
-                    .of(getActivity())
-                    .get(WpsFlowInfo.class);
             mStateMachine = ViewModelProviders
                     .of(getActivity())
                     .get(StateMachine.class);
@@ -96,7 +89,7 @@ public class WpsErrorState implements State {
         public void onCreateActions(List<GuidedAction> actions, Bundle savedInstanceState) {
             Context context = getActivity();
             actions.add(new GuidedAction.Builder(context)
-                    .title(R.string.wifi_wps_retry_scan)
+                    .title(getString(R.string.wifi_action_ok))
                     .id(GuidedAction.ACTION_ID_CONTINUE)
                     .build());
         }
@@ -104,7 +97,7 @@ public class WpsErrorState implements State {
         @Override
         public void onGuidedActionClicked(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
-                mStateMachine.getListener().onComplete(StateMachine.WPS_START);
+                mStateMachine.getListener().onComplete(StateMachine.FAIL);
             }
         }
     }

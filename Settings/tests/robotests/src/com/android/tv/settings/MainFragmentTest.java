@@ -16,37 +16,28 @@
 
 package com.android.tv.settings;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
-import static org.robolectric.Shadows.shadowOf;
 
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.support.v7.preference.Preference;
 import android.telephony.SignalStrength;
 
-import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.connectivity.ConnectivityListener;
+import com.android.tv.settings.testutils.ShadowUserManager;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(manifest = TestConfig.MANIFEST_PATH, sdk = TestConfig.SDK_VERSION)
+@RunWith(TvSettingsRobolectricTestRunner.class)
+@Config(shadows = {ShadowUserManager.class})
 public class MainFragmentTest {
 
     @Spy
@@ -55,52 +46,8 @@ public class MainFragmentTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+
         doReturn(RuntimeEnvironment.application).when(mMainFragment).getContext();
-    }
-
-    @Test
-    public void testUpdateDeveloperOptions_developerDisabled() {
-        DevelopmentSettingsEnabler
-                .setDevelopmentSettingsEnabled(RuntimeEnvironment.application, false);
-        final Preference developerPref = mock(Preference.class);
-        doReturn(developerPref).when(mMainFragment).findPreference(MainFragment.KEY_DEVELOPER);
-        mMainFragment.updateDeveloperOptions();
-        verify(developerPref, atLeastOnce()).setVisible(false);
-        verify(developerPref, never()).setVisible(true);
-    }
-
-    @Test
-    public void testUpdateDeveloperOptions_developerEnabled() {
-        DevelopmentSettingsEnabler
-                .setDevelopmentSettingsEnabled(RuntimeEnvironment.application, true);
-        final Preference developerPref = mock(Preference.class);
-        doReturn(developerPref).when(mMainFragment).findPreference(MainFragment.KEY_DEVELOPER);
-        mMainFragment.updateDeveloperOptions();
-        verify(developerPref, atLeastOnce()).setVisible(true);
-        verify(developerPref, never()).setVisible(false);
-    }
-
-    @Test
-    public void testUpdateCastSettings() {
-        final Preference castPref = mock(Preference.class);
-        doReturn(castPref).when(mMainFragment).findPreference(MainFragment.KEY_CAST_SETTINGS);
-        final Intent intent = new Intent("com.google.android.settings.CAST_RECEIVER_SETTINGS");
-        doReturn(intent).when(castPref).getIntent();
-
-        final ResolveInfo resolveInfo = new ResolveInfo();
-        resolveInfo.resolvePackageName = "com.test.CastPackage";
-        final ActivityInfo activityInfo = mock(ActivityInfo.class);
-        doReturn("Test Name").when(activityInfo).loadLabel(any(PackageManager.class));
-        resolveInfo.activityInfo = activityInfo;
-        final ApplicationInfo applicationInfo = new ApplicationInfo();
-        applicationInfo.flags = ApplicationInfo.FLAG_SYSTEM;
-        activityInfo.applicationInfo = applicationInfo;
-        shadowOf(RuntimeEnvironment.application.getPackageManager()).addResolveInfoForIntent(
-                intent, resolveInfo);
-
-        mMainFragment.updateCastSettings();
-
-        verify(castPref, atLeastOnce()).setTitle("Test Name");
     }
 
     @Test
@@ -117,7 +64,6 @@ public class MainFragmentTest {
 
         mMainFragment.updateWifi();
 
-        verify(networkPref, atLeastOnce()).setTitle(R.string.connectivity_wifi);
         verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_off_white);
     }
 
@@ -135,7 +81,6 @@ public class MainFragmentTest {
 
         mMainFragment.updateWifi();
 
-        verify(networkPref, atLeastOnce()).setTitle(R.string.connectivity_network);
         verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_off_white);
     }
 
@@ -153,7 +98,6 @@ public class MainFragmentTest {
 
         mMainFragment.updateWifi();
 
-        verify(networkPref, atLeastOnce()).setTitle(R.string.connectivity_network);
         verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_ethernet_white);
     }
 
@@ -172,7 +116,6 @@ public class MainFragmentTest {
 
         mMainFragment.updateWifi();
 
-        verify(networkPref, atLeastOnce()).setTitle(R.string.connectivity_wifi);
         verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_wifi_signal_0_white);
 
         doReturn(1).when(listener).getWifiSignalStrength(anyInt());
@@ -216,7 +159,6 @@ public class MainFragmentTest {
 
         mMainFragment.updateWifi();
 
-        verify(networkPref, atLeastOnce()).setTitle(R.string.connectivity_wifi);
         verify(networkPref, atLeastOnce()).setIcon(R.drawable.ic_cell_signal_0_white);
 
         doReturn(SignalStrength.SIGNAL_STRENGTH_POOR)

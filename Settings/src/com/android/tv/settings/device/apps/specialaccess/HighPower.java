@@ -54,7 +54,8 @@ public class HighPower extends SettingsPreferenceFragment implements
                         public boolean filterApp(ApplicationsState.AppEntry info) {
                             info.extraInfo =
                                     mPowerWhitelistBackend.isWhitelisted(info.info.packageName);
-                            return true;
+                            return !ManageAppOp.shouldIgnorePackage(getContext(),
+                                    info.info.packageName);
                         }
                     });
 

@@ -37,7 +37,7 @@ public class ConnectFailedState implements State {
     private final FragmentActivity mActivity;
     private Fragment mFragment;
 
-    public ConnectFailedState(WifiSetupActivity activity) {
+    public ConnectFailedState(FragmentActivity activity) {
         mActivity = activity;
     }
 
