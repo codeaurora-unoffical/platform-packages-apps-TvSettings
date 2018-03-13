@@ -22,7 +22,6 @@ import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
-import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
@@ -42,11 +41,9 @@ import com.android.tv.settings.util.TransitionUtils;
  * Wi-Fi settings during initial setup for a large no-touch device.
  */
 public class WifiSetupActivity extends FragmentActivity implements State.FragmentChangeListener {
-    public static final int WPS_REQUEST = 1;
     private static final String TAG = "WifiSetupActivity";
     private static final String EXTRA_SHOW_SUMMARY = "extra_show_summary";
     private static final String EXTRA_SHOW_SKIP_NETWORK = "extra_show_skip_network";
-    private static final String EXTRA_SHOW_WPS_AT_TOP = "extra_show_wps_at_top";
     private static final String EXTRA_MOVING_FORWARD = "movingForward";
 
     private boolean mShowFirstFragmentForwards;
@@ -128,8 +125,6 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
         boolean showSummary = getIntent().getBooleanExtra(EXTRA_SHOW_SUMMARY, false);
         mNetworkListInfo.setShowSkipNetwork(
                 getIntent().getBooleanExtra(EXTRA_SHOW_SKIP_NETWORK, false));
-        mNetworkListInfo.setShowWpsAtTop(
-                getIntent().getBooleanExtra(EXTRA_SHOW_WPS_AT_TOP, false));
 
         // If we are not moving forwards during the setup flow, we need to show the first fragment
         // with the reverse animation.
@@ -140,7 +135,6 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
         mEnterSsidState = new EnterSsidState(this);
         mChooseSecurityState = new ChooseSecurityState(this);
         mEnterPasswordState = new EnterPasswordState(this);
-        mEnterSsidState = new EnterSsidState(this);
         mConnectState = new ConnectState(this);
         mConnectTimeOutState = new ConnectTimeOutState(this);
         mConnectRejectedByApState = new ConnectRejectedByApState(this);
@@ -158,8 +152,8 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
             mStateMachine.setStartState(mSelectWifiState);
         }
 
-        AdvancedWifiOptionsFlow.createFlow(
-                this, true, false, null, mOptionsOrConnectState, mConnectState);
+        AdvancedWifiOptionsFlow.createFlow(this, true, false, null,
+                mOptionsOrConnectState, mConnectState, AdvancedWifiOptionsFlow.START_DEFAULT_PAGE);
 
         // Define the transition between different states.
         /** KnownNetwork **/
@@ -277,7 +271,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
                 mSelectWifiState
         );
 
-        //** Connect Rejected By AP **/
+        /** Connect Rejected By AP **/
         mStateMachine.addState(
                 mConnectRejectedByApState,
                 StateMachine.TRY_AGAIN,
@@ -374,17 +368,6 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
 
     private void doFinish() {
         super.finish();
-    }
-
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == WPS_REQUEST) {
-            if (resultCode == RESULT_OK) {
-                setResult(RESULT_OK);
-                finish();
-            } else {
-                mStateMachine.getCurrentState().processBackward();
-            }
-        }
     }
 
     private void addSummaryState() {

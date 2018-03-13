@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,21 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings;
+package com.android.tv.settings.connectivity;
+
+import android.arch.lifecycle.ViewModel;
 
 /**
- * Constants for Robolectric config
+ * Store the information for EditIpSettings and EditProxySettings flows.
  */
-public class TestConfig {
-    public static final int SDK_VERSION = 26;
-    public static final String MANIFEST_PATH =
-            "packages/apps/TvSettings/Settings/AndroidManifest.xml";
+public class EditSettingsInfo extends ViewModel {
+    private NetworkConfiguration mNetworkConfiguration;
+
+    public NetworkConfiguration getNetworkConfiguration() {
+        return mNetworkConfiguration;
+    }
+
+    public void setNetworkConfiguration(NetworkConfiguration config) {
+        this.mNetworkConfiguration = config;
+    }
 }
