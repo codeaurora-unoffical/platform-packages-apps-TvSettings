@@ -50,7 +50,7 @@ import java.util.Set;
  * The fragment where all good things begin. Evil is handled elsewhere.
  */
 public class MainFragment extends SettingsPreferenceFragment implements
-        SuggestionControllerMixin.SuggestionControllerHost {
+        SuggestionControllerMixin.SuggestionControllerHost, SuggestionPreference.Callback {
     private static final String TAG = "MainFragment";
 
     private static final String KEY_SUGGESTIONS_LIST = "suggestions";
@@ -87,8 +87,8 @@ public class MainFragment extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        // TODO(70572789): Finalize metrics categories.
-        return 0;
+        // Do not log visibility.
+        return METRICS_CATEGORY_UNKNOWN;
     }
 
     @Override
@@ -243,8 +243,9 @@ public class MainFragment extends SettingsPreferenceFragment implements
             Preference curPref = findPreference(
                         SuggestionPreference.SUGGESTION_PREFERENCE_KEY + suggestion.getId());
             if (curPref == null) {
-                SuggestionPreference newSuggPref = new SuggestionPreference(suggestion,
-                            this.getPreferenceManager().getContext(), mSuggestionControllerMixin);
+                SuggestionPreference newSuggPref = new SuggestionPreference(
+                        suggestion, this.getPreferenceManager().getContext(),
+                        mSuggestionControllerMixin, this);
                 newSuggPref.setIcon(mIconCache.getIcon(suggestion.getIcon()));
                 newSuggPref.setTitle(suggestion.getTitle());
                 newSuggPref.setSummary(suggestion.getSummary());
@@ -349,6 +350,17 @@ public class MainFragment extends SettingsPreferenceFragment implements
             return true;
         } else {
             return super.onPreferenceTreeClick(preference);
+        }
+    }
+
+    @Override
+    public void onSuggestionClosed(Preference preference) {
+        if (mSuggestionsList == null || mSuggestionsList.getPreferenceCount() == 0) {
+            return;
+        } else if (mSuggestionsList.getPreferenceCount() == 1) {
+            getPreferenceScreen().removePreference(mSuggestionsList);
+        } else {
+            mSuggestionsList.removePreference(preference);
         }
     }
 }
