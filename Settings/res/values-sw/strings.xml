@@ -23,6 +23,9 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Mapendekezo"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Mipangilio ya Haraka"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Mipangilio ya Jumla"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"Ondoa pendekezo hili"</string>
+    <string name="hotwording_title" msgid="1770342282683096475">"Utambuzi wa \"OK Google\""</string>
+    <string name="hotwording_summary" msgid="2863751845299261441">"Zungumza na programu yako ya Mratibu wa Google wakati wowote"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Kifaa"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Mapendeleo"</string>
     <string name="header_category_accessories" msgid="823295909353025991">"Kidhibiti cha mbali na vifaa"</string>
@@ -38,7 +41,7 @@
     <string name="connectivity_network_category_title" msgid="6005656364481347542">"Mtandao na Intaneti"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"Programu"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"Mapendeleo ya Kifaa"</string>
-    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"Vidhibiti Mbali na Vifaa vya Ziada"</string>
+    <string name="remotes_and_accessories_category_title" msgid="2729050422677319645">"Kiungambali na Vifaa vya Ziada"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3967545806275801632">"Hakuna vifaa vya Bluetooth vilivyounganishwa"</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="2004733390509722820">
       <item quantity="other">Vifaa <xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> vya ziada</item>
@@ -60,14 +63,22 @@
     <string name="sync_failed" msgid="5514824149810480551">"Imeshindwa kusawazisha"</string>
     <string name="sync_active" msgid="6891115263481154378">"Kipengee cha kusawazisha kimewashwa"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
-    <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
+    <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethaneti"</string>
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Ethaneti imeunganishwa"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Hakuna mtandao uliounganishwa"</string>
-    <string name="connectivity_summary_wifi_disabled" msgid="1086559359898954682">"Wi-Fi imezimwa"</string>
-    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Uchanganuzi unapatika wakati wote"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"Wi-Fi imezimwa"</string>
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Utafutaji wa mitandao hufanyika wakati wote"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Ruhusu huduma ya eneo la Google na programu nyingine kutafuta mitandao, hata wakati Wi-Fi imezimwa"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"Unganisha kwenye mtandao"</string>
+    <string name="apps_recently_used_category_title" msgid="5254492409677346900">"Programu ulizofungua hivi karibuni"</string>
+    <string name="apps_see_all_apps" msgid="5546179088197139203">"Angalia programu zote"</string>
+    <string name="apps_permissions_category_title" msgid="4476837368840442313">"Ruhusa"</string>
+    <string name="all_apps_title" msgid="5330174847732759402">"Programu zote"</string>
+    <string name="all_apps_show_system_apps" msgid="4648447904721171884">"Onyesha programu za mfumo"</string>
+    <string name="all_apps_installed" msgid="54800379871111518">"Programu zilizosakinishwa"</string>
+    <string name="all_apps_other" msgid="8297097642727891911">"Programu za mfumo"</string>
+    <string name="all_apps_disabled" msgid="2016067533586741345">"Programu zilizozimwa"</string>
     <string name="device_daydream" msgid="3354366974209179614">"Taswira ya skrini"</string>
     <string name="device_display" msgid="101455384386372747">"Onyesha"</string>
     <string name="device_sound" msgid="9214182566287657481">"Sauti"</string>
@@ -79,11 +90,19 @@
     <string name="device_backup_restore" msgid="5627523987587511884">"Hifadhi nakala na uzirejeshe"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Kurejesha data iliyotoka nayo kiwandani"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Marekebisho"</string>
+    <string name="surround_sound_select_formats" msgid="6329868407147678259">"Chagua miundo"</string>
+    <string name="surround_sound_category_title" msgid="1331285587464316534">"Sauti Mzunguko"</string>
+    <string name="surround_sound_format_ac3" msgid="1482464022424295698">"AC3 (Dolby Digital)"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4406523828595644068">"E-AC3 (Dolby Digital Plus/DD+)"</string>
+    <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
+    <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
+    <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
+    <string name="surround_sound_auto_info" msgid="4957977219847012992">"Kumbuka: chaguo la Otomatiki huenda lisitumike ikiwa kifaa chako hakiripoti kwa usahihi miundo inayotumika."</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"Otomatiki: Tumia miundo ambayo kifaa chako kimeripoti kuwa kinaitumia (inapendekezwa)"</string>
+    <string name="surround_sound_none_summary" msgid="4295042972785042496">"Hamna: Kamwe usitumie sauti mzunguko"</string>
+    <string name="surround_sound_manual_summary" msgid="9208540024024014501">"Jichagulie: Teua miundo ambayo ungependa kutumia"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Ungependa kufuta data iliyo kwenye akiba?"</string>
     <string name="device_storage_clear_cache_message" msgid="6495570470005696210">"Hii itafuta data iliyo kwenye akiba ya programu zote."</string>
-    <string name="apps_downloaded" msgid="4222190849854323480">"Programu zilizopakuliwa"</string>
-    <string name="apps_system" msgid="2499191125802829425">"Programu za mfumo"</string>
-    <string name="apps_running" msgid="6430310491739956228">"Programu zinazotumika"</string>
     <string name="accessories_add" msgid="1347802656349218830">"Ongeza kifaa"</string>
     <string name="accessory_state_pairing" msgid="7501989679637780963">"Inaoanisha..."</string>
     <string name="accessory_state_connecting" msgid="8777884957977608529">"Inaunganisha…"</string>
@@ -187,8 +206,8 @@
     <string name="title_internet_connection" msgid="8710084774588697646">"Muunganisho kwa Intaneti"</string>
     <string name="connected" msgid="7563100162902079938">"Umeunganishwa"</string>
     <string name="not_connected" msgid="6858480380326923017">"Hujaunganishwa"</string>
-    <string name="wifi_setting_header_other_options" msgid="3638677601577777216">"Chaguo zingine"</string>
-    <string name="wifi_setting_see_all" msgid="3217814666041974878">"Angalia zote"</string>
+    <string name="wifi_setting_header_other_options" msgid="3638677601577777216">"Chaguo nyinginezo"</string>
+    <string name="wifi_setting_see_all" msgid="3217814666041974878">"Angalia yote"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"Angalia chache"</string>
     <string name="wifi_setting_available_networks" msgid="6713791371350513043">"Mitandao inayopatikana"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"Ongeza mtandao mpya"</string>
@@ -257,6 +276,10 @@
     <string name="proxy_port_description" msgid="6791098212244367568">"Weka lango sahihi. \nMfano: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="6020640103462473072">"Weka orodha iliyotenganishwa kwa koma, ya vikoa visivyojumuishwa au usiweke chochote. \nMfano: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5824391500254472447">"Weka jina sahihi la mpangishaji.\nMfano: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
+    <string name="title_wifi_eap_method" msgid="3723583936041145157">"Chagua mbinu ya EAP ya <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_phase2_authentication" msgid="8292177518924013886">"Chagua uthibitishaji wa hatua ya 2 wa <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_identity" msgid="6154397685951091638">"Weka kitambulisho cha <xliff:g id="SSID">%1$s</xliff:g>"</string>
+    <string name="title_wifi_anonymous_identity" msgid="4530402657655491360">"Weka kitambulisho cha siri cha <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_setup_summary_title_connected" msgid="3349953509191969645">"Umeunganishwa kwenye <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="8329216588732277139">"Mtandao umeunganishwa"</string>
     <string name="wifi_summary_title_not_connected" msgid="3799548944869386251">"Mtandao haujaunganishwa"</string>
@@ -438,7 +461,7 @@
     <string name="system_play_sample" msgid="7187293932891811148">"Chezesha sampuli"</string>
     <string name="system_install_voice_data" msgid="8920883886563714355">"Sakinisha data ya sauti"</string>
     <string name="system_general" msgid="3535958631591158282">"Kawaida"</string>
-    <string name="system_debugging" msgid="7204447785851191331">"Utatuaji"</string>
+    <string name="system_debugging" msgid="7204447785851191331">"Utatuzi"</string>
     <string name="system_input" msgid="6164987320529039626">"Mfumo wa Uingizaji"</string>
     <string name="system_drawing" msgid="6573389872154957039">"Uchoraji"</string>
     <string name="system_monitoring" msgid="8424072546138094053">"Ufuatiliaji"</string>
@@ -464,15 +487,15 @@
     <string name="system_show_touches" msgid="2179121368437801757">"Onyesha miguso"</string>
     <string name="system_pointer_location" msgid="2673764026490179227">"Mahali pa kiashiria"</string>
     <string name="system_show_layout_bounds" msgid="645732439882291943">"Onyesha mipaka ya mpangilio"</string>
-    <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"Onyesha sasisho za mtazamo wa GPU"</string>
+    <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"Onyesha masasisho ya mtazamo wa GPU"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"Onyesha safu ya maunzi"</string>
     <string name="system_show_gpu_overdraw" msgid="707861254106800199">"Onyesha utoaji zaidi wa GPU"</string>
-    <string name="system_show_surface_updates" msgid="8878834675712192327">"Onyesha sasisho za uso"</string>
+    <string name="system_show_surface_updates" msgid="8878834675712192327">"Onyesha masasisho ya uso"</string>
     <string name="system_window_animation_scale" msgid="3213952676672537856">"Mizani ya uhuishaji wa Dirisha"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Mizani ya ubadilikaji wa uhuishaji"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Mizani ya muda wa uhuishaji"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"Modi makinifu imewezeshwa"</string>
-    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Utungilizaji wa wasifu wa GPU"</string>
+    <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"Utekelezaji wa wasifu wa GPU"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"Washa ufuatiliaji"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"Usihifadhi shughuli"</string>
     <string name="system_background_process_limit" msgid="7921766877363771436">"Kikomo cha kiwango uchakataji wa chini kwa chini"</string>
@@ -488,7 +511,7 @@
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"Angaza kijani safu za maunzi zinaposasisha"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"Kutoka kwa bora hadi mbovu: samawati, kijani, nyekundu hafifu, nyekundu"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Angaza eneo lote la dirisha linaposasisha"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Mulika skrini wakati programu zinafanya uendeshaji mrefu kwenye mtungo mkuu"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Fanya skrini imemeteke programu zinapoendeleza shughuli ndefu kwenye skrini kuu"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"Pima muda wa kutungiliza katika adp shell dumpys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"Washa"</string>
     <string name="action_off_title" msgid="3157728958166559966">"Zima"</string>
@@ -692,7 +715,7 @@
     <string name="usage_access" msgid="1914242907684452328">"Ufikiaji wa matumizi"</string>
     <string name="usage_access_description" msgid="6290001769893747651">"Ufikiaji wa matumizi huruhusu programu kufuatilia programu zingine unazotumia na mara unazozitumia, pamoja na mtoa huduma, mipangilio ya lugha na maelezo yako mengine."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"Kuboresha matumizi ya betri"</string>
-    <string name="high_power_apps_description" msgid="1990016812115792282">"Boresha matumizi ya betri ya programu"</string>
+    <string name="high_power_apps_description" msgid="1990016812115792282">"Boresha jinsi programu zinavyotumia betri"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"Hakuna programu zinazohitaji kuboresha matumizi ya betri"</string>
     <string name="high_power_on" msgid="7725180078784796673">"Haijaboreshwa"</string>
     <string name="high_power_off" msgid="308272752152871252">"Kuboresha matumizi ya betri"</string>
