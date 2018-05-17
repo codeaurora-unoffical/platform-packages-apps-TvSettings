@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"સૂચનો"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"ઝડપી સેટિંગ"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"સામાન્ય સેટિંગ"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"સૂચન છોડી દો"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"\"ઓકે Google\" શોધ"</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"Google આસિસ્ટંટ સાથે ગમે ત્યારે વાત કરો"</string>
     <string name="header_category_device" msgid="4855983928659541345">"ઉપકરણ"</string>
@@ -198,7 +199,7 @@
     <item msgid="7541004325985469896">"સારી"</item>
     <item msgid="1546771355788926692">"ઉત્તમ"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3428401680168668544">"MAC સરનામું"</string>
+    <string name="title_mac_address" msgid="3428401680168668544">"MAC ઍડ્રેસ"</string>
     <string name="title_signal_strength" msgid="205478650262078041">"સિગ્નલ પ્રબળતા"</string>
     <string name="title_ip_address" msgid="4533523100923004711">"IP સરનામું"</string>
     <string name="title_ssid" msgid="4858945903642469730">"Wi-Fi નેટવર્કનું નામ દાખલ કરો"</string>
@@ -482,7 +483,7 @@
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"USB પર ઍપ્લિકેશનો ચકાસો"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"હાનિકારક વર્તણૂંક માટે ADB/ADT મારફતે ઇન્સ્ટૉલ કરવામાં આવેલી ઍપ્લિકેશનો તપાસો."</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi-Fi વર્બોઝ લોગિંગ"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Wi-Fi વર્બોઝ લૉગિંગ સક્ષમ કરો"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"વાઇ-ફાઇ વર્બોઝ લૉગિંગ ચાલુ કરો"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"ટચ બતાવો"</string>
     <string name="system_pointer_location" msgid="2673764026490179227">"પોઇન્ટર સ્થાન"</string>
     <string name="system_show_layout_bounds" msgid="645732439882291943">"લેઆઉટ બાઉન્ડ બતાવો"</string>
@@ -493,7 +494,7 @@
     <string name="system_window_animation_scale" msgid="3213952676672537856">"વિંડો એનિમેશન સ્કેલ"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"સંક્રમણ એનિમેશન સ્કેલ"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"એનિમેટર અવધિ સ્કેલ"</string>
-    <string name="system_strict_mode_enabled" msgid="5728680397806673270">"સ્ટ્રિક્ટ મોડ સક્ષમ કરેલ છે"</string>
+    <string name="system_strict_mode_enabled" msgid="5728680397806673270">"સ્ટ્રિક્ટ મોડ ચાલુ કરેલ છે"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"પ્રોફાઇલ GPU રેન્ડરિંગ"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"ટ્રેસ સક્ષમ કરો"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"પ્રવૃત્તિઓ રાખશો નહીં"</string>
@@ -708,7 +709,7 @@
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"આ તમે ઇન્સ્ટૉલ કરેલ તમામ તૃતીય પક્ષ ઍપ્લિકેશનોને અક્ષમ કરશે. જ્યારે તમે ફરીથી રીબૂટ કરશો ત્યારે તે પુનઃસ્થાપિત કરવામાં આવશે."</string>
     <string name="capturing_bugreport" msgid="3291125403411239592">"બગ રિપોર્ટ કૅપ્ચર કરી રહ્યાં છીએ"</string>
     <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"ઉપલબ્ધ વર્ચ્યુઅલ કીબોર્ડ"</string>
-    <string name="manage_keyboards" msgid="1905379263117016795">"કીબોર્ડ સંચાલિત કરો"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"કીબોર્ડ મેનેજ કરો"</string>
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"મંજૂરી છે"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"મંજૂરી નથી"</string>
     <string name="usage_access" msgid="1914242907684452328">"વપરાશ ઍક્સેસ"</string>

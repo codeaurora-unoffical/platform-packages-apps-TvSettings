@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Ұсыныстар"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Жылдам параметрлер"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Жалпы параметрлер"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"Ұсынысты қабылдамау"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"\"OK Google\" пәрменін анықтау"</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"Google Assistant қолданбасына кез келген уақытта команда беріңіз"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Құрылғы"</string>
@@ -147,7 +148,7 @@
     <string name="system_diagnostic" msgid="7269638365915225701">"Пайдалану және диагностика"</string>
     <string name="tutorials" msgid="3731493987558093244">"Оқулықтар"</string>
     <string name="about_system_update" msgid="7282772247661356586">"Жүйе жаңартуы"</string>
-    <string name="about_preference" msgid="4131396784531360434">"Туралы"</string>
+    <string name="about_preference" msgid="4131396784531360434">"Мәлімет"</string>
     <string name="device_name" msgid="2670488158531273028">"Құрылғы атауы"</string>
     <string name="restart_button_label" msgid="8153112858638352970">"Қайта бастау"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Құқықтық ақпарат"</string>
@@ -162,7 +163,7 @@
       <item quantity="other">Қазір әзірлеуші болуыңызға <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> қадам қалды</item>
       <item quantity="one">Қазір әзірлеуші болуыңызға <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> қадам қалды</item>
     </plurals>
-    <string name="about_ads" msgid="3364786994943748337">"Құлақтандырулар"</string>
+    <string name="about_ads" msgid="3364786994943748337">"Жарнама"</string>
     <string name="show_dev_on" msgid="8997172736024819952">"Енді сіз әзірлеушісіз!"</string>
     <string name="show_dev_already" msgid="7525967300421794483">"Қажет емес, сіз әлдеқашан әзірлеушісіз"</string>
     <string name="device_info_default" msgid="4519181343309136050">"Белгісіз"</string>
@@ -371,7 +372,7 @@
     <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="4447882066895090612">"24 сағаттық пішімді пайдалану"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
-    <string name="system_auto_date_time" msgid="3629668599205033272">"Автоматты күн және уақыт"</string>
+    <string name="system_auto_date_time" msgid="3629668599205033272">"Автоматты күн мен уақыт"</string>
   <string-array name="auto_date_time_entries">
     <item msgid="4590792581242018007">"Желі берген уақытты пайдалану"</item>
     <item msgid="3807025813081244357">"Өшірулі"</item>
@@ -404,10 +405,10 @@
     <string name="delete_location_history_desc" msgid="4142806827237093397">"Бұл осы құрылғыдан осы Google есептік жазбасы үшін сақталған бүкіл орындар тарихын жояды. Бұл жоюды болдырмау мүмкін емес. Кейбір қолданбалар, соның ішінде, Google Now, жұмысын тоқтатады."</string>
     <string name="system_services" msgid="7230571820151215779">"Қызметтер"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"Қызмет параметрлері"</string>
-    <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Жоғары контрастты мәтін"</string>
+    <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Жоғары контрасты мәтін"</string>
     <string name="accessibility_shortcut" msgid="6726361991387558828">"Арнайы мүмкіндік пернелер тіркесімі"</string>
     <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"Арнайы мүмкіндіктер таңбашасын қосу"</string>
-    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Таңбашамен байланыстырылған қызмет"</string>
+    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"Қызметті тез қосу"</string>
     <string name="accessibility_shortcut_description" msgid="514995490967241715">"Таңбаша қосулы кезде артқа және төмен көрсеткілі түймелерінің екеуін де 3 секунд бойы басып тұрып, арнайы мүмкіндіктер функциясы іске қосуға болады."</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"Титрлар"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"Бейнедегі титрлер мәтіні қабатының параметрлері"</string>
@@ -711,7 +712,7 @@
     <string name="manage_keyboards" msgid="1905379263117016795">"Пернетақталарды басқару"</string>
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Рұқсат етілген"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Рұқсат етілмеген"</string>
-    <string name="usage_access" msgid="1914242907684452328">"Пайдалану тарихына кіру"</string>
+    <string name="usage_access" msgid="1914242907684452328">"Деректерге кіру"</string>
     <string name="usage_access_description" msgid="6290001769893747651">"Пайдалану мүмкіндігі қолданбаға сіз пайдаланатын басқа қолданбаларды және қаншалықты жиі пайдаланатыңыз туралы ақпаратты, сондай-ақ операторды, тіл параметрлерін және басқа мәліметтерді бақылауға мүмкіндік береді."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"Қуат үнемдеу"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"Қолданбалардың қуат тұтынуын оңтайландыру"</string>
@@ -734,5 +735,5 @@
     <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"\"Сурет ішіндегі сурет\" режиміне рұқсат беру"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Орнатылған қолданбалардың ешқайсысы \"сурет ішіндегі сурет\" режимін қолдамайды"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Қолданба ашық болғанда не одан шыққанда (мысалы, бейнені әрі қарай көру үшін), қолданбаларға \"суреттегі сурет\" терезесін ашуға мүмкіндік береді. Бұл терезе ашылған басқа қолданбалардың үстінен шығады."</string>
-    <string name="special_access" msgid="3513811566600299998">"Арнайы кіру рұқсаты"</string>
+    <string name="special_access" msgid="3513811566600299998">"Арнайы рұқсат"</string>
 </resources>
