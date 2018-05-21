@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Pasiūlymai"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Spartieji nustatymai"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Bendrieji nustatymai"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"Atsisakyti siūlymo"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"„Ok Google“ aptikimas"</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"Kalbėkitės su „Google“ padėjėju bet kuriuo metu"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Įrenginys"</string>
@@ -70,7 +71,7 @@
     <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Prisijungta prie eterneto"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"Neprisijungta prie tinklo"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"„Wi-Fi“ išjungtas"</string>
-    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Nuskaitymas visada galimas"</string>
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Nuskaitymas leidžiamas visada"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Leisti „Google“ vietovių paslaugai ir kitoms programoms nuskaityti tinklus, net kai „Wi-Fi“ išjungtas"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"Prisijunkite prie tinklo"</string>
@@ -214,7 +215,7 @@
     <string name="wifi_setting_header_other_options" msgid="3638677601577777216">"Kitos parinktys"</string>
     <string name="wifi_setting_see_all" msgid="3217814666041974878">"Žr. viską"</string>
     <string name="wifi_setting_see_fewer" msgid="5958876323942699235">"Žr. mažiau"</string>
-    <string name="wifi_setting_available_networks" msgid="6713791371350513043">"Galimi tinklai"</string>
+    <string name="wifi_setting_available_networks" msgid="6713791371350513043">"Pasiekiami tinklai"</string>
     <string name="wifi_setting_other_options_add_network" msgid="2791106243851894788">"Pridėti naują tinklą"</string>
     <string name="security_type" msgid="524443802004143058">"Saugos tipas"</string>
     <string name="other_network" msgid="3539704463099544488">"Kitas tinklas…"</string>
