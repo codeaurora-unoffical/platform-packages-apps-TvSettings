@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"おすすめ"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"クイック設定"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"全般設定"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"候補を閉じる"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"「OK Google」の検出"</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"Google アシスタントにいつでも話しかけてください"</string>
     <string name="header_category_device" msgid="4855983928659541345">"端末"</string>
@@ -132,7 +133,10 @@
     <string name="system_date_time" msgid="8898457978560618950">"日付と時刻"</string>
     <string name="system_language" msgid="2337138146114609247">"言語"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"キーボード"</string>
-    <string name="system_autofill_service" msgid="3867736719921644747">"自動入力サービス"</string>
+    <!-- no translation found for system_keyboard_autofill (5787948036400896834) -->
+    <skip />
+    <!-- no translation found for system_autofill (8647914463541617409) -->
+    <skip />
     <string name="system_home" msgid="2858989138172296012">"ホーム画面"</string>
     <string name="system_search" msgid="2837264654143247611">"検索"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -556,11 +560,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"標準"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"速い"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"非常に速い"</string>
+    <!-- no translation found for title_settings (5433841477518010243) -->
+    <skip />
     <string name="title_current_keyboard" msgid="4259032357469819835">"現在のキーボード"</string>
     <string name="title_configure" msgid="6929522003149212388">"設定"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"キーボードオプション"</string>
     <string name="title_current_autofill_service" msgid="6055852915343152350">"現在の自動入力サービス"</string>
-    <string name="autofill_disable" msgid="539635915296078432">"無効にする"</string>
+    <!-- no translation found for autofill_none (2426888642367790651) -->
+    <skip />
     <string name="computing_size" msgid="2955133568424704042">"計算しています…"</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"Wi-Fi ネットワークの選択"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"名前を変更"</string>
@@ -694,6 +701,10 @@
     <string name="custom_room" msgid="8655516733933892458">"カスタム名を入力…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"この <xliff:g id="DEVICEMODEL">%1$s</xliff:g> の名前を変更"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"現在、この <xliff:g id="DEVICEMODEL">%1$s</xliff:g> の名前は「<xliff:g id="DEVICENAME">%2$s</xliff:g>」です"</string>
+    <!-- no translation found for device_name_suggestion_title (2312205155408810120) -->
+    <skip />
+    <!-- no translation found for device_name_suggestion_summary (863826452740003652) -->
+    <skip />
     <string name="change_setting" msgid="2047402388786162246">"変更する"</string>
     <string name="keep_settings" msgid="6798327196645732517">"変更しない"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"権限"</string>
@@ -713,26 +724,28 @@
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"許可しない"</string>
     <string name="usage_access" msgid="1914242907684452328">"使用状況へのアクセス"</string>
     <string name="usage_access_description" msgid="6290001769893747651">"使用状況へのアクセスにより、アプリは他のアプリの使用状況や使用頻度、携帯通信会社、言語設定などの情報を追跡できるようになります。"</string>
-    <string name="high_power_apps" msgid="7796096221999495077">"エネルギーの最適化"</string>
-    <string name="high_power_apps_description" msgid="1990016812115792282">"アプリのエネルギー使用量を最適化します"</string>
+    <string name="high_power_apps" msgid="7796096221999495077">"電気使用量の最適化"</string>
+    <string name="high_power_apps_description" msgid="1990016812115792282">"アプリの電気使用量を最適化します"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"最適化が必要なアプリはありません"</string>
     <string name="high_power_on" msgid="7725180078784796673">"最適化していないアプリ"</string>
-    <string name="high_power_off" msgid="308272752152871252">"エネルギー使用量を最適化しているアプリ"</string>
-    <string name="high_power_system" msgid="7815843517656137656">"エネルギーの最適化を利用できないアプリ"</string>
+    <string name="high_power_off" msgid="308272752152871252">"電気使用量を最適化しているアプリ"</string>
+    <string name="high_power_system" msgid="7815843517656137656">"電気使用量の最適化を利用できないアプリ"</string>
     <string name="manage_notification_access_title" msgid="2051765294087620434">"通知へのアクセス"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"通知へのアクセスをリクエストしたインストール済みアプリはありません。"</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"このアプリはすべての通知を読み取ることができます。通知には、連絡先名などの個人情報や受信したメッセージの本文も含まれます。また、通知を非表示にしたり、通知内のボタン操作を実行したりすることもできます。"</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"他のアプリの上に重ねて表示"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"他のアプリの上に重ねて表示できるようにする"</string>
-    <string name="allow_overlay_description" msgid="1946279120428813474">"使用中の他のアプリの上にアプリを重ねて表示できるようになります。他のアプリを使用する際に邪魔になったり、他のアプリの表示や動作が変わったりする場合があります。"</string>
+    <string name="allow_overlay_description" msgid="1946279120428813474">"使用中の他のアプリの上にアプリを重ねて表示できるようになります。他のアプリを使用する際に見えづらくなったり、他のアプリの表示や動作が変わったりする場合があります。"</string>
     <string name="write_system_settings" msgid="2730923656857824907">"システム設定の変更"</string>
     <string name="write_settings_title" msgid="8750406725746598710">"システム設定を変更できるアプリ"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"この権限により、アプリはシステム設定の変更ができるようになります。"</string>
-    <string name="write_settings_on" msgid="3312616037931341656">"可"</string>
-    <string name="write_settings_off" msgid="6219072254626503312">"不可"</string>
+    <string name="write_settings_on" msgid="3312616037931341656">"変更可能"</string>
+    <string name="write_settings_off" msgid="6219072254626503312">"変更不可"</string>
     <string name="picture_in_picture_title" msgid="7738692876349058">"ピクチャー イン ピクチャー"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"ピクチャー イン ピクチャーの許可"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"ピクチャー イン ピクチャーに対応したアプリはインストールされていません"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"アプリを開いているとき、またはアプリを離れた後に、動画の再生を続けるなどの目的でピクチャー イン ピクチャー ウィンドウを表示できるようにします。このウィンドウは、使用中の他のアプリの上に重ねて表示されます。"</string>
     <string name="special_access" msgid="3513811566600299998">"特別なアプリアクセス"</string>
+    <!-- no translation found for string_concat (5897947064488902904) -->
+    <skip />
 </resources>

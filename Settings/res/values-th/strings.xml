@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"คำแนะนำ"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"การตั้งค่าด่วน"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"การตั้งค่าทั่วไป"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"ปิดคำแนะนำ"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"การตรวจหา \"Ok Google\""</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"คุยกับ Google Assistant ได้ทุกเมื่อ"</string>
     <string name="header_category_device" msgid="4855983928659541345">"อุปกรณ์"</string>
@@ -132,7 +133,10 @@
     <string name="system_date_time" msgid="8898457978560618950">"วันที่และเวลา"</string>
     <string name="system_language" msgid="2337138146114609247">"ภาษา"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"แป้นพิมพ์"</string>
-    <string name="system_autofill_service" msgid="3867736719921644747">"บริการป้อนอัตโนมัติ"</string>
+    <!-- no translation found for system_keyboard_autofill (5787948036400896834) -->
+    <skip />
+    <!-- no translation found for system_autofill (8647914463541617409) -->
+    <skip />
     <string name="system_home" msgid="2858989138172296012">"หน้าจอหลัก"</string>
     <string name="system_search" msgid="2837264654143247611">"ค้นหา"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -488,11 +492,11 @@
     <string name="system_show_layout_bounds" msgid="645732439882291943">"แสดงขอบของการจัดวาง"</string>
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"แสดงการอัปเดตมุมมอง GPU"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"แสดงเลเยอร์ฮาร์ดแวร์"</string>
-    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"แสดงการใช้ GPU มากเกินไป"</string>
+    <string name="system_show_gpu_overdraw" msgid="707861254106800199">"แสดงให้เห็นการแสดงพิกเซลซ้ำด้วย GPU"</string>
     <string name="system_show_surface_updates" msgid="8878834675712192327">"แสดงการอัปเดตพื้นผิว"</string>
-    <string name="system_window_animation_scale" msgid="3213952676672537856">"ขนาดหน้าต่างภาพเคลื่อนไหว"</string>
-    <string name="system_transition_animation_scale" msgid="2964817709721784757">"อัตราการสลับภาพเคลื่อนไหว"</string>
-    <string name="system_animator_duration_scale" msgid="7413512458963984521">"ความเร็วตามผู้สร้างกำหนด"</string>
+    <string name="system_window_animation_scale" msgid="3213952676672537856">"อัตราการเคลื่อนไหวของหน้าต่าง"</string>
+    <string name="system_transition_animation_scale" msgid="2964817709721784757">"อัตราการเคลื่อนไหวของการเปลี่ยนภาพ"</string>
+    <string name="system_animator_duration_scale" msgid="7413512458963984521">"อัตราความเร็วตามตัวสร้างภาพเคลื่อนไหว"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"เปิดใช้งานโหมดเข้มงวด"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"การแสดงผล GPU ตามโปรไฟล์"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"เปิดใช้งานร่องรอย"</string>
@@ -510,7 +514,7 @@
     <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"แสดงเลเยอร์ฮาร์ดแวร์เป็นสีเขียวเมื่อมีการอัปเดต"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"จากดีที่สุดไปหาแย่ที่สุด: ฟ้า เขียว แดงอ่อน แดง"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"แสดงพื้นผิวหน้าต่างทั้งหมดเมื่อมีการอัปเดต"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"แสดงหน้าจอเมื่อแอปทำงานในชุดข้อความหลักนาน"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"กะพริบหน้าจอเมื่อแอปทำงานในชุดข้อความหลักนาน"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"วัดเวลาที่ใช้แสดงผลใน adb shell dumpsys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"เปิด"</string>
     <string name="action_off_title" msgid="3157728958166559966">"ปิด"</string>
@@ -536,12 +540,12 @@
     <string name="enable_opengl_traces_none" msgid="6074804146602749420">"ไม่มี"</string>
   <string-array name="animation_scale_entries">
     <item msgid="7477134110460336436">"ปิดภาพเคลื่อนไหว"</item>
-    <item msgid="8327257151534006014">"ภาพเคลื่อนไหวขนาด 0.5 เท่า"</item>
-    <item msgid="2105786719544636780">"ภาพเคลื่อนไหวขนาด 1 เท่า"</item>
-    <item msgid="5290554136790336403">"ภาพเคลื่อนไหวขนาด 1.5 เท่า"</item>
-    <item msgid="1232929590838082483">"ภาพเคลื่อนไหวขนาด 2 เท่า"</item>
-    <item msgid="1889239009419613796">"ภาพเคลื่อนไหวขนาด 5 เท่า"</item>
-    <item msgid="7268894934484547297">"ภาพเคลื่อนไหวขนาด 10 เท่า"</item>
+    <item msgid="8327257151534006014">"อัตราการเคลื่อนไหว 0.5 เท่า"</item>
+    <item msgid="2105786719544636780">"อัตราการเคลื่อนไหว 1 เท่า"</item>
+    <item msgid="5290554136790336403">"อัตราการเคลื่อนไหว 1.5 เท่า"</item>
+    <item msgid="1232929590838082483">"อัตราการเคลื่อนไหว 2 เท่า"</item>
+    <item msgid="1889239009419613796">"อัตราการเคลื่อนไหว 5 เท่า"</item>
+    <item msgid="7268894934484547297">"อัตราการเคลื่อนไหว 10 เท่า"</item>
   </string-array>
     <string name="track_frame_time_off" msgid="5050360262132715904">"ปิด"</string>
     <string name="track_frame_time_bars" msgid="4470692840177888414">"เป็นแถบบนหน้าจอ"</string>
@@ -556,11 +560,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"ปกติ"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"เร็ว"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"เร็วมาก"</string>
+    <!-- no translation found for title_settings (5433841477518010243) -->
+    <skip />
     <string name="title_current_keyboard" msgid="4259032357469819835">"แป้นพิมพ์ปัจจุบัน"</string>
     <string name="title_configure" msgid="6929522003149212388">"กำหนดค่า"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"ตัวเลือกแป้นพิมพ์"</string>
     <string name="title_current_autofill_service" msgid="6055852915343152350">"บริการป้อนอัตโนมัติปัจจุบัน"</string>
-    <string name="autofill_disable" msgid="539635915296078432">"ปิดใช้"</string>
+    <!-- no translation found for autofill_none (2426888642367790651) -->
+    <skip />
     <string name="computing_size" msgid="2955133568424704042">"กำลังคำนวณ…"</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"เลือกเครือข่าย WiFi ของคุณ"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"เปลี่ยนชื่อ"</string>
@@ -694,6 +701,10 @@
     <string name="custom_room" msgid="8655516733933892458">"ป้อนชื่อที่กำหนดเอง…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"เปลี่ยนชื่อ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> เครื่องนี้"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"ปัจจุบัน <xliff:g id="DEVICEMODEL">%1$s</xliff:g> เครื่องนี้มีชื่อว่า \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
+    <!-- no translation found for device_name_suggestion_title (2312205155408810120) -->
+    <skip />
+    <!-- no translation found for device_name_suggestion_summary (863826452740003652) -->
+    <skip />
     <string name="change_setting" msgid="2047402388786162246">"เปลี่ยน"</string>
     <string name="keep_settings" msgid="6798327196645732517">"ไม่เปลี่ยนแปลง"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"สิทธิ์"</string>
@@ -735,4 +746,6 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"แอปที่ติดตั้งอยู่ไม่รองรับการแสดงภาพซ้อนภาพ"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"อนุญาตให้แอปสร้างหน้าต่างการแสดงภาพซ้อนภาพในขณะที่แอปเปิดอยู่หรือหลังจากที่คุณปล่อยทิ้งไว้ (เช่น เพื่อดูวิดีโอต่อ) หน้าต่างนี้จะแสดงทับแอปอื่นๆ ที่คุณกำลังใช้"</string>
     <string name="special_access" msgid="3513811566600299998">"สิทธิ์เข้าถึงพิเศษของแอป"</string>
+    <!-- no translation found for string_concat (5897947064488902904) -->
+    <skip />
 </resources>

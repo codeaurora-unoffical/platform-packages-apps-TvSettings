@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Suggeriments"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Configuració ràpida"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Configuració general"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"Ignora el suggeriment"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"Detecció d\'\"Ok Google\""</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"Parla amb l\'Assistent de Google sempre que vulguis"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Dispositiu"</string>
@@ -63,10 +64,10 @@
     <string name="sync_active" msgid="6891115263481154378">"Sincronització activada"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
-    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"S\'ha connectat l\'Ethernet"</string>
+    <string name="connectivity_summary_ethernet_connected" msgid="2015335020646410586">"Ethernet connectada"</string>
     <string name="connectivity_summary_no_network_connected" msgid="5187378791046457432">"No hi ha cap xarxa connectada"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="6904637079319724455">"La Wi-Fi està desactivada"</string>
-    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Cerca xarxes sempre"</string>
+    <string name="wifi_setting_always_scan" msgid="8883713018717323351">"Cerca sempre disponible"</string>
     <string name="wifi_setting_always_scan_context" msgid="398651204440349752">"Permet que el servei d\'ubicacions de Google i altres aplicacions cerquin xarxes, fins i tot si la Wi-Fi està desactivada"</string>
     <string name="wifi_setting_enable_wifi" msgid="9214100840401870408">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="1314202316675864203">"Connecta\'t a la xarxa"</string>
@@ -132,7 +133,10 @@
     <string name="system_date_time" msgid="8898457978560618950">"Data i hora"</string>
     <string name="system_language" msgid="2337138146114609247">"Idioma"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"Teclat"</string>
-    <string name="system_autofill_service" msgid="3867736719921644747">"Servei Emplenament automàtic"</string>
+    <!-- no translation found for system_keyboard_autofill (5787948036400896834) -->
+    <skip />
+    <!-- no translation found for system_autofill (8647914463541617409) -->
+    <skip />
     <string name="system_home" msgid="2858989138172296012">"Pantalla d\'inici"</string>
     <string name="system_search" msgid="2837264654143247611">"Cerca"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -461,11 +465,11 @@
     <string name="system_install_voice_data" msgid="8920883886563714355">"Instal·la les dades de veu"</string>
     <string name="system_general" msgid="3535958631591158282">"General"</string>
     <string name="system_debugging" msgid="7204447785851191331">"Depuració"</string>
-    <string name="system_input" msgid="6164987320529039626">"Entrada"</string>
+    <string name="system_input" msgid="6164987320529039626">"Introducció de text"</string>
     <string name="system_drawing" msgid="6573389872154957039">"Dibuix"</string>
     <string name="system_monitoring" msgid="8424072546138094053">"Supervisió"</string>
     <string name="system_apps" msgid="6293850468968494924">"Aplicacions"</string>
-    <string name="system_stay_awake" msgid="1212296404230848490">"Mantén-te activat"</string>
+    <string name="system_stay_awake" msgid="1212296404230848490">"Pantalla sempre activa"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"Comprovació HDCP"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"Optimització d\'HDMI"</string>
     <string name="system_reboot_confirm" msgid="534407910866199191">"Vols reiniciar ara el dispositiu?"</string>
@@ -480,7 +484,7 @@
     <string name="system_select_debug_app" msgid="8592021815119618485">"Selecciona l\'aplicació per depurar"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"Espera el depurador"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Verifica les aplicacions per USB"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"Comprova les aplicacions que s\'hagin instal·lat mitjançant ADB/ADT per detectar possibles comportaments perillosos"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"Comprova les aplicacions instal·lades mitjançant ADB/ADT per detectar possibles comportaments perillosos"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Registre detallat de Wi-Fi"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Activa el registre detallat de Wi-Fi"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"Mostra els tocs"</string>
@@ -489,7 +493,7 @@
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"Mostra les actualitzacions de visualització de GPU"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"Mostra la capa de programari"</string>
     <string name="system_show_gpu_overdraw" msgid="707861254106800199">"Mostra el sobredibuix de la GPU"</string>
-    <string name="system_show_surface_updates" msgid="8878834675712192327">"Mostra les actualitzacions de superfície"</string>
+    <string name="system_show_surface_updates" msgid="8878834675712192327">"Mostra els canvis de superfície"</string>
     <string name="system_window_animation_scale" msgid="3213952676672537856">"Escala de l\'animació de la finestra"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"Escala de l\'animació de transició"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"Escala de durada de l\'animació"</string>
@@ -506,11 +510,11 @@
     <string name="system_desc_usb_debugging" msgid="5168830368191788731">"Mode de depuració quan l\'USB està connectat"</string>
     <string name="system_desc_wait_for_debugger" msgid="2342968959255039368">"Abans d\'executar-se, l\'aplicació de depuració espera que es connecti el depurador."</string>
     <string name="system_desc_show_layout_bounds" msgid="3449386884226708985">"Mostra els límits de clips, els marges, etc."</string>
-    <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"Actualització de les visualitzacions de les finestres creades amb GPU"</string>
-    <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"Les capes de maquin. parpellegen verd en actual."</string>
+    <string name="system_desc_show_gpu_view_updates" msgid="8045162296029336710">"Actualitza visualitzacions de finestres creades amb GPU"</string>
+    <string name="system_desc_show_hardware_layer" msgid="642854466995400529">"Il·lumina capes de maquinari en verd en actualitzar-se"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="8204945204510618865">"De millor a pitjor: blau, verd, vermell clar, vermell"</string>
     <string name="system_desc_show_surface_updates" msgid="8177734845253807688">"Actualitza superfície de finestres en actualitzar-se"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Centelleja si les aplicacions triguen molt al procés principal"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="4647420860235689510">"Centelleja si aplicacions tarden molt al procés principal"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="2836283129486718887">"Mesura temps represen. a adb shell dumpsys gfxinfo"</string>
     <string name="action_on_title" msgid="6852389884236870765">"Activa"</string>
     <string name="action_off_title" msgid="3157728958166559966">"Desactiva"</string>
@@ -556,11 +560,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"Normal"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"Ràpida"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"Molt ràpida"</string>
+    <!-- no translation found for title_settings (5433841477518010243) -->
+    <skip />
     <string name="title_current_keyboard" msgid="4259032357469819835">"Teclat actual"</string>
     <string name="title_configure" msgid="6929522003149212388">"Configura"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"Opcions del teclat"</string>
     <string name="title_current_autofill_service" msgid="6055852915343152350">"Servei Emplenament automàtic actual"</string>
-    <string name="autofill_disable" msgid="539635915296078432">"Desactiva"</string>
+    <!-- no translation found for autofill_none (2426888642367790651) -->
+    <skip />
     <string name="computing_size" msgid="2955133568424704042">"S\'està calculant..."</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"Selecciona la teva xarxa Wi-Fi"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"Canvia el nom"</string>
@@ -694,6 +701,10 @@
     <string name="custom_room" msgid="8655516733933892458">"Introdueix un nom personalitzat…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Canvia el nom del dispositiu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"El nom actual d\'aquest <xliff:g id="DEVICEMODEL">%1$s</xliff:g> és <xliff:g id="DEVICENAME">%2$s</xliff:g>"</string>
+    <!-- no translation found for device_name_suggestion_title (2312205155408810120) -->
+    <skip />
+    <!-- no translation found for device_name_suggestion_summary (863826452740003652) -->
+    <skip />
     <string name="change_setting" msgid="2047402388786162246">"Canvia"</string>
     <string name="keep_settings" msgid="6798327196645732517">"No canviïs"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Permisos"</string>
@@ -709,7 +720,7 @@
     <string name="capturing_bugreport" msgid="3291125403411239592">"S\'està capturant l\'informe d\'errors"</string>
     <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"Teclats virtuals disponibles"</string>
     <string name="manage_keyboards" msgid="1905379263117016795">"Gestiona els teclats"</string>
-    <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Permesa"</string>
+    <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Permès"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"No permesa"</string>
     <string name="usage_access" msgid="1914242907684452328">"Accés a dades d\'ús"</string>
     <string name="usage_access_description" msgid="6290001769893747651">"L\'accés a dades d\'ús permet que una aplicació pugui fer un seguiment de les altres aplicacions que utilitzes i la freqüència amb què ho fas, així com del teu operador de telefonia mòbil i de la configuració d\'idioma, entre d\'altres."</string>
@@ -717,22 +728,24 @@
     <string name="high_power_apps_description" msgid="1990016812115792282">"Optimitza l\'ús de l\'energia de les aplicacions"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"No cal optimitzar cap aplicació"</string>
     <string name="high_power_on" msgid="7725180078784796673">"Sense optimitzar"</string>
-    <string name="high_power_off" msgid="308272752152871252">"Optimitzen l\'ús de l\'energia"</string>
+    <string name="high_power_off" msgid="308272752152871252">"Optimitza l\'ús de l\'energia"</string>
     <string name="high_power_system" msgid="7815843517656137656">"L\'optimització de l\'energia no està disponible"</string>
     <string name="manage_notification_access_title" msgid="2051765294087620434">"Accés a les notificacions"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"Cap aplicació instal·lada no ha sol·licitat accés a les notificacions."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"Aquestes aplicacions podran llegir totes les notificacions, inclosa la informació personal, com ara els noms dels contactes i el text dels missatges que rebis. També podran ignorar les notificacions o utilitzar els botons d\'acció que continguin."</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Mostra sobre altres aplicacions"</string>
-    <string name="permit_draw_overlay" msgid="2400084757761408906">"Permet que es mostri sobre altres aplicacions"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"Permet mostrar sobre altres aplicacions"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"Permet que una aplicació es mostri sobre les altres aplicacions que estiguis utilitzant. És possible que interfereixi amb l\'ús que fas d\'aquestes aplicacions i canviï la manera com es mostren o es comporten."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"Modificar configuració sistema"</string>
-    <string name="write_settings_title" msgid="8750406725746598710">"Pot modificar la configuració del sistema"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Pot modificar configuració del sistema"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"Aquest permís permet que una aplicació modifiqui la configuració del sistema."</string>
     <string name="write_settings_on" msgid="3312616037931341656">"Sí"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"No"</string>
     <string name="picture_in_picture_title" msgid="7738692876349058">"Pantalla en pantalla"</string>
-    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Permet la funció de pantalla en pantalla"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Permet Pantalla en pantalla"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Cap de les aplicacions instal·lades no admet la funció de pantalla en pantalla"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Permet que les aplicacions creïn una finestra de pantalla en pantalla mentre estan obertes o després de sortir-ne (per exemple, per seguir veient un vídeo). Aquesta finestra es mostra sobre altres aplicacions que estàs utilitzant."</string>
     <string name="special_access" msgid="3513811566600299998">"Accés especial d\'aplicacions"</string>
+    <!-- no translation found for string_concat (5897947064488902904) -->
+    <skip />
 </resources>

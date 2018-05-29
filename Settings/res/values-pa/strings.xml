@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"ਸੁਝਾਅ"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"ਤਤਕਾਲ ਸੈਟਿੰਗਾਂ"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"ਸਧਾਰਨ ਸੈਟਿੰਗਾਂ"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"ਸੁਝਾਅ ਖਾਰਜ ਕਰੋ"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"\"Ok Google\" ਦੀ ਪਛਾਣ"</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"ਕਿਸੇ ਵੇਲੇ ਵੀ ਆਪਣੇ \'Google ਸਹਾਇਕ\' ਨਾਲ ਗੱਲ ਕਰੋ"</string>
     <string name="header_category_device" msgid="4855983928659541345">"ਡੀਵਾਈਸ"</string>
@@ -132,7 +133,10 @@
     <string name="system_date_time" msgid="8898457978560618950">"ਮਿਤੀ ਅਤੇ ਸਮਾਂ"</string>
     <string name="system_language" msgid="2337138146114609247">"ਭਾਸ਼ਾ"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"ਕੀ-ਬੋਰਡ"</string>
-    <string name="system_autofill_service" msgid="3867736719921644747">"ਆਟੋਫਿਲ ਸੇਵਾ"</string>
+    <!-- no translation found for system_keyboard_autofill (5787948036400896834) -->
+    <skip />
+    <!-- no translation found for system_autofill (8647914463541617409) -->
+    <skip />
     <string name="system_home" msgid="2858989138172296012">"ਹੋਮ ਸਕ੍ਰੀਨ"</string>
     <string name="system_search" msgid="2837264654143247611">"ਖੋਜੋ"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -183,7 +187,7 @@
     <string name="device_status_title" msgid="1629253652287243543">"ਅਵਸਥਾ"</string>
     <string name="battery_status_title" msgid="2557264957661087826">"ਬੈਟਰੀ ਅਵਸਥਾ"</string>
     <string name="battery_level_title" msgid="100046129713781009">"ਬੈਟਰੀ ਪੱਧਰ"</string>
-    <string name="sim_status_title" msgid="498929467188844611">"SIM ਅਵਸਥਾ"</string>
+    <string name="sim_status_title" msgid="498929467188844611">"ਸਿਮ ਸਥਿਤੀ"</string>
     <string name="imei_information_title" msgid="5208860549282877136">"IMEI ਜਾਣਕਾਰੀ"</string>
     <string name="status_bt_address" msgid="1571721865060122393">"Bluetooth ਪਤਾ"</string>
     <string name="status_up_time" msgid="1674116490191446110">"ਚਾਲੂ ਰਹਿਣ ਦਾ ਸਮਾਂ"</string>
@@ -369,15 +373,15 @@
     <string name="system_set_time" msgid="4661804115501057452">"ਸਮਾਂ ਸੈੱਟ ਕਰੋ"</string>
     <string name="system_set_time_zone" msgid="8239601932757697259">"ਸਮਾਂ ਜ਼ੋਨ ਸੈੱਟ ਕਰੋ"</string>
     <string name="desc_set_time_zone" msgid="2948629174438460709">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
-    <string name="system_set_time_format" msgid="4447882066895090612">"24-ਘੰਟੇ ਵਾਲੀ ਵੰਨਗੀ ਵਰਤੋ"</string>
+    <string name="system_set_time_format" msgid="4447882066895090612">"24-ਘੰਟੇ ਵਾਲਾ ਫਾਰਮੈਟ ਵਰਤੋ"</string>
     <string name="desc_set_time_format" msgid="3131006238681763219">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="3629668599205033272">"ਸਵੈਚਲਿਤ ਮਿਤੀ ਅਤੇ ਸਮਾਂ"</string>
   <string-array name="auto_date_time_entries">
-    <item msgid="4590792581242018007">"ਨੈੱਟਵਰਕ ਵੱਲੋਂ-ਮੁਹੱਈਆ ਕੀਤਾ ਸਮਾਂ ਵਰਤੋ"</item>
+    <item msgid="4590792581242018007">"ਨੈੱਟਵਰਕ ਵੱਲੋਂ ਮੁਹੱਈਆ ਕਰਵਾਇਆ ਸਮਾਂ ਵਰਤੋ"</item>
     <item msgid="3807025813081244357">"ਬੰਦ"</item>
   </string-array>
   <string-array name="auto_date_time_ts_entries">
-    <item msgid="8463479794795616025">"ਨੈੱਟਵਰਕ ਵੱਲੋਂ-ਮੁਹੱਈਆ ਕੀਤਾ ਸਮਾਂ ਵਰਤੋ"</item>
+    <item msgid="8463479794795616025">"ਨੈੱਟਵਰਕ ਵੱਲੋਂ ਮੁਹੱਈਆ ਕਰਵਾਇਆ ਸਮਾਂ ਵਰਤੋ"</item>
     <item msgid="2475903014233987786">"ਟ੍ਰਾਂਸਪੋਰਟ ਸਟ੍ਰੀਮ ਵੱਲੋਂ ਮੁਹੱਈਆ ਕੀਤਾ ਸਮਾਂ ਵਰਤੋ"</item>
     <item msgid="150957081326946463">"ਬੰਦ"</item>
   </string-array>
@@ -484,7 +488,7 @@
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi-Fi ਅਡੰਬਰਪੂਰਨ ਲੌਗਿੰਗ"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Wi‑Fi ਅਡੰਬਰਪੂਰਨ ਲੌਗਿੰਗ ਨੂੰ ਯੋਗ ਬਣਾਓ"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"ਸਪੱਰਸ਼ਾਂ ਨੂੰ ਦਿਖਾਓ"</string>
-    <string name="system_pointer_location" msgid="2673764026490179227">"ਪੌਇੰਟਰ ਟਿਕਾਣਾ"</string>
+    <string name="system_pointer_location" msgid="2673764026490179227">"ਪੁਆਇੰਟਰ ਟਿਕਾਣਾ"</string>
     <string name="system_show_layout_bounds" msgid="645732439882291943">"ਖਾਕਾ ਸੀਮਾਵਾਂ ਦਿਖਾਓ"</string>
     <string name="system_show_gpu_view_updates" msgid="7936280271091152459">"GPU ਦ੍ਰਿਸ਼ ਅੱਪਡੇਟ ਦਿਖਾਓ"</string>
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"ਹਾਰਡਵੇਅਰ ਪਰਤ ਦਿਖਾਓ"</string>
@@ -556,11 +560,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"ਸਧਾਰਨ"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"ਤੇਜ਼"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"ਬਹੁਤ ਤੇਜ਼"</string>
+    <!-- no translation found for title_settings (5433841477518010243) -->
+    <skip />
     <string name="title_current_keyboard" msgid="4259032357469819835">"ਮੌਜੂਦਾ ਕੀ-ਬੋਰਡ"</string>
     <string name="title_configure" msgid="6929522003149212388">"ਸੰਰੂਪਣ ਕਰੋ"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"ਕੀ-ਬੋਰਡ ਚੋਣਾਂ"</string>
     <string name="title_current_autofill_service" msgid="6055852915343152350">"ਮੌਜੂਦਾ ਆਟੋਫਿਲ ਸੇਵਾ"</string>
-    <string name="autofill_disable" msgid="539635915296078432">"ਬੰਦ ਕਰੋ"</string>
+    <!-- no translation found for autofill_none (2426888642367790651) -->
+    <skip />
     <string name="computing_size" msgid="2955133568424704042">"ਹਿਸਾਬ ਲਗਾਇਆ ਜਾ ਰਿਹਾ ਹੈ…"</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"ਆਪਣਾ Wi-Fi ਨੈੱਟਵਰਕ ਚੁਣੋ"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"ਨਾਮ ਬਦਲੋ"</string>
@@ -694,6 +701,10 @@
     <string name="custom_room" msgid="8655516733933892458">"ਵਿਸ਼ੇਸ਼-ਵਿਉਂਤਬੱਧ ਨਾਮ ਦਾਖਲ ਕਰੋ…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"ਇਸ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ਦਾ ਮੁੜ-ਨਾਮਕਰਨ ਕਰੋ"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"ਇਸ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ਦਾ ਵਰਤਮਾਨ ਤੌਰ \'ਤੇ \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" ਨਾਮ ਰੱਖਿਆ ਗਿਆ ਹੈ"</string>
+    <!-- no translation found for device_name_suggestion_title (2312205155408810120) -->
+    <skip />
+    <!-- no translation found for device_name_suggestion_summary (863826452740003652) -->
+    <skip />
     <string name="change_setting" msgid="2047402388786162246">"ਬਦਲੋ"</string>
     <string name="keep_settings" msgid="6798327196645732517">"ਨਾ ਬਦਲੋ"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"ਇਜਾਜ਼ਤਾਂ"</string>
@@ -735,4 +746,6 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"ਸਥਾਪਤ ਕੀਤੀਆਂ ਐਪਾਂ ਵਿੱਚੋਂ ਕੋਈ ਵੀ ਐਪ ਤਸਵੀਰ-ਵਿੱਚ-ਤਸਵੀਰ ਮੋਡ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੀ"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"ਐਪ ਖੁੱਲ੍ਹੇ ਹੋਣ ਜਾਂ ਤੁਹਾਡੇ ਵੱਲੋਂ ਉਸ ਤੋਂ ਬਾਹਰ ਜਾਣ ਵੇਲੇ ਐਪਾਂ ਨੂੰ ਤਸਵੀਰ-ਵਿੱਚ-ਤਸਵੀਰ ਵਿੰਡੋ ਬਣਾਉਣ ਦਿਓ (ਉਦਾਹਰਨ ਵਜੋਂ, ਕਿਸੇ ਵੀਡੀਓ ਨੂੰ ਦੇਖਣਾ ਜਾਰੀ ਰੱਖਣ ਲਈ)। ਇਹ ਵਿੰਡੋ ਤੁਹਾਡੇ ਵੱਲੋਂ ਵਰਤੀਆਂ ਜਾ ਰਹੀਆਂ ਹੋਰਾਂ ਐਪਾਂ ਉੱਤੇ ਦਿਖਾਈ ਦੇਵੇਗੀ।"</string>
     <string name="special_access" msgid="3513811566600299998">"ਵਿਸ਼ੇਸ਼ ਐਪ ਪਹੁੰਚ"</string>
+    <!-- no translation found for string_concat (5897947064488902904) -->
+    <skip />
 </resources>

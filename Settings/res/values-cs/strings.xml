@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Návrhy"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Rychlé nastavení"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Obecná nastavení"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"Zavřít návrh"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"Zjištění příkazu „Ok Google“"</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"Oslovte Asistenta Google kdykoli"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Zařízení"</string>
@@ -136,7 +137,10 @@
     <string name="system_date_time" msgid="8898457978560618950">"Datum a čas"</string>
     <string name="system_language" msgid="2337138146114609247">"Jazyk"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"Klávesnice"</string>
-    <string name="system_autofill_service" msgid="3867736719921644747">"Služba automatického vyplňování"</string>
+    <!-- no translation found for system_keyboard_autofill (5787948036400896834) -->
+    <skip />
+    <!-- no translation found for system_autofill (8647914463541617409) -->
+    <skip />
     <string name="system_home" msgid="2858989138172296012">"Plocha"</string>
     <string name="system_search" msgid="2837264654143247611">"Vyhledávání"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -562,11 +566,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"Normální"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"Rychlá"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"Velmi rychlá"</string>
+    <!-- no translation found for title_settings (5433841477518010243) -->
+    <skip />
     <string name="title_current_keyboard" msgid="4259032357469819835">"Aktuální klávesnice"</string>
     <string name="title_configure" msgid="6929522003149212388">"Konfigurovat"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"Možnosti klávesnice"</string>
     <string name="title_current_autofill_service" msgid="6055852915343152350">"Aktuální služba automatického vyplňování"</string>
-    <string name="autofill_disable" msgid="539635915296078432">"Vypnout"</string>
+    <!-- no translation found for autofill_none (2426888642367790651) -->
+    <skip />
     <string name="computing_size" msgid="2955133568424704042">"Probíhá výpočet…"</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"Vyberte síť Wi-Fi"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"Přejmenovat"</string>
@@ -708,6 +715,10 @@
     <string name="custom_room" msgid="8655516733933892458">"Zadat vlastní název…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Přejmenování zařízení <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Aktuální název tohoto zařízení <xliff:g id="DEVICEMODEL">%1$s</xliff:g> je <xliff:g id="DEVICENAME">%2$s</xliff:g>"</string>
+    <!-- no translation found for device_name_suggestion_title (2312205155408810120) -->
+    <skip />
+    <!-- no translation found for device_name_suggestion_summary (863826452740003652) -->
+    <skip />
     <string name="change_setting" msgid="2047402388786162246">"Změnit"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Neměnit"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Oprávnění"</string>
@@ -726,7 +737,7 @@
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Povoleno"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"Nepovoleno"</string>
     <string name="usage_access" msgid="1914242907684452328">"Přístup k údajům o využití"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"Přístup k údajům o využití umožňuje aplikaci sledovat, které ostatní aplikace používáte, jak často je používáte, a také operátora, nastavení jazyka a další podrobnosti."</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"Přístup k údajům o využití umožňuje aplikaci sledovat, které ostatní aplikace používáte, jak často je používáte, jakého máte operátora, nastavení jazyka a další podrobnosti."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"Optimalizace energie"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"Optimalizace využití energie aplikacemi"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"Žádná aplikace nepotřebuje optimalizaci"</string>
@@ -737,7 +748,7 @@
     <string name="no_notification_listeners" msgid="4583789599075326886">"Žádné nainstalované aplikace o přístup k oznámením nepožádaly."</string>
     <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"Tyto aplikace budou moci číst všechna oznámení včetně osobních údajů, jako jsou jména kontaktů a přijaté SMS. Budou také moci oznámení zavřít nebo aktivovat tlačítka akcí, která obsahují."</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Zobrazení přes ostatní aplikace"</string>
-    <string name="permit_draw_overlay" msgid="2400084757761408906">"Povolit zobrazení přes ostatní aplikace"</string>
+    <string name="permit_draw_overlay" msgid="2400084757761408906">"Povolit zobrazení přes jiné aplikace"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"Umožní aplikaci zobrazovat se přes ostatní aplikace, které používáte. Může tak narušit vaši práci s těmito aplikacemi a změnit způsob jejich zobrazování nebo chování."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"Změny nastavení systému"</string>
     <string name="write_settings_title" msgid="8750406725746598710">"Smí měnit nastavení systému"</string>
@@ -749,4 +760,6 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Žádná nainstalovaná aplikace nepodporuje režim obraz v obraze"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Povolí aplikacím vytvořit okno v režimu obraz v obraze, když je aplikace otevřená nebo poté, co ji opustíte (například abyste mohli pokračovat ve sledování videa). Toto okno se zobrazuje nad ostatními aplikacemi, které používáte."</string>
     <string name="special_access" msgid="3513811566600299998">"Přístup ke speciálním aplikacím"</string>
+    <!-- no translation found for string_concat (5897947064488902904) -->
+    <skip />
 </resources>

@@ -23,6 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Sugerencias"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Ajustes rápidos"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Ajustes generales"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"Ignorar la sugerencia"</string>
     <string name="hotwording_title" msgid="1770342282683096475">"Detección de \"OK Google\""</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"Habla con el Asistente de Google cuando quieras"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Dispositivo"</string>
@@ -132,7 +133,10 @@
     <string name="system_date_time" msgid="8898457978560618950">"Fecha y hora"</string>
     <string name="system_language" msgid="2337138146114609247">"Idioma"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"Teclado"</string>
-    <string name="system_autofill_service" msgid="3867736719921644747">"Servicio Autocompletar"</string>
+    <!-- no translation found for system_keyboard_autofill (5787948036400896834) -->
+    <skip />
+    <!-- no translation found for system_autofill (8647914463541617409) -->
+    <skip />
     <string name="system_home" msgid="2858989138172296012">"Pantalla de inicio"</string>
     <string name="system_search" msgid="2837264654143247611">"Búsqueda"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -225,7 +229,7 @@
     <string name="title_wifi_could_not_connect_ap_reject" msgid="328274688839033015">"La red Wi-Fi no ha aceptado la conexión"</string>
     <string name="title_wifi_advanced_options" msgid="5389467736846644832">"¿Quieres configurar el proxy de <xliff:g id="SSID">%1$s</xliff:g> y los ajustes de IP?"</string>
     <string name="title_wifi_proxy_settings" msgid="7728120764469991303">"Ajustes de proxy"</string>
-    <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"Nombre del host del proxy:"</string>
+    <string name="title_wifi_proxy_hostname" msgid="4655634673840885248">"Nombre de host del proxy:"</string>
     <string name="title_wifi_proxy_port" msgid="9194893429116021337">"Puerto del proxy:"</string>
     <string name="title_wifi_proxy_bypass" msgid="4522775396659538614">"Saltar proxy para:"</string>
     <string name="title_wifi_ip_settings" msgid="1176973848286865602">"Ajustes de IP"</string>
@@ -480,7 +484,7 @@
     <string name="system_select_debug_app" msgid="8592021815119618485">"Aplicación para depurar"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"Esperar al depurador"</string>
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"Verificar aplicaciones por USB"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"Comprueba las aplicaciones instaladas mediante ADB/ADT para detectar comportamientos dañinos."</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"Comprobar las aplicaciones instaladas mediante ADB/ADT para detectar comportamientos dañinos"</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Registro Wi-Fi detallado"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Habilitar registro Wi-Fi detallado"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"Mostrar pulsaciones"</string>
@@ -556,11 +560,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"Normal"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"Rápida"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"Muy rápida"</string>
+    <!-- no translation found for title_settings (5433841477518010243) -->
+    <skip />
     <string name="title_current_keyboard" msgid="4259032357469819835">"Teclado actual"</string>
     <string name="title_configure" msgid="6929522003149212388">"Configurar"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"Opciones del teclado"</string>
     <string name="title_current_autofill_service" msgid="6055852915343152350">"Servicio Autocompletar actual"</string>
-    <string name="autofill_disable" msgid="539635915296078432">"Inhabilitar"</string>
+    <!-- no translation found for autofill_none (2426888642367790651) -->
+    <skip />
     <string name="computing_size" msgid="2955133568424704042">"Calculando…"</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"Selecciona tu red Wi-Fi"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"Cambiar nombre"</string>
@@ -694,13 +701,17 @@
     <string name="custom_room" msgid="8655516733933892458">"Introducir un nombre personalizado…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Cambia el nombre a este <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"El nombre actual de este <xliff:g id="DEVICEMODEL">%1$s</xliff:g> es \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
+    <!-- no translation found for device_name_suggestion_title (2312205155408810120) -->
+    <skip />
+    <!-- no translation found for device_name_suggestion_summary (863826452740003652) -->
+    <skip />
     <string name="change_setting" msgid="2047402388786162246">"Cambiar"</string>
     <string name="keep_settings" msgid="6798327196645732517">"No cambiar"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Permisos"</string>
-    <string name="device_apps_permissions" msgid="2966387603529725982">"Permisos aplicaciones"</string>
+    <string name="device_apps_permissions" msgid="2966387603529725982">"Permisos de aplicaciones"</string>
     <string name="app_permissions_group_summary" msgid="7906834786705287901">"<xliff:g id="COUNT_0">%1$d</xliff:g> de <xliff:g id="COUNT_1">%2$d</xliff:g> aplicaciones permitidas"</string>
     <string name="bluetooth_permission_request" msgid="6649813878683015301">"Solicitud de permiso de Bluetooth"</string>
-    <string name="security_patch" msgid="2131617390189164481">"Nivel de parche de seguridad de Android"</string>
+    <string name="security_patch" msgid="2131617390189164481">"Nivel del parche de seguridad de Android"</string>
     <string name="choose_application" msgid="5662960665577780353">"Seleccionar aplicación"</string>
     <string name="experimental_preference" msgid="1137673985823581797">"(Experimental)"</string>
     <string name="reboot_safemode_action" msgid="8129550438717110406">"Reiniciar en modo seguro"</string>
@@ -711,8 +722,8 @@
     <string name="manage_keyboards" msgid="1905379263117016795">"Administrar teclados"</string>
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"Permitido"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"No permitido"</string>
-    <string name="usage_access" msgid="1914242907684452328">"Acceso de uso"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"El acceso de uso permite que una aplicación controle las aplicaciones que utilizas y con qué frecuencia, así como tu operador, los ajustes de idioma y otros detalles."</string>
+    <string name="usage_access" msgid="1914242907684452328">"Acceso a datos de uso"</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"El acceso a los datos de uso permite que una aplicación controle qué otras aplicaciones utilizas y con qué frecuencia, así como tu operador, los ajustes de idioma y otros detalles."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"Optimización de energía"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"Optimiza el uso de la energía por parte de las aplicaciones"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"No es necesario optimizar ninguna aplicación"</string>
@@ -721,18 +732,20 @@
     <string name="high_power_system" msgid="7815843517656137656">"La optimización de la energía no está disponible"</string>
     <string name="manage_notification_access_title" msgid="2051765294087620434">"Acceso a notificaciones"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"Ninguna aplicación instalada ha solicitado acceso a las notificaciones."</string>
-    <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"Estas aplicaciones podrán leer todoas las notificaciones, incluidas las relativas a información personal, como nombres de contactos y texto de mensajes que hayas recibido. También podrán ignorar las notificaciones o utilizar los botones de acción que incluyan."</string>
+    <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"Estas aplicaciones podrán leer todas las notificaciones, incluidas las relativas a información personal, como nombres de contactos y texto de mensajes que hayas recibido. También podrán ignorar las notificaciones o utilizar los botones de acción que incluyan."</string>
     <string name="system_alert_window_settings" msgid="2069031369694448339">"Mostrar sobre otras aplicaciones"</string>
     <string name="permit_draw_overlay" msgid="2400084757761408906">"Permitir mostrar sobre otras aplicaciones"</string>
     <string name="allow_overlay_description" msgid="1946279120428813474">"Permite que una aplicación se muestre sobre otras aplicaciones que estés utilizando. Esto puede interferir en el uso de esas aplicaciones o cambiar el modo en que se muestran o se comportan."</string>
     <string name="write_system_settings" msgid="2730923656857824907">"Modificar ajustes del sistema"</string>
-    <string name="write_settings_title" msgid="8750406725746598710">"Puede modificar los ajustes del sistema"</string>
+    <string name="write_settings_title" msgid="8750406725746598710">"Permite modificar ajustes del sistema"</string>
     <string name="write_settings_description" msgid="2765037074460395437">"Cuando se concede este permiso, la aplicación puede modificar los ajustes del sistema."</string>
     <string name="write_settings_on" msgid="3312616037931341656">"Sí"</string>
     <string name="write_settings_off" msgid="6219072254626503312">"No"</string>
-    <string name="picture_in_picture_title" msgid="7738692876349058">"Picture-in-Picture"</string>
+    <string name="picture_in_picture_title" msgid="7738692876349058">"Imagen en imagen"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="8063965798321494391">"Permitir imagen en imagen"</string>
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Las aplicaciones instaladas no admiten el modo imagen en imagen"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Permite que las aplicaciones creen una ventana imagen en imagen mientras estén abiertas o después de que hayas salido de ellas (por ejemplo, para seguir viendo un vídeo). La ventana se muestra sobre otras aplicaciones que estés utilizando."</string>
     <string name="special_access" msgid="3513811566600299998">"Acceso especial de aplicaciones"</string>
+    <!-- no translation found for string_concat (5897947064488902904) -->
+    <skip />
 </resources>
