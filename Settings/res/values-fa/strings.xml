@@ -133,7 +133,10 @@
     <string name="system_date_time" msgid="8898457978560618950">"تاریخ و ساعت"</string>
     <string name="system_language" msgid="2337138146114609247">"زبان"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"صفحه‌کلید"</string>
-    <string name="system_autofill_service" msgid="3867736719921644747">"سرویس تکمیل خودکار"</string>
+    <!-- no translation found for system_keyboard_autofill (5787948036400896834) -->
+    <skip />
+    <!-- no translation found for system_autofill (8647914463541617409) -->
+    <skip />
     <string name="system_home" msgid="2858989138172296012">"صفحه اصلی"</string>
     <string name="system_search" msgid="2837264654143247611">"جستجو"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -201,7 +204,7 @@
   </string-array>
     <string name="title_mac_address" msgid="3428401680168668544">"آدرس MAC"</string>
     <string name="title_signal_strength" msgid="205478650262078041">"قدرت سیگنال"</string>
-    <string name="title_ip_address" msgid="4533523100923004711">"آدرس IP"</string>
+    <string name="title_ip_address" msgid="4533523100923004711">"نشانی IP"</string>
     <string name="title_ssid" msgid="4858945903642469730">"نام شبکه Wi-Fi را وارد کنید"</string>
     <string name="title_internet_connection" msgid="8710084774588697646">"اتصال اینترنت"</string>
     <string name="connected" msgid="7563100162902079938">"متصل"</string>
@@ -230,7 +233,7 @@
     <string name="title_wifi_proxy_port" msgid="9194893429116021337">"درگاه پروکسی:"</string>
     <string name="title_wifi_proxy_bypass" msgid="4522775396659538614">"کنار گذاشتن پروکسی برای:"</string>
     <string name="title_wifi_ip_settings" msgid="1176973848286865602">"تنظیمات IP"</string>
-    <string name="title_wifi_ip_address" msgid="1176502993805009566">"آدرس IP:"</string>
+    <string name="title_wifi_ip_address" msgid="1176502993805009566">"نشانی IP:"</string>
     <string name="title_wifi_gateway" msgid="7210935277165358134">"دروازه:"</string>
     <string name="title_wifi_network_prefix_length" msgid="4821632382990582038">"طول پیشوند شبکه:"</string>
     <string name="title_wifi_dns1" msgid="8202712852864206601">"DNS 1:"</string>
@@ -258,14 +261,14 @@
     <string name="wifi_action_static" msgid="1025855501453321749">"ثابت"</string>
     <string name="wifi_action_status_info" msgid="7664354971197839253">"اطلاعات وضعیت"</string>
     <string name="wifi_action_advanced_options_title" msgid="3242132674399983503">"گزینه‌های پیشرفته"</string>
-    <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"یک آدرس IP معتبر وارد کنید"</string>
+    <string name="wifi_ip_settings_invalid_ip_address" msgid="5228247770505105107">"یک نشانی IP معتبر وارد کنید"</string>
     <string name="wifi_ip_settings_invalid_gateway" msgid="3292444764474145026">"یک آدرس دروازه معتبر وارد کنید"</string>
     <string name="wifi_ip_settings_invalid_dns" msgid="6172189835428184828">"یک آدرس DNS معتبر وارد کنید"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="6209978918929182270">"یک پیشوند شبکه با طول بین ۰ تا ۳۲ نویسه تایپ کنید"</string>
-    <string name="wifi_ip_address_description" msgid="6548838784556001283">"آدرس IP معتبری وارد کنید.\nمثال: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
-    <string name="wifi_dns1_description" msgid="2463500547232077393">"آدرس IP معتبری وارد کنید یا آن را خالی بگذارید.\nمثال: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
-    <string name="wifi_dns2_description" msgid="8005473174044015359">"آدرس IP معتبری وارد کنید یا آن را خالی بگذارید.\nمثال: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
-    <string name="wifi_gateway_description" msgid="4773751224452216231">"آدرس IP معتبری وارد کنید یا آن را خالی بگذارید.\nمثال: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_ip_address_description" msgid="6548838784556001283">"نشانی IP معتبری وارد کنید.\nمثال: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2463500547232077393">"نشانی IP معتبری وارد کنید یا آن را خالی بگذارید.\nمثال: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="8005473174044015359">"نشانی IP معتبری وارد کنید یا آن را خالی بگذارید.\nمثال: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="4773751224452216231">"نشانی IP معتبری وارد کنید یا آن را خالی بگذارید.\nمثال: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
     <string name="wifi_network_prefix_length_description" msgid="4849589333293194414">"طول پیشوند شبکه معتبری وارد کنید.\nمثال: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="3660415920668138953">"نام میزبان معتبر نیست"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="4921547051724987804">"این فهرست موارد استثنا معتبر نیست. فهرست جدا شده با کامایی از دامنه‌های استثنا شده وارد کنید."</string>
@@ -557,11 +560,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"عادی"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"سریع"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"بسیار سریع"</string>
+    <!-- no translation found for title_settings (5433841477518010243) -->
+    <skip />
     <string name="title_current_keyboard" msgid="4259032357469819835">"صفحه‌کلید کنونی"</string>
     <string name="title_configure" msgid="6929522003149212388">"پیکربندی"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"گزینه‌های صفحه‌کلید"</string>
     <string name="title_current_autofill_service" msgid="6055852915343152350">"سرویس تکمیل خودکار کنونی"</string>
-    <string name="autofill_disable" msgid="539635915296078432">"غیرفعال کردن"</string>
+    <!-- no translation found for autofill_none (2426888642367790651) -->
+    <skip />
     <string name="computing_size" msgid="2955133568424704042">"‫در حال محاسبه..."</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"شبکه Wi-Fi خودتان را انتخاب کنید"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"تغییر نام"</string>
@@ -695,6 +701,10 @@
     <string name="custom_room" msgid="8655516733933892458">"نام سفارشی را وارد کنید…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"تغییر نام این <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"نام فعلی این <xliff:g id="DEVICEMODEL">%1$s</xliff:g>،‏ «<xliff:g id="DEVICENAME">%2$s</xliff:g>» است."</string>
+    <!-- no translation found for device_name_suggestion_title (2312205155408810120) -->
+    <skip />
+    <!-- no translation found for device_name_suggestion_summary (863826452740003652) -->
+    <skip />
     <string name="change_setting" msgid="2047402388786162246">"تغییر داده شود"</string>
     <string name="keep_settings" msgid="6798327196645732517">"تغییر داده نشود"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"مجوزها"</string>
@@ -736,4 +746,6 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"هیچ برنامه نصب‌شده‌ای از تصویردرتصویر پشتیبانی نمی‌کند"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"به این برنامه امکان دهید هنگامی که باز است یا پس از اینکه از آن خارج شدید (مثلاً برای ادامه تماشای ویدیویی)، پنجره تصویردرتصویر ایجاد کند. این پنجره روی سایر برنامه‌هایی که درحال استفاده هستید نمایش داده می‌شود."</string>
     <string name="special_access" msgid="3513811566600299998">"دسترسی ویژه به برنامه"</string>
+    <!-- no translation found for string_concat (5897947064488902904) -->
+    <skip />
 </resources>
