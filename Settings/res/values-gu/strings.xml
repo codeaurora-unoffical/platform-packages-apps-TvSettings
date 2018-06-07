@@ -133,7 +133,10 @@
     <string name="system_date_time" msgid="8898457978560618950">"તારીખ અને સમય"</string>
     <string name="system_language" msgid="2337138146114609247">"ભાષા"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"કીબોર્ડ"</string>
-    <string name="system_autofill_service" msgid="3867736719921644747">"આપમેળે ભરવાની સેવા"</string>
+    <!-- no translation found for system_keyboard_autofill (5787948036400896834) -->
+    <skip />
+    <!-- no translation found for system_autofill (8647914463541617409) -->
+    <skip />
     <string name="system_home" msgid="2858989138172296012">"હોમ સ્ક્રીન"</string>
     <string name="system_search" msgid="2837264654143247611">"શોધો"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -483,7 +486,7 @@
     <string name="system_verify_apps_over_usb" msgid="7340861918835270609">"USB પર ઍપ્લિકેશનો ચકાસો"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="6722973410408262393">"હાનિકારક વર્તણૂંક માટે ADB/ADT મારફતે ઇન્સ્ટૉલ કરવામાં આવેલી ઍપ્લિકેશનો તપાસો."</string>
     <string name="system_wifi_verbose_logging" msgid="3474525355071613242">"Wi-Fi વર્બોઝ લોગિંગ"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"Wi-Fi વર્બોઝ લૉગિંગ સક્ષમ કરો"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="1559904751873455868">"વાઇ-ફાઇ વર્બોઝ લૉગિંગ ચાલુ કરો"</string>
     <string name="system_show_touches" msgid="2179121368437801757">"ટચ બતાવો"</string>
     <string name="system_pointer_location" msgid="2673764026490179227">"પોઇન્ટર સ્થાન"</string>
     <string name="system_show_layout_bounds" msgid="645732439882291943">"લેઆઉટ બાઉન્ડ બતાવો"</string>
@@ -494,7 +497,7 @@
     <string name="system_window_animation_scale" msgid="3213952676672537856">"વિંડો એનિમેશન સ્કેલ"</string>
     <string name="system_transition_animation_scale" msgid="2964817709721784757">"સંક્રમણ એનિમેશન સ્કેલ"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"એનિમેટર અવધિ સ્કેલ"</string>
-    <string name="system_strict_mode_enabled" msgid="5728680397806673270">"સ્ટ્રિક્ટ મોડ સક્ષમ કરેલ છે"</string>
+    <string name="system_strict_mode_enabled" msgid="5728680397806673270">"સ્ટ્રિક્ટ મોડ ચાલુ કરેલ છે"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"પ્રોફાઇલ GPU રેન્ડરિંગ"</string>
     <string name="system_enable_traces" msgid="4038210655699986482">"ટ્રેસ સક્ષમ કરો"</string>
     <string name="system_dont_keep_activities" msgid="7906911077198718958">"પ્રવૃત્તિઓ રાખશો નહીં"</string>
@@ -557,11 +560,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"સામાન્ય"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"ઝડપી"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"ખૂબ ઝડપી"</string>
+    <!-- no translation found for title_settings (5433841477518010243) -->
+    <skip />
     <string name="title_current_keyboard" msgid="4259032357469819835">"વર્તમાન કીબોર્ડ"</string>
     <string name="title_configure" msgid="6929522003149212388">"ગોઠવો"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"કીબોર્ડ વિકલ્પો"</string>
     <string name="title_current_autofill_service" msgid="6055852915343152350">"વર્તમાનની આપમેળે ભરવાની સેવા"</string>
-    <string name="autofill_disable" msgid="539635915296078432">"બંધ કરો"</string>
+    <!-- no translation found for autofill_none (2426888642367790651) -->
+    <skip />
     <string name="computing_size" msgid="2955133568424704042">"ગણતરી કરી રહ્યું છે…"</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"તમારું Wi-Fi નેટવર્ક પસંદ કરો"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"નામ બદલો"</string>
@@ -695,6 +701,10 @@
     <string name="custom_room" msgid="8655516733933892458">"કસ્ટમ નામ દાખલ કરો…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"આ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> નું નામ બદલો"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"આ <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ને હાલમાં \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" નામ આપવામાં આવ્યું છે"</string>
+    <!-- no translation found for device_name_suggestion_title (2312205155408810120) -->
+    <skip />
+    <!-- no translation found for device_name_suggestion_summary (863826452740003652) -->
+    <skip />
     <string name="change_setting" msgid="2047402388786162246">"બદલો"</string>
     <string name="keep_settings" msgid="6798327196645732517">"બદલશો નહીં"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"પરવાનગીઓ"</string>
@@ -709,7 +719,7 @@
     <string name="reboot_safemode_desc" msgid="5031024337104679492">"આ તમે ઇન્સ્ટૉલ કરેલ તમામ તૃતીય પક્ષ ઍપ્લિકેશનોને અક્ષમ કરશે. જ્યારે તમે ફરીથી રીબૂટ કરશો ત્યારે તે પુનઃસ્થાપિત કરવામાં આવશે."</string>
     <string name="capturing_bugreport" msgid="3291125403411239592">"બગ રિપોર્ટ કૅપ્ચર કરી રહ્યાં છીએ"</string>
     <string name="available_virtual_keyboard_category" msgid="6566257204210337817">"ઉપલબ્ધ વર્ચ્યુઅલ કીબોર્ડ"</string>
-    <string name="manage_keyboards" msgid="1905379263117016795">"કીબોર્ડ સંચાલિત કરો"</string>
+    <string name="manage_keyboards" msgid="1905379263117016795">"કીબોર્ડ મેનેજ કરો"</string>
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"મંજૂરી છે"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"મંજૂરી નથી"</string>
     <string name="usage_access" msgid="1914242907684452328">"વપરાશ ઍક્સેસ"</string>
@@ -736,4 +746,6 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"ઇન્સ્ટૉલ કરેલી કોઈપણ ઍપ ચિત્ર-માં-ચિત્રને સમર્થન આપતી નથી"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"જ્યારે ઍપ ખુલ્લી હોય અથવા તમે તેમાંથી બહાર આવી ગયા હોય (ઉદાહરણ તરીકે, વીડિઓ જોવાનું ચાલુ રાખવા માટે), ત્યારે ઍપને ચિત્ર-માં-ચિત્ર વિંડો બનાવવાની મંજૂરી આપો. આ વિંડો તમે ઉપયોગ કરતા હોય તે અન્ય ઍપની સૌથી ઉપર પ્રદર્શિત થાય છે."</string>
     <string name="special_access" msgid="3513811566600299998">"ઍપનો વિશિષ્ટ ઍક્સેસ"</string>
+    <!-- no translation found for string_concat (5897947064488902904) -->
+    <skip />
 </resources>
