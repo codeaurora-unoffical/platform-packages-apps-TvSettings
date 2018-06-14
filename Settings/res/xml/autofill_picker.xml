@@ -16,17 +16,14 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.android.tv.settings"
-    android:title="@string/system_autofill_service">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/title_select_autofill_service">
 
-    <!-- TODO b/70684657 add description of what is autofill service -->
-    <!-- Shows name and icon of current selected autofill service, when click on it, show a list
-    of available autofill services for selection -->
-    <ListPreference
-        android:key="currentAutofill"
-        android:dialogTitle="@string/title_current_autofill_service"
-        android:title="@string/title_current_autofill_service"
-        android:summary="%s"
-        android:persistent="false" />
+    <com.android.tv.settings.RadioPreference
+        android:key="_none_"
+        android:title="@string/autofill_none"
+        android:layout="@layout/preference_reversed_widget"
+        android:persistent="false"
+        app:radioGroup="autofill_service_group" />
 
 </PreferenceScreen>

@@ -31,27 +31,30 @@ import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.service.settings.suggestions.Suggestion;
 import android.support.annotation.VisibleForTesting;
+import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.telephony.SignalStrength;
 
+import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.suggestions.SuggestionControllerMixin;
 import com.android.settingslib.utils.IconCache;
+import com.android.tv.settings.HotwordSwitchController.HotwordStateListener;
 import com.android.tv.settings.accounts.AccountsFragment;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.suggestions.SuggestionPreference;
 import com.android.tv.settings.system.SecurityFragment;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
 
 /**
  * The fragment where all good things begin. Evil is handled elsewhere.
  */
-public class MainFragment extends SettingsPreferenceFragment implements
-        SuggestionControllerMixin.SuggestionControllerHost, SuggestionPreference.Callback {
-    private static final String TAG = "MainFragment";
+public class MainFragment extends PreferenceControllerFragment implements
+        SuggestionControllerMixin.SuggestionControllerHost, SuggestionPreference.Callback,
+        HotwordStateListener {
 
     private static final String KEY_SUGGESTIONS_LIST = "suggestions";
     @VisibleForTesting
@@ -63,16 +66,27 @@ public class MainFragment extends SettingsPreferenceFragment implements
     static final String KEY_NETWORK = "network";
 
     @VisibleForTesting
+    static final String KEY_QUICK_SETTINGS = "quick_settings";
+
+    @VisibleForTesting
     ConnectivityListener mConnectivityListener;
-    private PreferenceCategory mSuggestionsList;
+    @VisibleForTesting
+    PreferenceCategory mSuggestionsList;
     private SuggestionControllerMixin mSuggestionControllerMixin;
-    private IconCache mIconCache;
+    @VisibleForTesting
+    IconCache mIconCache;
     @VisibleForTesting
     BluetoothAdapter mBtAdapter;
     @VisibleForTesting
     boolean mHasBtAccessories;
     @VisibleForTesting
     boolean mHasAccounts;
+
+    /** Controllers for the Quick Settings section. */
+    private List<AbstractPreferenceController> mPreferenceControllers;
+    private HotwordSwitchController mHotwordSwitchController;
+    private PreferenceCategory mQuickSettingsList;
+    private SwitchPreference mHotwordSwitch;
 
     private final BroadcastReceiver mBCMReceiver = new BroadcastReceiver() {
         @Override
@@ -92,12 +106,79 @@ public class MainFragment extends SettingsPreferenceFragment implements
     }
 
     @Override
+    protected int getPreferenceScreenResId() {
+        return R.xml.main_prefs;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         mIconCache = new IconCache(getContext());
         mConnectivityListener =
                 new ConnectivityListener(getContext(), this::updateWifi, getLifecycle());
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onDestroy() {
+        if (mHotwordSwitchController != null) {
+            mHotwordSwitchController.unregister();
+        }
+        super.onDestroy();
+    }
+
+    /** @return true if there is at least one available item in quick settings. */
+    private boolean shouldShowQuickSettings() {
+        for (AbstractPreferenceController controller : mPreferenceControllers) {
+            if (controller.isAvailable()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void showOrHideQuickSettings() {
+        if (shouldShowQuickSettings()) {
+            showQuickSettings();
+        } else {
+            hideQuickSettings();
+        }
+    }
+
+    /** Creates the quick settings category and its children. */
+    private void showQuickSettings() {
+        if (mQuickSettingsList != null) {
+            return;
+        }
+        mQuickSettingsList = new PreferenceCategory(this.getPreferenceManager().getContext());
+        mQuickSettingsList.setKey(KEY_QUICK_SETTINGS);
+        mQuickSettingsList.setTitle(R.string.header_category_quick_settings);
+        mQuickSettingsList.setLayoutResource(R.layout.preference_category_compact_layout);
+        mQuickSettingsList.setOrder(1); // at top, but below suggested settings
+        getPreferenceScreen().addPreference(mQuickSettingsList);
+        mHotwordSwitch = new SwitchPreference(this.getPreferenceManager().getContext());
+        mHotwordSwitch.setKey(HotwordSwitchController.KEY_HOTWORD_SWITCH);
+        mHotwordSwitchController.updateState(mHotwordSwitch);
+        mQuickSettingsList.addPreference(mHotwordSwitch);
+    }
+
+    /** Removes the quick settings category and all its children. */
+    private void hideQuickSettings() {
+        Preference quickSettingsPref = findPreference(KEY_QUICK_SETTINGS);
+        if (quickSettingsPref == null) {
+            return;
+        }
+        mQuickSettingsList.removeAll();
+        getPreferenceScreen().removePreference(mQuickSettingsList);
+        mQuickSettingsList = null;
+    }
+
+    @Override
+    public void onHotwordStateChanged() {
+        if (mHotwordSwitch != null) {
+            mHotwordSwitchController.updateState(mHotwordSwitch);
+        }
+        showOrHideQuickSettings();
     }
 
     @Override
@@ -113,6 +194,15 @@ public class MainFragment extends SettingsPreferenceFragment implements
                 accountsPref.setVisible(false);
             }
         }
+        mHotwordSwitchController.init(this);
+    }
+
+    @Override
+    protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
+        mPreferenceControllers = new ArrayList<>(1);
+        mHotwordSwitchController = new HotwordSwitchController(context);
+        mPreferenceControllers.add(mHotwordSwitchController);
+        return mPreferenceControllers;
     }
 
     @VisibleForTesting
@@ -215,14 +305,15 @@ public class MainFragment extends SettingsPreferenceFragment implements
             mSuggestionsList = new PreferenceCategory(this.getPreferenceManager().getContext());
             mSuggestionsList.setKey(KEY_SUGGESTIONS_LIST);
             mSuggestionsList.setTitle(R.string.header_category_suggestions);
-            int firstOrder = getPreferenceScreen().getPreference(0).getOrder();
-            mSuggestionsList.setOrder(firstOrder - 1);
+            mSuggestionsList.setLayoutResource(R.layout.preference_category_compact_layout);
+            mSuggestionsList.setOrder(0); // always at top
             getPreferenceScreen().addPreference(mSuggestionsList);
         }
         updateSuggestionList(data);
     }
 
-    private void updateSuggestionList(List<Suggestion> suggestions) {
+    @VisibleForTesting
+    void updateSuggestionList(List<Suggestion> suggestions) {
         // Remove suggestions that are not in the new list.
         for (int i = 0; i < mSuggestionsList.getPreferenceCount(); i++) {
             SuggestionPreference pref = (SuggestionPreference) mSuggestionsList.getPreference(i);
@@ -238,7 +329,7 @@ public class MainFragment extends SettingsPreferenceFragment implements
             }
         }
 
-        // Add suggestions that are not in the old list.
+        // Add suggestions that are not in the old list and update the existing suggestions.
         for (Suggestion suggestion : suggestions) {
             Preference curPref = findPreference(
                         SuggestionPreference.SUGGESTION_PREFERENCE_KEY + suggestion.getId());
@@ -250,6 +341,12 @@ public class MainFragment extends SettingsPreferenceFragment implements
                 newSuggPref.setTitle(suggestion.getTitle());
                 newSuggPref.setSummary(suggestion.getSummary());
                 mSuggestionsList.addPreference(newSuggPref);
+            } else {
+                // Even though the id of suggestion might not change, the details could change.
+                // So we need to update icon, title and summary for the suggestions.
+                curPref.setIcon(mIconCache.getIcon(suggestion.getIcon()));
+                curPref.setTitle(suggestion.getTitle());
+                curPref.setSummary(suggestion.getSummary());
             }
         }
     }
@@ -319,7 +416,6 @@ public class MainFragment extends SettingsPreferenceFragment implements
         super.onStop();
         getContext().unregisterReceiver(mBCMReceiver);
     }
-
 
     @Override
     public void onAttach(Context context) {
