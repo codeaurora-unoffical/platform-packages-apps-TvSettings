@@ -24,7 +24,7 @@
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Setelan Cepat"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Setelan Umum"</string>
     <string name="dismiss_suggestion" msgid="8288127823132069828">"Tutup saran"</string>
-    <string name="hotwording_title" msgid="1770342282683096475">"Deteksi \"OK Google\""</string>
+    <string name="hotwording_title" msgid="1984130766527626626">"Deteksi \"OK Google\""</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"Bicaralah dengan Asisten Google kapan saja"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Perangkat"</string>
     <string name="header_category_preferences" msgid="175105555164713972">"Preferensi"</string>
@@ -133,7 +133,8 @@
     <string name="system_date_time" msgid="8898457978560618950">"Tanggal &amp; waktu"</string>
     <string name="system_language" msgid="2337138146114609247">"Bahasa"</string>
     <string name="system_keyboard" msgid="7680159735294672514">"Keyboard"</string>
-    <string name="system_autofill_service" msgid="3867736719921644747">"Layanan IsiOtomatis"</string>
+    <string name="system_keyboard_autofill" msgid="5787948036400896834">"Keyboard &amp; IsiOtomatis"</string>
+    <string name="system_autofill" msgid="8647914463541617409">"IsiOtomatis"</string>
     <string name="system_home" msgid="2858989138172296012">"Layar utama"</string>
     <string name="system_search" msgid="2837264654143247611">"Penelusuran"</string>
     <string name="system_google" msgid="8560404305602209622">"Google"</string>
@@ -557,11 +558,14 @@
     <string name="tts_rate_normal" msgid="362011908545519639">"Biasa"</string>
     <string name="tts_rate_fast" msgid="3792863158623953072">"Cepat"</string>
     <string name="tts_rate_very_fast" msgid="5876670536911919074">"Sangat cepat"</string>
+    <string name="title_settings" msgid="5433841477518010243">"Setelan <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="title_current_keyboard" msgid="4259032357469819835">"Keyboard saat ini"</string>
     <string name="title_configure" msgid="6929522003149212388">"Konfigurasikan"</string>
     <string name="desc_configure_keyboard" msgid="7187242843867404657">"Opsi keyboard"</string>
     <string name="title_current_autofill_service" msgid="6055852915343152350">"Layanan IsiOtomatis Saat Ini"</string>
-    <string name="autofill_disable" msgid="539635915296078432">"Nonaktifkan"</string>
+    <string name="title_select_autofill_service" msgid="2515782066694197988">"Pilih Layanan IsiOtomatis"</string>
+    <string name="autofill_none" msgid="2426888642367790651">"Tidak ada"</string>
+    <string name="autofill_confirmation_message" msgid="9068009043054751287">"&lt;b&gt;Pastikan Anda memercayai aplikasi ini&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Layanan sandi&gt;%1$s&lt;/xliff:g&gt; menggunakan item yang ada di layar untuk menentukan item yang dapat diisi otomatis."</string>
     <string name="computing_size" msgid="2955133568424704042">"Menghitung..."</string>
     <string name="title_select_wifi_network" msgid="1038871400014761952">"PIlih jaringan Wi-Fi Anda"</string>
     <string name="accessories_wifi_display_rename_device" msgid="7416728299196887186">"Ganti nama"</string>
@@ -695,6 +699,8 @@
     <string name="custom_room" msgid="8655516733933892458">"Masukkan nama khusus…"</string>
     <string name="device_rename_title" msgid="2629557295786267185">"Ganti nama <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ini"</string>
     <string name="device_rename_description" msgid="2461752788563877107">"Saat ini, <xliff:g id="DEVICEMODEL">%1$s</xliff:g> ini diberi nama \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
+    <string name="device_name_suggestion_title" msgid="2312205155408810120">"Setel nama perangkat"</string>
+    <string name="device_name_suggestion_summary" msgid="5657494684788779371">"Gunakan nama ini saat mentransmisikan foto, video, dan lainnya dari ponsel"</string>
     <string name="change_setting" msgid="2047402388786162246">"Ubah"</string>
     <string name="keep_settings" msgid="6798327196645732517">"Jangan ubah"</string>
     <string name="apps_permissions" msgid="1283592091618660965">"Izin"</string>
@@ -736,4 +742,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Tidak ada aplikasi terinstal yang mendukung Picture-in-picture"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Mengizinkan aplikasi membuat jendela picture-in-picture saat aplikasi terbuka atau setelah Anda membiarkannya terbuka (misalnya, untuk melanjutkan aktivitas menonton video). Jendela ini ditampilkan di atas aplikasi lain yang sedang digunakan."</string>
     <string name="special_access" msgid="3513811566600299998">"Akses aplikasi khusus"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
 </resources>
