@@ -22,7 +22,8 @@
     <PreferenceCategory
         android:key="keyboardCategory"
         android:order="0"
-        android:title="@string/system_keyboard" >
+        android:title="@string/system_keyboard"
+        android:layout="@layout/preference_category_compact_layout">
     </PreferenceCategory>
 
     <ListPreference
@@ -43,12 +44,13 @@
     <PreferenceCategory
         android:order="4"
         android:key="autofillCategory"
-        android:title="@string/system_autofill">
+        android:title="@string/system_autofill"
+        android:layout="@layout/preference_category_compact_layout">
 
-        <ListPreference
+        <Preference
             android:key="currentAutofill"
-            android:dialogTitle="@string/title_current_autofill_service"
             android:title="@string/title_current_autofill_service"
+            android:fragment="com.android.tv.settings.autofill.AutofillPickerFragment"
             android:summary="%s" />
 
     </PreferenceCategory>
