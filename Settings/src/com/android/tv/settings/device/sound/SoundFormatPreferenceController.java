@@ -19,10 +19,11 @@ package com.android.tv.settings.device.sound;
 import android.content.Context;
 import android.media.AudioManager;
 import android.provider.Settings;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.Preference;
 import android.text.TextUtils;
 import android.util.Log;
+
+import androidx.preference.Preference;
+import androidx.preference.SwitchPreference;
 
 import com.android.settingslib.core.AbstractPreferenceController;
 

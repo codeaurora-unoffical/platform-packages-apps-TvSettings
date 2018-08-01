@@ -46,11 +46,6 @@ import android.os.SystemProperties;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.service.persistentdata.PersistentDataBlockManager;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceGroup;
-import android.support.v7.preference.PreferenceScreen;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.IWindowManager;
@@ -60,6 +55,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.Toast;
+
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.SwitchPreference;
 
 import com.android.internal.app.LocalePicker;
 import com.android.internal.logging.nano.MetricsProto;
@@ -92,7 +93,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private static final String HDCP_CHECKING_KEY = "hdcp_checking";
     private static final String HDCP_CHECKING_PROPERTY = "persist.sys.hdcp_checking";
     private static final String LOCAL_BACKUP_PASSWORD = "local_backup_password";
-    private static final String HARDWARE_UI_PROPERTY = "persist.sys.ui.hw";
     private static final String MSAA_PROPERTY = "debug.egl.force_msaa";
     private static final String BUGREPORT = "bugreport";
     private static final String BUGREPORT_IN_POWER_KEY = "bugreport_in_power";
@@ -112,7 +112,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private static final String DISABLE_OVERLAYS_KEY = "disable_overlays";
     private static final String SIMULATE_COLOR_SPACE = "simulate_color_space";
     private static final String USB_AUDIO_KEY = "usb_audio";
-    private static final String FORCE_HARDWARE_UI_KEY = "force_hw_ui";
     private static final String FORCE_MSAA_KEY = "force_msaa";
     private static final String TRACK_FRAME_TIME_KEY = "track_frame_time";
     private static final String SHOW_NON_RECTANGULAR_CLIP_KEY = "show_non_rect_clip";
@@ -202,7 +201,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private SwitchPreference mShowTouches;
     private SwitchPreference mShowScreenUpdates;
     private SwitchPreference mDisableOverlays;
-    private SwitchPreference mForceHardwareUi;
     private SwitchPreference mForceMsaa;
     private SwitchPreference mShowHwScreenUpdates;
     private SwitchPreference mShowHwLayersUpdates;
@@ -361,7 +359,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mShowTouches = findAndInitSwitchPref(SHOW_TOUCHES_KEY);
         mShowScreenUpdates = findAndInitSwitchPref(SHOW_SCREEN_UPDATES_KEY);
         mDisableOverlays = findAndInitSwitchPref(DISABLE_OVERLAYS_KEY);
-        mForceHardwareUi = findAndInitSwitchPref(FORCE_HARDWARE_UI_KEY);
         mForceMsaa = findAndInitSwitchPref(FORCE_MSAA_KEY);
         mTrackFrameTime = addListPreference(TRACK_FRAME_TIME_KEY);
         mShowNonRectClip = addListPreference(SHOW_NON_RECTANGULAR_CLIP_KEY);
@@ -614,7 +611,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         updatePointerLocationOptions();
         updateShowTouchesOptions();
         updateFlingerOptions();
-        updateHardwareUiOptions();
         updateMsaaOptions();
         updateTrackFrameTimeOptions();
         updateShowNonRectClipOptions();
@@ -991,16 +987,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         } catch (RemoteException ex) {
             // ignore
         }
-    }
-
-    private void updateHardwareUiOptions() {
-        updateSwitchPreference(mForceHardwareUi,
-                SystemProperties.getBoolean(HARDWARE_UI_PROPERTY, false));
-    }
-
-    private void writeHardwareUiOptions() {
-        SystemProperties.set(HARDWARE_UI_PROPERTY, mForceHardwareUi.isChecked() ? "true" : "false");
-        SystemPropPoker.getInstance().poke();
     }
 
     private void updateMsaaOptions() {
@@ -1539,8 +1525,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             writeImmediatelyDestroyActivitiesOptions();
         } else if (preference == mShowAllANRs) {
             writeShowAllANRsOptions();
-        } else if (preference == mForceHardwareUi) {
-            writeHardwareUiOptions();
         } else if (preference == mForceMsaa) {
             writeMsaaOptions();
         } else if (preference == mShowHwScreenUpdates) {

@@ -38,15 +38,16 @@ import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.IntDef;
-import android.support.v17.preference.LeanbackSettingsFragment;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceGroup;
-import android.support.v7.preference.TwoStatePreference;
 import android.text.TextUtils;
 import android.util.Log;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.IntDef;
+import androidx.leanback.preference.LeanbackSettingsFragment;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
+import androidx.preference.TwoStatePreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.widget.ILockSettings;
@@ -112,8 +113,9 @@ public class SecurityFragment extends SettingsPreferenceFragment
     private Preference mRestrictedProfileDeletePref;
 
     private UserManager mUserManager;
-    private UserInfo mRestrictedUserInfo;
     private ILockSettings mLockSettingsService;
+    private UserInfo mRestrictedUserInfo;
+    private UserInfo mOwnerUserInfo;
 
     private boolean mCreatingRestrictedProfile;
     @SuppressLint("StaticFieldLeak")
@@ -267,13 +269,17 @@ public class SecurityFragment extends SettingsPreferenceFragment
                 getActivity().finish();
                 return true;
             case KEY_RESTRICTED_PROFILE_EXIT:
-                launchPinDialog(PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT);
+                if (hasLockscreenSecurity()) {
+                    launchPinDialog(PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT);
+                } else {
+                    pinFragmentDone(PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT, /* success= */ true);
+                }
                 return true;
             case KEY_RESTRICTED_PROFILE_PIN:
                 launchPinDialog(PIN_MODE_RESTRICTED_PROFILE_CHANGE_PASSWORD);
                 return true;
             case KEY_RESTRICTED_PROFILE_CREATE:
-                if (hasLockscreenSecurity(new LockPatternUtils(getActivity()))) {
+                if (hasLockscreenSecurity()) {
                     addRestrictedUser();
                 } else {
                     launchPinDialog(PIN_MODE_CHOOSE_LOCKSCREEN);
@@ -364,20 +370,21 @@ public class SecurityFragment extends SettingsPreferenceFragment
 
     @Override
     public void saveLockPassword(String pin, String originalPin, int quality) {
-        new LockPatternUtils(getActivity()).saveLockPassword(pin, originalPin, quality,
-                UserHandle.myUserId());
+        new LockPatternUtils(getActivity())
+                .saveLockPassword(pin, originalPin, quality, getOwnerUser().id);
     }
 
     @Override
     public void clearLockPassword(String oldPin) {
-        new LockPatternUtils(getActivity()).clearLock(oldPin, UserHandle.myUserId());
+        new LockPatternUtils(getActivity()).clearLock(oldPin, getOwnerUser().id);
     }
 
     @Override
-    public boolean checkPassword(String password, int userId) {
+    public boolean checkPassword(String password) {
         try {
-            return getLockSettings().checkCredential(password,
-                LockPatternUtils.CREDENTIAL_TYPE_PASSWORD, userId,  null /* progressCallback */)
+            return getLockSettings()
+                    .checkCredential(password, LockPatternUtils.CREDENTIAL_TYPE_PASSWORD,
+                            getOwnerUser().id, null /* progressCallback */)
                     .getResponseCode() == VerifyCredentialResponse.RESPONSE_OK;
         } catch (final RemoteException e) {
             // ignore
@@ -387,7 +394,9 @@ public class SecurityFragment extends SettingsPreferenceFragment
 
     @Override
     public boolean hasLockscreenSecurity() {
-        return hasLockscreenSecurity(new LockPatternUtils(getActivity()));
+        UserInfo owner = getOwnerUser();
+        LockPatternUtils lpu = new LockPatternUtils(getActivity());
+        return lpu.isLockPasswordEnabled(owner.id) || lpu.isLockPatternEnabled(owner.id);
     }
 
     private ILockSettings getLockSettings() {
@@ -396,11 +405,6 @@ public class SecurityFragment extends SettingsPreferenceFragment
                     ServiceManager.getService("lock_settings"));
         }
         return mLockSettingsService;
-    }
-
-    private static boolean hasLockscreenSecurity(LockPatternUtils lpu) {
-        return lpu.isLockPasswordEnabled(UserHandle.myUserId())
-                || lpu.isLockPatternEnabled(UserHandle.myUserId());
     }
 
     @Override
@@ -413,14 +417,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT:
                 if (success) {
-                    UserInfo myUserInfo =
-                            UserManager.get(getActivity()).getUserInfo(UserHandle.myUserId());
-                    if (myUserInfo == null ||
-                            myUserInfo.restrictedProfileParentId == UserInfo.NO_PROFILE_GROUP_ID) {
-                        switchUserNow(UserHandle.USER_SYSTEM);
-                    } else {
-                        switchUserNow(myUserInfo.restrictedProfileParentId);
-                    }
+                    switchUserNow(getOwnerUser().id);
                     getActivity().finish();
                 }
                 break;
@@ -433,6 +430,26 @@ public class SecurityFragment extends SettingsPreferenceFragment
                 }
                 break;
         }
+    }
+
+    private static UserInfo findOwnerUser(UserManager userManager) {
+        UserInfo myUserInfo = userManager.getUserInfo(UserHandle.myUserId());
+        if (!myUserInfo.isRestricted()) {
+            return myUserInfo;
+        }
+        // UserInfo.restrictedProfileParentId may not be set if the restricted profile was
+        // created on Android M devices.
+        return userManager.getUserInfo(
+                myUserInfo.restrictedProfileParentId != UserInfo.NO_PROFILE_GROUP_ID
+                        ? myUserInfo.restrictedProfileParentId
+                        : UserHandle.USER_OWNER);
+    }
+
+    private UserInfo getOwnerUser() {
+        if (mOwnerUserInfo == null) {
+            mOwnerUserInfo = findOwnerUser(mUserManager);
+        }
+        return mOwnerUserInfo;
     }
 
     public static UserInfo findRestrictedUser(UserManager userManager) {
