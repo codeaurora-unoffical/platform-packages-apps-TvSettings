@@ -92,8 +92,10 @@
     <string name="device_calibration" msgid="8632962533376605191">"Calibrazione"</string>
     <string name="surround_sound_select_formats" msgid="6329868407147678259">"Seleziona i formati"</string>
     <string name="surround_sound_category_title" msgid="1331285587464316534">"Audio surround"</string>
-    <string name="surround_sound_format_ac3" msgid="1482464022424295698">"AC3 (Dolby Digital)"</string>
-    <string name="surround_sound_format_e_ac3" msgid="4406523828595644068">"E-AC3 (Dolby Digital Plus/DD+)"</string>
+    <!-- no translation found for surround_sound_format_ac3 (1724977459494885356) -->
+    <skip />
+    <!-- no translation found for surround_sound_format_e_ac3 (4307389628668099135) -->
+    <skip />
     <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
     <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
@@ -723,7 +725,7 @@
     <string name="high_power_apps" msgid="7796096221999495077">"Ottimizzazione energia"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"Ottimizza il consumo di energia delle app"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"Nessuna app da ottimizzare"</string>
-    <string name="high_power_on" msgid="7725180078784796673">"Non ottimizzate"</string>
+    <string name="high_power_on" msgid="7725180078784796673">"Senza ottimizzazione"</string>
     <string name="high_power_off" msgid="308272752152871252">"Ottimizzazione del consumo di energia"</string>
     <string name="high_power_system" msgid="7815843517656137656">"Ottimizzazione dell\'energia non disponibile"</string>
     <string name="manage_notification_access_title" msgid="2051765294087620434">"Accesso alle notifiche"</string>
