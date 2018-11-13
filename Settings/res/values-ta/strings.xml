@@ -92,10 +92,8 @@
     <string name="device_calibration" msgid="8632962533376605191">"அளவுக்குறியீடு"</string>
     <string name="surround_sound_select_formats" msgid="6329868407147678259">"வடிவங்களைத் தேர்ந்தெடுக்கவும்"</string>
     <string name="surround_sound_category_title" msgid="1331285587464316534">"சரவுண்ட் சவுண்ட்"</string>
-    <!-- no translation found for surround_sound_format_ac3 (1724977459494885356) -->
-    <skip />
-    <!-- no translation found for surround_sound_format_e_ac3 (4307389628668099135) -->
-    <skip />
+    <string name="surround_sound_format_ac3" msgid="1724977459494885356">"Dolby Digital"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4307389628668099135">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
     <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
@@ -721,7 +719,7 @@
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"அனுமதிக்கப்பட்டது"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"அனுமதிக்கப்படவில்லை"</string>
     <string name="usage_access" msgid="1914242907684452328">"உபயோக அணுகல்"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"உபயோக அணுகலானது நீங்கள் பயன்படுத்தும் பிற பயன்பாடுகள், அவற்றை எவ்வளவு அடிக்கடிப் பயன்படுத்துகிறீர்கள் என்பதையும், அத்துடன் தொலைத்தொடர்பு நிறுவனம், மொழி அமைப்புகள், பிற விவரங்களையும் கண்காணிக்க, பயன்பாட்டை அனுமதிக்கும்."</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"உபயோக அணுகலானது, நீங்கள் வேறு எந்தெந்த ஆப்ஸை எவ்வளவு அடிக்கடி பயன்படுத்துகிறீர்கள் என்று அறியும் அனுமதியை ஒரு ஆப்ஸுக்கு வழங்குகிறது. உங்கள் மொபைல் நிறுவனம், மொழி அமைப்புகள் மற்றும் பிற விவரங்களையும் அறிந்து கொள்ளும் அனுமதியும் இதில் அடங்கும்."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"பேட்டரி ஆற்றலை மேம்படுத்துதல்"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"பேட்டரியைக் குறைவாகப் பயன்படுத்த, ஆப்ஸின் ஆற்றல் உபயோகத்தை மேம்படுத்துதல்"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"பேட்டரியைக் குறைவாகப் பயன்படுத்துவதற்காக, ஆற்றல் மேம்படுத்தப்பட வேண்டிய ஆப்ஸ் எதுவும் இல்லை"</string>

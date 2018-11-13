@@ -92,10 +92,8 @@
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrierung"</string>
     <string name="surround_sound_select_formats" msgid="6329868407147678259">"Formate auswählen"</string>
     <string name="surround_sound_category_title" msgid="1331285587464316534">"Surround-Sound"</string>
-    <!-- no translation found for surround_sound_format_ac3 (1724977459494885356) -->
-    <skip />
-    <!-- no translation found for surround_sound_format_e_ac3 (4307389628668099135) -->
-    <skip />
+    <string name="surround_sound_format_ac3" msgid="1724977459494885356">"Dolby Digital"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4307389628668099135">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
     <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
@@ -641,8 +639,8 @@
     <string name="pin_enter_again" msgid="1510456697040826496">"Neue PIN erneut eingeben"</string>
     <string name="pin_enter_old_pin" msgid="851029058127630869">"Alte PIN eingeben"</string>
     <string name="pin_enter_wrong_seconds" msgid="7541208202846169755">"Du hast fünfmal die falsche PIN eingegeben.\nVersuche es in <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> Sekunden erneut."</string>
-    <string name="pin_toast_wrong" msgid="4628358195224633248">"Falsche PIN. Bitte versuche es erneut."</string>
-    <string name="pin_toast_not_match" msgid="5886041789737632996">"Die PIN stimmt nicht. Bitte versuche es erneut."</string>
+    <string name="pin_toast_wrong" msgid="4628358195224633248">"Falsche PIN. Bitte versuche es noch einmal."</string>
+    <string name="pin_toast_not_match" msgid="5886041789737632996">"Die PIN stimmt nicht. Bitte versuche es noch einmal."</string>
     <string name="wifi_setup_input_password" msgid="1596168874369038536">"Passwort für <xliff:g id="SSID">%1$s</xliff:g> eingeben"</string>
     <string name="wifi_setup_connection_success" msgid="3846993789166071184">"Die Verbindung wurde hergestellt"</string>
     <string name="wifi_setup_save_success" msgid="4785799603638549254">"Die Konfiguration wurde gespeichert"</string>

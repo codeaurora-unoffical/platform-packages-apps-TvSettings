@@ -96,10 +96,8 @@
     <string name="device_calibration" msgid="8632962533376605191">"Kalibracja"</string>
     <string name="surround_sound_select_formats" msgid="6329868407147678259">"Wybierz formaty"</string>
     <string name="surround_sound_category_title" msgid="1331285587464316534">"Dźwięk przestrzenny"</string>
-    <!-- no translation found for surround_sound_format_ac3 (1724977459494885356) -->
-    <skip />
-    <!-- no translation found for surround_sound_format_e_ac3 (4307389628668099135) -->
-    <skip />
+    <string name="surround_sound_format_ac3" msgid="1724977459494885356">"Dolby Digital"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4307389628668099135">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
     <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
@@ -352,7 +350,7 @@
     <string name="storage_wizard_back_up_apps_space_available" msgid="7209210725057470544">"Dostępne: <xliff:g id="SIZE">%1$s</xliff:g>"</string>
     <string name="storage_wizard_eject_private_title" msgid="2844023177159233031">"Odłącz pamięć urządzenia"</string>
     <string name="storage_wizard_eject_private_description" msgid="8966427719795472538">"Gdy odłączysz ten nośnik pamięci, znajdujące się na nim aplikacje przestaną działać. Ten dysk USB jest sformatowany w taki sposób, że będzie działać tylko na tym urządzeniu. Nie będzie działać na żadnych innych urządzeniach."</string>
-    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"Wyuwam dysk <xliff:g id="NAME">%1$s</xliff:g>..."</string>
+    <string name="storage_wizard_eject_progress_title" msgid="8823133087157003820">"Wysuwam dysk <xliff:g id="NAME">%1$s</xliff:g>..."</string>
     <string name="storage_wizard_move_app_title" msgid="37057801779891287">"Wykorzystane miejsce"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7807062446517628864">"Przenoszę <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="3693104566187904724">"Nie wyjmuj dysku w trakcie przenoszenia danych.\nAplikacja <xliff:g id="APPNAME">%1$s</xliff:g> na tym urządzeniu będzie niedostępna, dopóki przenoszenie się nie zakończy."</string>

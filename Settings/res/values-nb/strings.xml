@@ -78,7 +78,7 @@
     <string name="all_apps_show_system_apps" msgid="4648447904721171884">"Vis systemapper"</string>
     <string name="all_apps_installed" msgid="54800379871111518">"Installerte apper"</string>
     <string name="all_apps_other" msgid="8297097642727891911">"Systemapper"</string>
-    <string name="all_apps_disabled" msgid="2016067533586741345">"Avslåtte apper"</string>
+    <string name="all_apps_disabled" msgid="2016067533586741345">"Deaktiverte apper"</string>
     <string name="device_daydream" msgid="3354366974209179614">"Skjermsparer"</string>
     <string name="device_display" msgid="101455384386372747">"Skjerm"</string>
     <string name="device_sound" msgid="9214182566287657481">"Lyd"</string>
@@ -92,10 +92,8 @@
     <string name="device_calibration" msgid="8632962533376605191">"Kalibrering"</string>
     <string name="surround_sound_select_formats" msgid="6329868407147678259">"Velg formater"</string>
     <string name="surround_sound_category_title" msgid="1331285587464316534">"Surround-lyd"</string>
-    <!-- no translation found for surround_sound_format_ac3 (1724977459494885356) -->
-    <skip />
-    <!-- no translation found for surround_sound_format_e_ac3 (4307389628668099135) -->
-    <skip />
+    <string name="surround_sound_format_ac3" msgid="1724977459494885356">"Dolby Digital"</string>
+    <string name="surround_sound_format_e_ac3" msgid="4307389628668099135">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="1730946367570023539">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
     <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
