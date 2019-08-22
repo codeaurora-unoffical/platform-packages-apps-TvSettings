@@ -43,8 +43,8 @@ import com.android.settingslib.core.lifecycle.events.OnStop;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.settingslib.wifi.WifiTracker;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Listens for changes to the current connectivity status.
@@ -106,10 +106,12 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         mWifiManager = mContext.getSystemService(WifiManager.class);
         mEthernetManager = mContext.getSystemService(EthernetManager.class);
         mListener = listener;
-        if (lifecycle != null) {
-            mWifiTracker = new WifiTracker(context, this, lifecycle, true, true);
-        } else {
-            mWifiTracker = new WifiTracker(context, this, true, true);
+        if (mWifiManager != null) {
+            if (lifecycle != null) {
+                mWifiTracker = new WifiTracker(context, this, lifecycle, true, true);
+            } else {
+                mWifiTracker = new WifiTracker(context, this, true, true);
+            }
         }
     }
 
@@ -121,7 +123,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
     @UiThread
     @Deprecated
     public void start() {
-        if (!mStarted) {
+        if (!mStarted && mWifiTracker != null) {
             mWifiTracker.onStart();
         }
         onStart();
@@ -156,7 +158,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
     @UiThread
     @Deprecated
     public void stop() {
-        if (mStarted) {
+        if (mStarted && mWifiTracker != null) {
             mWifiTracker.onStop();
         }
         onStop();
@@ -183,7 +185,9 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
      */
     @Deprecated
     public void destroy() {
-        mWifiTracker.onDestroy();
+        if (mWifiTracker != null) {
+            mWifiTracker.onDestroy();
+        }
     }
 
     public void setWifiListener(WifiNetworkListener wifiListener) {
@@ -192,10 +196,8 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
 
     public String getWifiIpAddress() {
         if (isWifiConnected()) {
-            WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
-            int ip = wifiInfo.getIpAddress();
-            return String.format(Locale.US, "%d.%d.%d.%d", (ip & 0xff), (ip >> 8 & 0xff),
-                    (ip >> 16 & 0xff), (ip >> 24 & 0xff));
+            Network network = mWifiManager.getCurrentNetwork();
+            return formatIpAddresses(network);
         } else {
             return "";
         }
@@ -219,7 +221,15 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
     }
 
     public boolean isWifiConnected() {
-        return mNetworkType == ConnectivityManager.TYPE_WIFI;
+        if (mNetworkType == ConnectivityManager.TYPE_WIFI) {
+            return true;
+        } else {
+            if (mWifiManager != null) {
+                WifiInfo connectionInfo = mWifiManager.getConnectionInfo();
+                return connectionInfo.getNetworkId() != -1;
+            }
+        }
+        return false;
     }
 
     public boolean isCellConnected() {
@@ -245,11 +255,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         return null;
     }
 
-    public String getEthernetIpAddress() {
-        final Network network = getFirstEthernet();
-        if (network == null) {
-            return null;
-        }
+    private String formatIpAddresses(Network network) {
         final StringBuilder sb = new StringBuilder();
         boolean gotAddress = false;
         final LinkProperties linkProperties = mConnectivityManager.getLinkProperties(network);
@@ -267,9 +273,24 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         }
     }
 
+    /**
+     * Returns the formatted IP addresses of the Ethernet connection or null
+     * if none available.
+     */
+    public String getEthernetIpAddress() {
+        final Network network = getFirstEthernet();
+        if (network == null) {
+            return null;
+        }
+        return formatIpAddresses(network);
+    }
+
     public int getWifiSignalStrength(int maxLevel) {
-        WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
-        return WifiManager.calculateSignalLevel(wifiInfo.getRssi(), maxLevel);
+        if (mWifiManager != null) {
+            WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
+            return WifiManager.calculateSignalLevel(wifiInfo.getRssi(), maxLevel);
+        }
+        return 0;
     }
 
     public int getCellSignalStrength() {
@@ -285,16 +306,19 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
      * as the first item on the list.
      */
     public List<AccessPoint> getAvailableNetworks() {
-        return mWifiTracker.getAccessPoints();
+        return mWifiTracker == null ? new ArrayList<>() : mWifiTracker.getAccessPoints();
     }
 
     public boolean isWifiEnabledOrEnabling() {
-        return mWifiManager.getWifiState() == WifiManager.WIFI_STATE_ENABLED
-                || mWifiManager.getWifiState() == WifiManager.WIFI_STATE_ENABLING;
+        return mWifiManager != null
+                && (mWifiManager.getWifiState() == WifiManager.WIFI_STATE_ENABLED
+                || mWifiManager.getWifiState() == WifiManager.WIFI_STATE_ENABLING);
     }
 
     public void setWifiEnabled(boolean enable) {
-        mWifiManager.setWifiEnabled(enable);
+        if (mWifiManager != null) {
+            mWifiManager.setWifiEnabled(enable);
+        }
     }
 
     private void updateConnectivityStatus() {
@@ -305,6 +329,9 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
             switch (networkInfo.getType()) {
                 case ConnectivityManager.TYPE_WIFI: {
 
+                    if (mWifiManager == null) {
+                        break;
+                    }
                     // Determine if this is
                     // an open or secure wifi connection.
                     mNetworkType = ConnectivityManager.TYPE_WIFI;
@@ -380,6 +407,9 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
      * @return SSID
      */
     public String getSsid() {
+        if (mWifiManager == null) {
+            return null;
+        }
         WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
         // Find the SSID of network.
         String ssid = null;
