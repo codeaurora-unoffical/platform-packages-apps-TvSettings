@@ -47,12 +47,13 @@
       <item quantity="other">액세서리 <xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g>개</item>
       <item quantity="one">액세서리 <xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g>개</item>
     </plurals>
+    <string name="help_and_feedback_category_title" msgid="6565641596360780888">"고객센터"</string>
     <string name="add_account" msgid="4098060223200619258">"계정 추가"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"계정 삭제"</string>
     <string name="account_sync" msgid="773808124331714965">"동기화된 앱 선택"</string>
     <string name="sync_now" msgid="8732244492880016471">"지금 동기화"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"동기화 중..."</string>
-    <string name="last_synced" msgid="6178494892357077274">"마지막 동기화: <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"마지막 동기화: <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"사용 중지됨"</string>
     <string name="account_remove" msgid="4313580520737295272">"계정 삭제"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"계정을 삭제할 수 없음"</string>
@@ -129,6 +130,8 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"일반적으로 0000 또는 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"페어링"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"취소"</string>
+    <string name="send_feedback" msgid="163934291815367080">"버그 신고 받기"</string>
+    <string name="launch_help" msgid="6712789610098190689">"고객센터"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"날짜 및 시간"</string>
     <string name="system_language" msgid="2337138146114609247">"언어"</string>
@@ -151,7 +154,7 @@
     <string name="about_system_update" msgid="7282772247661356586">"시스템 업데이트"</string>
     <string name="about_preference" msgid="4131396784531360434">"정보"</string>
     <string name="device_name" msgid="2670488158531273028">"기기 이름"</string>
-    <string name="restart_button_label" msgid="8153112858638352970">"다시 시작"</string>
+    <string name="restart_button_label" msgid="142580191737806071">"재부팅"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"법적 정보"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"오픈소스 라이선스"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google 법적 고지"</string>
@@ -469,7 +472,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"켜진 상태로 유지"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP 확인"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI 최적화"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"지금 다시 시작하시겠습니까?"</string>
+    <string name="system_reboot_confirm" msgid="1845950891544721359">"지금 재부팅하시겠습니까?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"이 설정을 업데이트하려면 기기를 새로 시작해야 합니다."</string>
     <string name="system_never_check" msgid="6666520460705041617">"확인 안함"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"DRM 콘텐츠만 확인"</string>
@@ -744,5 +747,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"PIP 모드를 지원하는 앱이 설치되지 않았습니다."</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"앱이 열려 있을 때나 사용자가 앱에서 나갔을 때 앱에서 PIP 창을 표시하도록 허용합니다(예: 동영상 시청을 계속하기 위해). 이 창은 사용 중인 다른 앱 위에 표시됩니다."</string>
     <string name="special_access" msgid="3513811566600299998">"특수 앱 액세스"</string>
-    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

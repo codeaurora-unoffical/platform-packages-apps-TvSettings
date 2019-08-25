@@ -47,12 +47,13 @@
       <item quantity="other">ဆက်စပ်ပစ္စည်း <xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ခု</item>
       <item quantity="one">ဆက်စပ်ပစ္စည်း <xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> ခု</item>
     </plurals>
+    <string name="help_and_feedback_category_title" msgid="6565641596360780888">"အကူအညီနှင့် အကြံပြုချက်"</string>
     <string name="add_account" msgid="4098060223200619258">"အကောင့်ထည့်ရန်"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"အကောင့်ကို ဖယ်ရှားရန်"</string>
     <string name="account_sync" msgid="773808124331714965">"စင့်က် လုပ်ပြီးသား အက်ပ်များကို ရွေးရန်"</string>
     <string name="sync_now" msgid="8732244492880016471">"ယခု စင့်က် လုပ်ရန်"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"စင့်ခ်လုပ်နေဆဲ…"</string>
-    <string name="last_synced" msgid="6178494892357077274">"နောက်ဆုံး စင့်ခ်လုပ်ချိန် <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"နောက်ဆုံး စင့်ခ်လုပ်ချိန် <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"ပိတ်ထား"</string>
     <string name="account_remove" msgid="4313580520737295272">"အကောင့်ကို ဖယ်ရှားရန်"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"အကောင့်ကို ဖယ်ရှား မရနိုင်"</string>
@@ -129,6 +130,8 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"ပုံမှန်အားဖြင့် ၀၀၀၀ သို့မဟုတ် ၁၂၃၄"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"ချိတ်တွဲရန်"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"မလုပ်တော့"</string>
+    <string name="send_feedback" msgid="163934291815367080">"ချွတ်ယွင်းမှု အစီရင်ခံစာ ယူရန်"</string>
+    <string name="launch_help" msgid="6712789610098190689">"ကူညီရေးဌာန"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"နေ့စွဲ&amp; အချိန်"</string>
     <string name="system_language" msgid="2337138146114609247">"ဘာသာစကား"</string>
@@ -151,7 +154,7 @@
     <string name="about_system_update" msgid="7282772247661356586">"စနစ် မွမ်းမံမှု"</string>
     <string name="about_preference" msgid="4131396784531360434">"အကြောင်း"</string>
     <string name="device_name" msgid="2670488158531273028">"ကိရိယာ အမည်"</string>
-    <string name="restart_button_label" msgid="8153112858638352970">"အစက ပြန်စရန်"</string>
+    <string name="restart_button_label" msgid="142580191737806071">"ပြန်လည်စတင်ရန်"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"ဥပဒေဆိုင်ရာ အချက်အလက်များ"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"အခမဲ့ ရင်းမြစ် လိုင်စင်များ"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google၏ ဥပဒေရေးရာ"</string>
@@ -469,7 +472,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"ဖွင့်လျက် ရှိနေရန်"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP စစ်ဆေးနေ"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI ဆီလျော်အောင် လုပ်ပေးခြင်း"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"ယခု ပြန်ဖွင့်ရမလား?"</string>
+    <string name="system_reboot_confirm" msgid="1845950891544721359">"ယခု ပြန်လည်စတင်မလား။"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"ဒီဆက်တင်ကို မွမ်းမံရန်၊ သင်၏ ကိရိယာကို ပြန်ပြီးဖွင့်ပေးရန် လိုသည်။"</string>
     <string name="system_never_check" msgid="6666520460705041617">"မည်သည့်အခါမှ မစစ်ဆေးပါနှင့်"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"DRM အကြောင်းအရာကိုသာ စစ်ဆေးရန်"</string>
@@ -744,5 +747,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"ထည့်သွင်းထားသည့် အက်ပ်တစ်ခုမျှ တစ်ခုပေါ်တစ်ခုထပ်၍ ဖွင့်ခြင်းကို ခွင့်မပြုပါ"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"အက်ပ်ဖွင့်ထားစဉ် သို့မဟုတ် ထွက်လိုက်စဉ်တွင် အက်ပ်များအား တစ်ခုပေါ်တစ်ခုထပ်၍ ဖွင့်သည့် ဝင်းဒိုးတစ်ခု ပြုလုပ်ခွင့်ပြုပါ (ဥပမာ ဗီဒီယိုဆက်ကြည့်ရန်)။ ဤဝင်းဒိုးကို သင်သုံးနေသော အခြားအက်ပ်များ၏အပေါ်တွင် ပြသပါလိမ့်မည်။"</string>
     <string name="special_access" msgid="3513811566600299998">"အက်ပ် အထူးအသုံးပြုခွင့်"</string>
-    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>၊ <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>၊ <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

@@ -47,12 +47,13 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ອຸປະກອນເສີມ</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> ອຸປະກອນເສີມ</item>
     </plurals>
+    <string name="help_and_feedback_category_title" msgid="6565641596360780888">"ຊ່ວຍເຫຼືອ ແລະ ຕິຊົມ"</string>
     <string name="add_account" msgid="4098060223200619258">"ເພີ່ມບັນຊີ"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"ລຶບບັນຊີ"</string>
     <string name="account_sync" msgid="773808124331714965">"​ເລືອກ​ແອັບຯ​ທີ່​ຊິ້ງ​​​ຂໍ້​ມູນແລ້ວ"</string>
     <string name="sync_now" msgid="8732244492880016471">"ຊິ້ງຂໍ້ມູນດຽວນີ້"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"ກຳລັງຊິ້ງຂໍ້ມູນ..."</string>
-    <string name="last_synced" msgid="6178494892357077274">"ຊິ້ງຂໍ້ມູນຫຼ້າສຸດ <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"ຊິ້ງຂໍ້ມູນຫຼ້າສຸດ <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"ປິດ​ນຳໃຊ້​ແລ້ວ"</string>
     <string name="account_remove" msgid="4313580520737295272">"ລຶບບັນຊີ"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"ບໍ່​ສາ​ມາດ​ລຶບ​ບັ​ນ​ຊີ​ໄດ້"</string>
@@ -129,6 +130,8 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"ປົກກະຕິແລ້ວໃຊ້ 0000 ຫຼື 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"ຈັບຄູ່"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"​ຍົກ​ເລີກ"</string>
+    <string name="send_feedback" msgid="163934291815367080">"ຂໍລາຍງານຂໍ້ຜິດພາດ"</string>
+    <string name="launch_help" msgid="6712789610098190689">"ສູນຊ່ວຍເຫຼືອ"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"ວັນທີ &amp; ເວລາ"</string>
     <string name="system_language" msgid="2337138146114609247">"ພາສາ"</string>
@@ -151,7 +154,7 @@
     <string name="about_system_update" msgid="7282772247661356586">"ການອັບເດດລະບົບ"</string>
     <string name="about_preference" msgid="4131396784531360434">"ກ່ຽວກັບ"</string>
     <string name="device_name" msgid="2670488158531273028">"ຊື່​ອຸ​ປະ​ກອນ"</string>
-    <string name="restart_button_label" msgid="8153112858638352970">"ຣີສະຕາດ"</string>
+    <string name="restart_button_label" msgid="142580191737806071">"ປິດເປີດໃໝ່"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"​ຂໍ້​ມູນ​ທາງ​ກົດ​ໝາຍ"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"​ລິ​ຂະ​ສິດ​ໂອ​ເພນ​ຊອດ"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google ຕາມ​ກົດ​ໝາຍ"</string>
@@ -469,7 +472,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"ເປີດໜ້າຈໍຕະຫຼອດ"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"ການກວດສອບ HDCP"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"ການ​ປັບ​ແຕ່ງ HDMI"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"ຣີສະຕາດດຽວນີ້ບໍ?"</string>
+    <string name="system_reboot_confirm" msgid="1845950891544721359">"ປິດເປີດໃໝ່ດຽວນີ້ບໍ?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"ເພື່ອອັບ​ເດດການ​ຕັ້ງຄ່ານີ້, ອຸປະກອນ​ຂອງທ່ານ​ຈະຖືກ​ປິດແລ້ວ​ເປີດໃຫມ່."</string>
     <string name="system_never_check" msgid="6666520460705041617">"ບໍ່ຕ້ອງກວດ"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"ກວດສອບເນື້ອຫາ DRM ເທົ່ານັ້ນ"</string>
@@ -744,5 +747,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"ບໍ່ມີແອັບທີ່ຮອງຮັບການສະແດງຜົນຫຼາຍຢ່າງພ້ອມກັນຕິດຕັ້ງໄວ້"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"ອະນຸຍາດໃຫ້ແອັບຕ່າງໆສາມາດສ້າງໜ້າຈໍທີ່ຊ້ອນຂຶ້ນມາໃນເວລາເປີດແອັບອື່ນ ຫຼື ຫຼັງຈາກທ່ານອອກຈາກມັນ (ເຊັ່ນ: ເພື່ອສືບຕໍ່ການເບິ່ງວິດີໂອ). ໜ້າຈໍນີ້ຈະສະແດງບັງແອັບອື່ນທີ່ທ່ານກຳລັງໃຊ້ຢູ່."</string>
     <string name="special_access" msgid="3513811566600299998">"ສິດການເຂົ້າເຖິງແອັບພິເສດ"</string>
-    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

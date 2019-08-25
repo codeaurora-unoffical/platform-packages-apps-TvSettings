@@ -49,12 +49,13 @@
       <item quantity="few"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> уређаја додатне опреме</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> уређаја додатне опреме</item>
     </plurals>
+    <string name="help_and_feedback_category_title" msgid="6565641596360780888">"Помоћ и повратне информације"</string>
     <string name="add_account" msgid="4098060223200619258">"Додај налог"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Уклањање налога"</string>
     <string name="account_sync" msgid="773808124331714965">"Изаберите синхронизоване апликације"</string>
     <string name="sync_now" msgid="8732244492880016471">"Синхронизуј одмах"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Синхронизовање…"</string>
-    <string name="last_synced" msgid="6178494892357077274">"Последњи пут синхронизовано <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"Последњи пут синхронизовано <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Онемогућено је"</string>
     <string name="account_remove" msgid="4313580520737295272">"Уклони налог"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"Није могуће уклонити налог"</string>
@@ -131,6 +132,8 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"Обично 0000 или 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"Упари"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"Откажи"</string>
+    <string name="send_feedback" msgid="163934291815367080">"Направи извештај о грешци"</string>
+    <string name="launch_help" msgid="6712789610098190689">"Центар за помоћ"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"Датум и време"</string>
     <string name="system_language" msgid="2337138146114609247">"Језик"</string>
@@ -153,7 +156,7 @@
     <string name="about_system_update" msgid="7282772247661356586">"Ажурирање система"</string>
     <string name="about_preference" msgid="4131396784531360434">"Основни подаци"</string>
     <string name="device_name" msgid="2670488158531273028">"Назив уређаја"</string>
-    <string name="restart_button_label" msgid="8153112858638352970">"Поновно покретање"</string>
+    <string name="restart_button_label" msgid="142580191737806071">"Рестартуј"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Правне информације"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Лиценце отвореног кода"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google правне информације"</string>
@@ -472,7 +475,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"Не закључавај"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP провера"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI оптимизација"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"Желите ли поново да покренете одмах?"</string>
+    <string name="system_reboot_confirm" msgid="1845950891544721359">"Желите ли одмах да рестартујете?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Да бисте ажурирали ово подешавање, треба поново да покренете уређај"</string>
     <string name="system_never_check" msgid="6666520460705041617">"Никад не проверавај"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Потражи само DRM садржај"</string>
@@ -751,5 +754,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Ниједна инсталирана апликација не подржава слику у слици"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Дозволите апликацијама да праве прозор слике у слици док је апликација отворена или када изађете из ње (на пример, да бисте наставили да гледате неки видео). Овај прозор се приказује преко других апликација које користите."</string>
     <string name="special_access" msgid="3513811566600299998">"Посебан приступ апликацији"</string>
-    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

@@ -47,12 +47,13 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> सामग्रीहरू</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> सामग्री</item>
     </plurals>
+    <string name="help_and_feedback_category_title" msgid="6565641596360780888">"मद्दत तथा प्रतिक्रिया"</string>
     <string name="add_account" msgid="4098060223200619258">"खाता थप्नुहोस्"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"खाता हटाउनुहोस्"</string>
     <string name="account_sync" msgid="773808124331714965">"सिंक गरिएको अनुप्रयोगहरू छनौट गर्नुहोस्"</string>
     <string name="sync_now" msgid="8732244492880016471">"अहिले सिंक्रोनाइजेसन गर्नुहोस्"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"सिंक्रोनाइजेसन गरिँदै..."</string>
-    <string name="last_synced" msgid="6178494892357077274">"अन्तिम सिंक भएको <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"अन्तिम सिंक भएको <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"असक्षम गरियो"</string>
     <string name="account_remove" msgid="4313580520737295272">"खाता हटाउनुहोस्"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"खाता हटाउन सक्दैन"</string>
@@ -129,6 +130,8 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"सामान्यत ०००० वा १२३४"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"जोड"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"रद्द गर्नुहोस्"</string>
+    <string name="send_feedback" msgid="163934291815367080">"बगसम्बन्धी रिपोर्ट लिनुहोस्"</string>
+    <string name="launch_help" msgid="6712789610098190689">"मद्दत केन्द्र"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"मिति र समय"</string>
     <string name="system_language" msgid="2337138146114609247">"भाषा"</string>
@@ -151,7 +154,7 @@
     <string name="about_system_update" msgid="7282772247661356586">"प्रणाली अद्यावधिक"</string>
     <string name="about_preference" msgid="4131396784531360434">"बारेमा"</string>
     <string name="device_name" msgid="2670488158531273028">"उपकरण नाम"</string>
-    <string name="restart_button_label" msgid="8153112858638352970">"पुन: सुरु गर्नुहोस्"</string>
+    <string name="restart_button_label" msgid="142580191737806071">"पुनः बुट गर्नुहोस्"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"कानूनी जानकारी"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"खुला स्रोतका इजाजतपत्रहरू"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google कानुनी"</string>
@@ -469,7 +472,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"जागा रहनुहोस्"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP जाँच गर्दै"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI आफू अनुकूल"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"अब सुरु गर्ने?"</string>
+    <string name="system_reboot_confirm" msgid="1845950891544721359">"अहिले नै पुनः बुट गर्ने हो?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"यो सेटिङ अद्यावधिक गर्न, आफ्नो उपकरण पुनः सुरु गर्न आवश्यक छ"</string>
     <string name="system_never_check" msgid="6666520460705041617">"कहिल्यै जाँच नगर्नुहोस्"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"DRM सामग्रीको मात्र जाँच गर्नुहोस्"</string>
@@ -744,5 +747,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"स्थापना गरिएको कुनै पनि अनुप्रयोगले Picture-in-picture मोडलाई समर्थन गर्दैन"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"यो अनुप्रयोग खुला रहेको अवस्थामा वा तपाईंले यसलाई छाडेपछि (उदाहरणका लागि, भिडियो हेर्ने कार्य जारी राख्न) यस अनुप्रयोगलाई picture-in-picture विन्डो सिर्जना गर्न अनुमति दिनुहोस्। यो विन्डो तपाईंले प्रयोग गरिरहनुभएका अन्य अनुप्रयोगहरूको माथि देखिन्छ।"</string>
     <string name="special_access" msgid="3513811566600299998">"अनुप्रयोगलाई विशेष पहुँच"</string>
-    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

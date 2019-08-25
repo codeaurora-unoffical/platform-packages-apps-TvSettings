@@ -51,12 +51,13 @@
       <item quantity="few"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> dodatki</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> dodatkov</item>
     </plurals>
+    <string name="help_and_feedback_category_title" msgid="6565641596360780888">"Pomoč in povratne informacije"</string>
     <string name="add_account" msgid="4098060223200619258">"Dodajanje računa"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Odstrani račun"</string>
     <string name="account_sync" msgid="773808124331714965">"Izberite sinhronizirane aplikacije"</string>
     <string name="sync_now" msgid="8732244492880016471">"Sinhroniziraj"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Sinhronizacija ..."</string>
-    <string name="last_synced" msgid="6178494892357077274">"Zadnja sinhronizacija: <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"Zadnja sinhronizacija: <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Onemogočeno"</string>
     <string name="account_remove" msgid="4313580520737295272">"Odstrani račun"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"Računa ni mogoče odstraniti"</string>
@@ -133,6 +134,8 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"Običajno 0000 ali 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"Seznani"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"Prekliči"</string>
+    <string name="send_feedback" msgid="163934291815367080">"Ustvari poročilo o napakah"</string>
+    <string name="launch_help" msgid="6712789610098190689">"Center za pomoč"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"Datum in ura"</string>
     <string name="system_language" msgid="2337138146114609247">"Jezik"</string>
@@ -155,7 +158,7 @@
     <string name="about_system_update" msgid="7282772247661356586">"Sistemska posodobitev"</string>
     <string name="about_preference" msgid="4131396784531360434">"Vizitka"</string>
     <string name="device_name" msgid="2670488158531273028">"Ime naprave"</string>
-    <string name="restart_button_label" msgid="8153112858638352970">"Znova zaženi"</string>
+    <string name="restart_button_label" msgid="142580191737806071">"Vnovičen zagon"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Pravne informacije"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Odprtokodne licence"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Googlova pravna obvestila"</string>
@@ -475,7 +478,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"Brez stanja pripravljenosti"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"Preverjanje HDCP"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"Optimizacija HDMI-ja"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"Želite znova zagnati napravo?"</string>
+    <string name="system_reboot_confirm" msgid="1845950891544721359">"Želite zdaj znova zagnati?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Če želite posodobiti to nastavitev, morate znova zagnati napravo"</string>
     <string name="system_never_check" msgid="6666520460705041617">"Nikoli ne preveri"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Iskanje samo vsebine DRM"</string>
@@ -758,5 +761,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Nobena aktivna aplikacija ne podpira načina slike v sliki"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Dovolite aplikacijam, da ustvarijo okno s sliko v sliki, medtem ko je aplikacija odprta ali potem ko jo zapustite (na primer, da nadaljujete z ogledom videoposnetka). To okno prekrije druge aplikacije, ki jih uporabljate."</string>
     <string name="special_access" msgid="3513811566600299998">"Posebni dostop za aplikacije"</string>
-    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>
