@@ -38,7 +38,8 @@
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> tài khoản</item>
       <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> tài khoản</item>
     </plurals>
-    <string name="connectivity_network_category_title" msgid="4369211310335709727">"Mạng và Internet"</string>
+    <string name="connectivity_network_category_title" msgid="6005656364481347542">"Mạng và Internet"</string>
+    <string name="sound_category_title" msgid="4712268573174731554">"Âm thanh"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"Ứng dụng"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"Tùy chọn thiết bị"</string>
     <string name="remotes_and_accessories_category_title" msgid="3361463550113457913">"Điều khiển từ xa và phụ kiện"</string>
@@ -479,7 +480,7 @@
     <string name="system_always_check" msgid="1866566828098009853">"Luôn kiểm tra"</string>
     <string name="system_bt_hci_log" msgid="2425757846046504431">"Ghi nhật ký HCI Bluetooth"</string>
     <string name="system_email_address" msgid="8669468986250302378">"Địa chỉ email"</string>
-    <string name="system_usb_debugging" msgid="3777895294421924323">"Gỡ lỗi USB"</string>
+    <string name="system_usb_debugging" msgid="3777895294421924323">"Gỡ lỗi qua USB"</string>
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"Cho phép vị trí mô phỏng"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"Chọn ứng dụng gỡ lỗi"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"Đợi trình gỡ lỗi"</string>
