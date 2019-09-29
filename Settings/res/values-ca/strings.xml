@@ -47,12 +47,13 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> accessoris</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> accessori</item>
     </plurals>
+    <string name="help_and_feedback_category_title" msgid="6565641596360780888">"Ajuda i suggeriments"</string>
     <string name="add_account" msgid="4098060223200619258">"Afegeix un compte"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Suprimeix el compte"</string>
     <string name="account_sync" msgid="773808124331714965">"Tria aplicacions sincronitzades"</string>
     <string name="sync_now" msgid="8732244492880016471">"Sincronitza ara"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"S\'està sincronitzant..."</string>
-    <string name="last_synced" msgid="6178494892357077274">"Última sincronització: <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"Última sincronització: <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Desactivada"</string>
     <string name="account_remove" msgid="4313580520737295272">"Suprimeix el compte"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"No es pot suprimir el compte."</string>
@@ -129,6 +130,8 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"En general, 0000 o 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"Sincronitza"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"Cancel·la"</string>
+    <string name="send_feedback" msgid="163934291815367080">"Crea un informe d\'errors"</string>
+    <string name="launch_help" msgid="6712789610098190689">"Centre d’ajuda"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"Data i hora"</string>
     <string name="system_language" msgid="2337138146114609247">"Idioma"</string>
@@ -151,7 +154,7 @@
     <string name="about_system_update" msgid="7282772247661356586">"Actualització del sistema"</string>
     <string name="about_preference" msgid="4131396784531360434">"Informació"</string>
     <string name="device_name" msgid="2670488158531273028">"Nom del dispositiu"</string>
-    <string name="restart_button_label" msgid="8153112858638352970">"Reinicia"</string>
+    <string name="restart_button_label" msgid="142580191737806071">"Reinicia"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Informació legal"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Llicències de programari lliure"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Informació legal de Google"</string>
@@ -469,7 +472,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"Pantalla activa"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"Comprovació d\'HDCP"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"Optimització d\'HDMI"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"Vols reiniciar ara el dispositiu?"</string>
+    <string name="system_reboot_confirm" msgid="1845950891544721359">"Vols reiniciar ara?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Per actualitzar la configuració, el dispositiu s\'ha de reiniciar."</string>
     <string name="system_never_check" msgid="6666520460705041617">"No comprovis mai"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Comprova només el contingut DRM"</string>
@@ -744,5 +747,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Cap de les aplicacions instal·lades no admet la funció de pantalla en pantalla"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Permet que les aplicacions creïn una finestra de pantalla en pantalla mentre estan obertes o després de sortir-ne (per exemple, per seguir veient un vídeo). Aquesta finestra es mostra sobre altres aplicacions que estàs utilitzant."</string>
     <string name="special_access" msgid="3513811566600299998">"Accés especial d\'aplicacions"</string>
-    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

@@ -47,12 +47,13 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ఉపకరణాలు</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> ఉపకరణం</item>
     </plurals>
+    <string name="help_and_feedback_category_title" msgid="6565641596360780888">"సహాయం &amp; అభిప్రాయం"</string>
     <string name="add_account" msgid="4098060223200619258">"ఖాతాను జోడించు"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"ఖాతాను తీసివేయి"</string>
     <string name="account_sync" msgid="773808124331714965">"సమకాలీకృత అనువర్తనాలను ఎంచుకోండి"</string>
     <string name="sync_now" msgid="8732244492880016471">"ఇప్పుడే సమకాలీకరించు"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"సమకాలీకరించబడుతోంది..."</string>
-    <string name="last_synced" msgid="6178494892357077274">"చివరగా సమకాలీకరించబడినది <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"చివరగా సమకాలీకరించబడినది <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"నిలిపివేయబడింది"</string>
     <string name="account_remove" msgid="4313580520737295272">"ఖాతాను తీసివేయి"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"ఖాతాను తీసివేయడం సాధ్యపడదు"</string>
@@ -129,6 +130,8 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"సాధారణంగా 0000 లేదా 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"జత చేయి"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"రద్దు చేయి"</string>
+    <string name="send_feedback" msgid="163934291815367080">"బగ్ నివేదికను తీయి"</string>
+    <string name="launch_help" msgid="6712789610098190689">"సహాయ కేంద్రం"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"తేదీ &amp; సమయం"</string>
     <string name="system_language" msgid="2337138146114609247">"భాష"</string>
@@ -143,7 +146,7 @@
     <string name="system_inputs" msgid="2413907183796651102">"ఇన్‌పుట్‌లు"</string>
     <string name="system_inputs_devices" msgid="8700905419497948327">"ఇన్‌పుట్‌లు &amp; పరికరాలు"</string>
     <string name="system_home_theater_control" msgid="2053198603790384368">"హోమ్ థియేటర్ నియంత్రణ"</string>
-    <string name="system_accessibility" msgid="6215431399759498005">"ప్రాప్యత సామర్థ్యం"</string>
+    <string name="system_accessibility" msgid="6215431399759498005">"యాక్సెస్‌ సామర్థ్యం"</string>
     <string name="system_developer_options" msgid="3237985523474863638">"డెవలపర్ ఎంపికలు"</string>
     <string name="accessibility_none" msgid="3441648940134070004">"ఏదీ లేదు"</string>
     <string name="system_diagnostic" msgid="4824915262415273530">"వినియోగం &amp; విశ్లేషణలు"</string>
@@ -151,7 +154,7 @@
     <string name="about_system_update" msgid="7282772247661356586">"సిస్టమ్ నవీకరణ"</string>
     <string name="about_preference" msgid="4131396784531360434">"పరిచయం"</string>
     <string name="device_name" msgid="2670488158531273028">"పరికరం పేరు"</string>
-    <string name="restart_button_label" msgid="8153112858638352970">"పునఃప్రారంభించు"</string>
+    <string name="restart_button_label" msgid="142580191737806071">"రీబూట్ చేయి"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"చట్టబద్ధమైన సమాచారం"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"ఓపెన్ సోర్స్ లైసెన్స్‌లు"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google చట్టపరం"</string>
@@ -469,7 +472,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"సక్రియంగా ఉంచు"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP తనిఖీ"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI అనుకూలీకరణ"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"ఇప్పుడే పునఃప్రారంభించాలా?"</string>
+    <string name="system_reboot_confirm" msgid="1845950891544721359">"ఇప్పుడే రీబూట్ చేయాలా?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"ఈ సెట్టింగ్‌ను నవీకరించడానికి, మీ పరికరాన్ని పునఃప్రారంభించాలి"</string>
     <string name="system_never_check" msgid="6666520460705041617">"ఎప్పటికీ తనిఖీ చేయవద్దు"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"DRM కంటెంట్‌కు మాత్రమే తనిఖీ చేయి"</string>
@@ -744,5 +747,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"చిత్రంలో చిత్రానికి మద్దతిచ్చే యాప్‌లు ఏమీ ఇన్‌స్టాల్ చేయబడలేదు"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"యాప్ తెరవబడి ఉన్నప్పుడు లేదా మీరు దాని నుండి నిష్క్రమించినప్పుడు (ఉదాహరణకు, వీడియోని చూడటం కొనసాగించడానికి) చిత్రంలో చిత్రం విండోని సృష్టించడానికి ఈ యాప్‌ని అనుమతించండి. మీరు ఉపయోగించే ఇతర యాప్‌‌ల ఎగువన ఈ విండో ప్రదర్శితమవుతుంది."</string>
     <string name="special_access" msgid="3513811566600299998">"ప్రత్యేక యాప్ యాక్సెస్"</string>
-    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

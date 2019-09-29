@@ -47,12 +47,13 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> tillbehör</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> tillbehör</item>
     </plurals>
+    <string name="help_and_feedback_category_title" msgid="6565641596360780888">"Hjälp och feedback"</string>
     <string name="add_account" msgid="4098060223200619258">"Lägg till konto"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Ta bort konto"</string>
     <string name="account_sync" msgid="773808124331714965">"Välj synkroniserade appar"</string>
     <string name="sync_now" msgid="8732244492880016471">"Synkronisera nu"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Synkroniseras ..."</string>
-    <string name="last_synced" msgid="6178494892357077274">"Synkroniserades senast: <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"Synkroniserades senast: <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Inaktiverad"</string>
     <string name="account_remove" msgid="4313580520737295272">"Ta bort konto"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"Det går inte att ta bort kontot"</string>
@@ -129,6 +130,8 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"Vanligtvis 0000 eller 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"Koppla"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"Avbryt"</string>
+    <string name="send_feedback" msgid="163934291815367080">"Skapa felrapport"</string>
+    <string name="launch_help" msgid="6712789610098190689">"Hjälpcenter"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"Datum och tid"</string>
     <string name="system_language" msgid="2337138146114609247">"Språk"</string>
@@ -151,7 +154,7 @@
     <string name="about_system_update" msgid="7282772247661356586">"Systemuppdatering"</string>
     <string name="about_preference" msgid="4131396784531360434">"Om"</string>
     <string name="device_name" msgid="2670488158531273028">"Enhetens namn"</string>
-    <string name="restart_button_label" msgid="8153112858638352970">"Starta om"</string>
+    <string name="restart_button_label" msgid="142580191737806071">"Starta om"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Juridisk information"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Licenser för öppen källkod"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Juridisk information från Google"</string>
@@ -469,7 +472,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"Lås inte"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP-kontroll"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI-optimering"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"Vill du starta om nu?"</string>
+    <string name="system_reboot_confirm" msgid="1845950891544721359">"Vill du starta om nu?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Om du vill uppdatera inställningen måste enheten startas om"</string>
     <string name="system_never_check" msgid="6666520460705041617">"Kontrollera aldrig"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Kontrollera bara DRM-innehåll"</string>
@@ -744,5 +747,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Inga installerade appar stöder bild-i-bild"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Tillåt att ett bild-i-bild-fönster skapas av appen medan den är öppen eller när du har slutat att använda den (till exempel när du fortsätter att titta på en video). Detta fönster visas ovanpå andra appar du använder."</string>
     <string name="special_access" msgid="3513811566600299998">"Särskild åtkomst för app"</string>
-    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

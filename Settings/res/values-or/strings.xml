@@ -47,12 +47,13 @@
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ଆସେସୋରୀଗୁଡିକ</item>
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> ଆସେରୋରୀ</item>
     </plurals>
+    <string name="help_and_feedback_category_title" msgid="6565641596360780888">"ସହାୟତା ଓ ମତାମତ"</string>
     <string name="add_account" msgid="4098060223200619258">"ଆକାଉଣ୍ଟ ଯୋଡ଼ନ୍ତୁ"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"ଆକାଉଣ୍ଟ କାଢ଼ିଦିଅନ୍ତୁ"</string>
     <string name="account_sync" msgid="773808124331714965">"ସିଂଙ୍କ୍‌ ହୋଇଥିବା ଆପ୍‌ ବାଛନ୍ତୁ"</string>
     <string name="sync_now" msgid="8732244492880016471">"ବର୍ତ୍ତମାନ ସିଙ୍କ କରନ୍ତୁ"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"ସିଙ୍କ କରୁଛି…"</string>
-    <string name="last_synced" msgid="6178494892357077274">"ଶେଷଥର ସିଙ୍କ୍‌ ହୋଇଛି <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"ଶେଷଥର ସିଙ୍କ୍‌ ହୋଇଛି <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"ବନ୍ଦ ହୋଇଛି"</string>
     <string name="account_remove" msgid="4313580520737295272">"ଆକାଉଣ୍ଟ କାଢ଼ିଦିଅନ୍ତୁ"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"ଆକାଉଣ୍ଟକୁ ବାହାର କରିହେବ ନାହିଁ"</string>
@@ -129,6 +130,8 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"ସାଧାରଣତଃ 0000 କିମ୍ବା 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"ପେୟାର୍‌"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"କ୍ୟାନ୍ସଲ୍‍ କରନ୍ତୁ"</string>
+    <string name="send_feedback" msgid="163934291815367080">"ବଗ୍ ରିପୋର୍ଟ ନିଅନ୍ତୁ"</string>
+    <string name="launch_help" msgid="6712789610098190689">"ସହାୟତା କେନ୍ଦ୍ର"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google କାଷ୍ଟ"</string>
     <string name="system_date_time" msgid="8898457978560618950">"ତାରିଖ ଓ ସମୟ"</string>
     <string name="system_language" msgid="2337138146114609247">"ଭାଷା"</string>
@@ -151,7 +154,7 @@
     <string name="about_system_update" msgid="7282772247661356586">"ସିଷ୍ଟମ୍‌ ଅପଡେଟ୍"</string>
     <string name="about_preference" msgid="4131396784531360434">"ପରିଚୟ"</string>
     <string name="device_name" msgid="2670488158531273028">"ଡିଭାଇସ୍‌ର ନାମ"</string>
-    <string name="restart_button_label" msgid="8153112858638352970">"ରିଷ୍ଟାର୍ଟ"</string>
+    <string name="restart_button_label" msgid="142580191737806071">"ରିବୁଟ୍ କରନ୍ତୁ"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"ଆଇନ ସୂଚନା"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"ଓପନ୍‌ ସୋର୍ସ ଲାଇସେନ୍ସ"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google ଲିଗାଲ୍‌"</string>
@@ -469,7 +472,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"ଜାଗ୍ରତ ରଖନ୍ତୁ"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP ଯାଞ୍ଚ କରୁଛି"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI ଅନୁକୂଳତା"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"ଏବେ ରିଷ୍ଟାର୍ଟ କରିବେ?"</string>
+    <string name="system_reboot_confirm" msgid="1845950891544721359">"ବର୍ତ୍ତମାନ ରିବୁଟ୍ କରିବେ?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"ଏହି ସେଟିଂ ଅପ୍‌ଡେଟ୍‌ କରିବାକୁ, ଆପଣଙ୍କ ଡିଭାଇସ୍‌ ପୁଣି ଆରମ୍ଭ କରିବା ଆବଶ୍ୟକ ଅଟେ"</string>
     <string name="system_never_check" msgid="6666520460705041617">"ଆଦୌ ଯାଞ୍ଚ କରନାହିଁ"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"କେବଳ DRM ବିଷୟବସ୍ତୁ ଦେଖନ୍ତୁ"</string>
@@ -744,5 +747,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"ଛବି-ଭିତରେ-ଛବିକୁ ଇନ୍‌ଷ୍ଟଲ୍‌ ହୋଇଥିବା କୌଣସି ଆପ୍‌ ସପୋର୍ଟ କରୁନାହିଁ"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"ଆପ୍‌ ଖୋଲା ଥିବାବେଳେ କିମ୍ୱା ଏହାକୁ ଆପଣ ଛାଡ଼ିବା ପରେ (ଉଦାହରଣସ୍ୱରୂପ, ଏକ ଭିଡିଓ ଦେଖିବା ଜାରି ରଖିବାକୁ) ଏକ ଛବି-ଭିତରେ-ଛବି ୱିଣ୍ଡୋ ତିଆରି କରିବା ପାଇଁ ଏହି ଆ‌ପ୍‌କୁ ଅନୁମତି ଦିଅନ୍ତୁ। ଏହି ୱିଣ୍ଡୋ, ଆପଣ ବ୍ୟବହାର କରୁଥିବା ଅନ୍ୟ ଆପ୍‌ଗୁଡ଼ିକ ଉପରେ ଦେଖାଦେବ।"</string>
     <string name="special_access" msgid="3513811566600299998">"ସ୍ୱତନ୍ତ୍ର ଆପ୍‌ ଆକ୍ସେସ୍‌"</string>
-    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

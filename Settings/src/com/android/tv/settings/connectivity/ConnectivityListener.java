@@ -113,6 +113,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
                 mWifiTracker = new WifiTracker(context, this, true, true);
             }
         }
+        updateConnectivityStatus();
     }
 
     /**
@@ -256,9 +257,12 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
     }
 
     private String formatIpAddresses(Network network) {
+        final LinkProperties linkProperties = mConnectivityManager.getLinkProperties(network);
+        if (linkProperties == null) {
+            return null;
+        }
         final StringBuilder sb = new StringBuilder();
         boolean gotAddress = false;
-        final LinkProperties linkProperties = mConnectivityManager.getLinkProperties(network);
         for (LinkAddress linkAddress : linkProperties.getLinkAddresses()) {
             if (gotAddress) {
                 sb.append("\n");

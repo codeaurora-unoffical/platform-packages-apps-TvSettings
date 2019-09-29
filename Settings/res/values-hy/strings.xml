@@ -47,20 +47,21 @@
       <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> լրասարք</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> լրասարք</item>
     </plurals>
+    <string name="help_and_feedback_category_title" msgid="6565641596360780888">"Օգնություն և հետադարձ կապ"</string>
     <string name="add_account" msgid="4098060223200619258">"Ավելացնել հաշիվ"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Հաշվի ջնջում"</string>
     <string name="account_sync" msgid="773808124331714965">"Ընտրեք հավելվածներ"</string>
-    <string name="sync_now" msgid="8732244492880016471">"Համաժամեցնել հիմա"</string>
-    <string name="sync_in_progress" msgid="1330721038775646022">"Համաժամեցում..."</string>
-    <string name="last_synced" msgid="6178494892357077274">"Վերջին անգամ համաժամեցվել է <xliff:g id="TIME">%1s</xliff:g>-ին"</string>
+    <string name="sync_now" msgid="8732244492880016471">"Համաժամացնել հիմա"</string>
+    <string name="sync_in_progress" msgid="1330721038775646022">"Համաժամացում..."</string>
+    <string name="last_synced" msgid="6178494892357077274">"Վերջին անգամ համաժամացվել է <xliff:g id="TIME">%1$s</xliff:g>-ին"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Անջատված է"</string>
     <string name="account_remove" msgid="4313580520737295272">"Հաշվի ջնջում"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"Հնարավոր չէ հեռացնել հաշիվը"</string>
     <!-- no translation found for sync_item_title (2716687595867726981) -->
     <skip />
-    <string name="sync_one_time_sync" msgid="3575080833667908804">"Համաժամեցնել հիմա<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="3575080833667908804">"Համաժամացնել հիմա<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
-    <string name="sync_failed" msgid="5514824149810480551">"Չհաջողվեց համաժամել"</string>
+    <string name="sync_failed" msgid="5514824149810480551">"Չհաջողվեց համաժամացնել"</string>
     <string name="sync_active" msgid="6891115263481154378">"Համաժամումն ակտիվ է"</string>
     <string name="connectivity_wifi" msgid="489974791299647708">"Wi-Fi"</string>
     <string name="connectivity_ethernet" msgid="2182407318634700320">"Ethernet"</string>
@@ -129,6 +130,8 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"Սովորաբար 0000 կամ 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"Զուգավորել"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"Չեղարկել"</string>
+    <string name="send_feedback" msgid="163934291815367080">"Հաղորդել վրիպակի մասին"</string>
+    <string name="launch_help" msgid="6712789610098190689">"Օգնության կենտրոն"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"Ամսաթիվ և ժամ"</string>
     <string name="system_language" msgid="2337138146114609247">"Լեզու"</string>
@@ -151,7 +154,7 @@
     <string name="about_system_update" msgid="7282772247661356586">"Համակարգի թարմացում"</string>
     <string name="about_preference" msgid="4131396784531360434">"Սարքի մասին"</string>
     <string name="device_name" msgid="2670488158531273028">"Սարքի անունը"</string>
-    <string name="restart_button_label" msgid="8153112858638352970">"Վերագործարկել"</string>
+    <string name="restart_button_label" msgid="142580191737806071">"Վերաբեռնել"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Իրավական տեղեկություններ"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Բաց կոդով ծրագրաշարի արտոնագրեր"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Google-ի իրավական տեղեկություններ"</string>
@@ -321,7 +324,7 @@
     <string name="storage_format_success" msgid="6252068844653804319">"<xliff:g id="NAME">%1$s</xliff:g> կրիչի ձևաչափումը հաջողվեց"</string>
     <string name="storage_format_failure" msgid="7336977074523932399">"Չհաջողվեց ձևաչափել <xliff:g id="NAME">%1$s</xliff:g> կրիչը"</string>
     <string name="storage_wizard_format_as_private_title" msgid="1887035626526247913">"Ձևաչափել որպես սարքի հիշողություն"</string>
-    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"USB հիշասարքի անվտանգությունը ապահովելու համար այն պետք է ձևաչափել: Որից հետո այս հիշասարքը կաշխատի միայն այս սարքի հետ: Ձևաչափման արդյունքում հիշասարքում պահեստավորված բոլոր տվյալները կջնջվեն: Տվյալները չկորցնելու համար չմոռանաք պահուստավորել դրանք:"</string>
+    <string name="storage_wizard_format_as_private_description" msgid="5814513630861655168">"USB հիշասարքի անվտանգությունը ապահովելու համար այն պետք է ձևաչափել: Դրանից հետո այս հիշասարքը կաշխատի միայն այս սարքի հետ: Ձևաչափման արդյունքում հիշասարքում պահեստավորված բոլոր տվյալները կջնջվեն: Տվյալները չկորցնելու համար չմոռանաք պահուստավորել դրանք:"</string>
     <string name="storage_wizard_format_as_public_title" msgid="5908924206021859650">"Ջնջել և ձևաչափել"</string>
     <string name="storage_wizard_format_as_public_description" msgid="184405877453834449">"Ձևաչափումից հետո այս USB հիշասարքը կարող եք օգտագործել այլ սարքերի վրա: Բոլոր տվյալները ջնջվելու են: Ուստի, նախ պահուստավորեք հավելվածները՝ տեղափոխելով այլ սարքի հիշողություն:"</string>
     <string name="storage_wizard_format_progress_title" msgid="143911640282435570">"USB հիշասարքի ձևաչափում…"</string>
@@ -402,7 +405,7 @@
     <string name="location_reporting_desc" msgid="6256424995139430823">"Այս հատկությունն օգտագործվում է այնպիսի արտադրանքներում, ինչպիսիք եք Google Now-ն և Google Քարտեզները: Այս հատկությունն օգտագործող Google-ի ցանկացած արտադրանք կարեղ է պահել և օգտագործել ձեր սարքի ամենավերջին տեղադրության տվյալները:"</string>
     <string name="location_history_desc" msgid="3861249867748294369">"Երբ տեղադրության պատմությունը միացված է հաշվի համար, Google-ը կարող է պահել ձեր սարքի տեղադրության տվյալները, որպեսզի ձեր ծրագրերը կարողանան այն օգտագործել:\n\nՕրինակ` Google Քարտեզները կարող են երթուղիներ ցույց տալ, իսկ Google Now-ն կտեղեկացնի ձեզ խցանումների մասին:\n\nԴուք կարող եք անջատել Տեղադրության պատմությունը ցանկացած պահի, սակայն դրա տվյալները չեն ջնջվի: Ձեր Տեղադրության պատմությունը դիտելու և կառավարելու համար այցելեք` maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="5804802702252280549">"Ջնջել տեղադրության պատմությունը"</string>
-    <string name="delete_location_history_desc" msgid="4142806827237093397">"Google հաշվի տեղադրության պատմությունը մշտապես կջնջվի այս սարքից: Դուք չեք կարող հետարկել այս գործողությունը: Որոշ ծրագրեր Google Now-ի հետ մեկտեղ կդադարեն աշխատել:"</string>
+    <string name="delete_location_history_desc" msgid="4142806827237093397">"Google հաշվի տեղադրության պատմությունը ընդմիշտ կջնջվի այս սարքից: Դուք չեք կարող հետարկել այս գործողությունը: Որոշ ծրագրեր Google Now-ի հետ մեկտեղ կդադարեն աշխատել:"</string>
     <string name="system_services" msgid="7230571820151215779">"Ծառայություններ"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"Ծառայության կարգավորումներ"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"Ցայտուն տեքստ"</string>
@@ -469,7 +472,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"Մնալ արթուն"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP ստուգում"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI լավարկում"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"Վերագործարկե՞լ հիմա"</string>
+    <string name="system_reboot_confirm" msgid="1845950891544721359">"Վերաբեռնե՞լ հիմա:"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Այս կարգավորումը թարմացնելու համար ձեր սարքը պետք է վերագործարկվի"</string>
     <string name="system_never_check" msgid="6666520460705041617">"Երբեք չստուգել"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Ստուգել միայն DRM բովանդակությունը"</string>
@@ -573,7 +576,7 @@
     <string name="whichApplication" msgid="8382179653567099571">"Ավարտել գործողությունը` օգտագործելով"</string>
     <string name="alwaysUseQuestion" msgid="7128459989232213727">"Այս գործուղության համար միշտ օգտագործե՞լ այս ընտրանքը:"</string>
     <string name="alwaysUseOption" msgid="1057645533268907906">"Միշտ օգտագործել"</string>
-    <string name="justOnceOption" msgid="6051458702672920102">"Միայն մեկ անգամ"</string>
+    <string name="justOnceOption" msgid="6051458702672920102">"Միայն այս անգամ"</string>
     <string name="noApplications" msgid="4197983402774959346">"Ոչ մի հավելված չի կարող կատարել այս գործողությունը:"</string>
     <string name="noAppsGoBack" msgid="5663180241276177314">"Հետ"</string>
     <string name="inputs_inputs" msgid="4249080110281833521">"Մուտքեր"</string>
@@ -657,7 +660,7 @@
     <string name="device_apps_app_management_storage_used" msgid="4611351576179140634">"Օգտագործված հիշողությունը"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="1529188874944834661">"Օգտագործված է <xliff:g id="SIZE">%1$s</xliff:g> <xliff:g id="VOLUME">%2$s</xliff:g>-ում"</string>
     <string name="device_apps_app_management_clear_data" msgid="4439114679323274127">"Մաքրել տվյալները"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Այս հավելվածի բոլոր տվյալները մշտապես ջնջվելու են:\nՋնջվելու են նաև բոլոր ֆայլերը, կարգավորումները, հաշիվները, տվյալների շտեմարանները և այլն:"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="4832124568689052441">"Այս հավելվածի բոլոր տվյալներն ընդմիշտ կջնջվեն:\nԿջնջվեն նաև բոլոր ֆայլերը, կարգավորումները, հաշիվները, տվյալների շտեմարանները և այլն:"</string>
     <string name="device_apps_app_management_clear_default" msgid="1861082768599452304">"Մաքրել կանխադրված կարգավորումները"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="4191720055364731307">"Գործարկել այս հավելվածը որոշ գործողությունների համար"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Կանխադրված արժեքները սահմանված չեն"</string>
@@ -744,5 +747,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Տեղադրված հավելվածները չեն աջակցում «նկար նկարի մեջ» ռեժիմը"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Թույլատրել հավելվածներին ստեղծել «նկար նկարի մեջ» պատուհան` հավելվածն օգտագործելիս կամ փակելուց հետո (օրինակ՝ տեսանյութի դիտումը շարունակելու համար): Այս պատուհանը ցուցադրվում է ձեր կողմից օգտագործվող այլ հավելվածների վերևում:"</string>
     <string name="special_access" msgid="3513811566600299998">"Հատուկ հասանելիություն"</string>
-    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>

@@ -49,12 +49,13 @@
       <item quantity="few"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> periferna uređaja</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> perifernih uređaja</item>
     </plurals>
+    <string name="help_and_feedback_category_title" msgid="6565641596360780888">"Pomoć i povratne informacije"</string>
     <string name="add_account" msgid="4098060223200619258">"Dodaj račun"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Ukloni račun"</string>
     <string name="account_sync" msgid="773808124331714965">"Odaberi sinhronizirane aplikacije"</string>
     <string name="sync_now" msgid="8732244492880016471">"Sinhroniziraj sada"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"Sinhroniziranje…"</string>
-    <string name="last_synced" msgid="6178494892357077274">"Posljednji put sinhronizirano u <xliff:g id="TIME">%1s</xliff:g>"</string>
+    <string name="last_synced" msgid="6178494892357077274">"Posljednji put sinhronizirano u <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="3089360175872892781">"Onemogućeno"</string>
     <string name="account_remove" msgid="4313580520737295272">"Ukloni račun"</string>
     <string name="account_remove_failed" msgid="980654375770693544">"Račun se ne može ukloniti"</string>
@@ -131,6 +132,8 @@
     <string name="bluetooth_pin_values_hint" msgid="2319900367581543300">"Obično 0000 ili 1234"</string>
     <string name="bluetooth_pair" msgid="7836818609620478122">"Upari"</string>
     <string name="bluetooth_cancel" msgid="4152153558528588479">"Otkaži"</string>
+    <string name="send_feedback" msgid="163934291815367080">"Kreiraj izvještaj o greškama"</string>
+    <string name="launch_help" msgid="6712789610098190689">"Centar za pomoć"</string>
     <string name="system_cast" msgid="6421567823845207156">"Google Cast"</string>
     <string name="system_date_time" msgid="8898457978560618950">"Datum i vrijeme"</string>
     <string name="system_language" msgid="2337138146114609247">"Jezik"</string>
@@ -153,7 +156,7 @@
     <string name="about_system_update" msgid="7282772247661356586">"Ažuriranje sistema"</string>
     <string name="about_preference" msgid="4131396784531360434">"Osnovne informacije"</string>
     <string name="device_name" msgid="2670488158531273028">"Ime uređaja"</string>
-    <string name="restart_button_label" msgid="8153112858638352970">"Ponovo pokreni"</string>
+    <string name="restart_button_label" msgid="142580191737806071">"Ponovo pokreni"</string>
     <string name="about_legal_info" msgid="8511870741437307531">"Pravne informacije"</string>
     <string name="about_legal_license" msgid="7867205982113209033">"Licence otvorenog koda"</string>
     <string name="about_terms_of_service" msgid="7743088207977334874">"Googleove pravne informacije"</string>
@@ -339,7 +342,7 @@
     <string name="storage_wizard_migrate_progress_title" msgid="8063255124619498728">"Premještanje podataka na uređaj <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_migrate_progress_description" msgid="3337889465416363170">"Ovo može potrajati kratko. Nemojte uklanjati disk.\nNeke aplikacije neće ispravno raditi tokom premještanja."</string>
     <string name="storage_wizard_format_slow_title" msgid="2483634437996887661">"Čini se da je ovaj disk spor."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Možete nastaviti, ali aplikacije premjštene na ovu lokaciju mogu zastajkivati i prijenosi podataka mogu dugo trajati. Koristite brži disk za bolje performanse."</string>
+    <string name="storage_wizard_format_slow_summary" msgid="1949177940762639885">"Možete nastaviti, ali aplikacije premještene na ovu lokaciju mogu zastajkivati i prijenosi podataka mogu dugo trajati. Koristite brži disk za bolje performanse."</string>
     <string name="storage_wizard_format_action" msgid="3986485572528374905">"Formatiraj"</string>
     <string name="storage_wizard_backup_apps_action" msgid="7246092320517630760">"Izradi sigurnosnu kopiju aplikacija"</string>
     <string name="storage_wizard_back_up_apps_title" msgid="452805102278225533">"Aplikacije pohranjene na uređaju <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -425,7 +428,7 @@
     <string name="captions_textsize" msgid="4828195509546070971">"Veličina teksta"</string>
     <string name="captions_captionstyle" msgid="7423638523487868230">"Stil titlova"</string>
     <string name="captions_customoptions" msgid="2699780648112330911">"Prilagođene opcije"</string>
-    <string name="captions_fontfamily" msgid="6840670778173003604">"Grupa fonta"</string>
+    <string name="captions_fontfamily" msgid="6840670778173003604">"Porodica fontova"</string>
     <string name="captions_textcolor" msgid="3233568269335050287">"Boja teksta"</string>
     <string name="captions_edgetype" msgid="841331274533086103">"Vrsta rubova"</string>
     <string name="captions_edgecolor" msgid="845125757332620884">"Boja rubova"</string>
@@ -472,7 +475,7 @@
     <string name="system_stay_awake" msgid="1212296404230848490">"Ostani aktivan"</string>
     <string name="system_hdcp_checking" msgid="8470793875143334320">"HDCP provjeravanje"</string>
     <string name="system_hdmi_optimization" msgid="9120919064234265144">"HDMI optimizacija"</string>
-    <string name="system_reboot_confirm" msgid="534407910866199191">"Ponovo pokrenuti sada?"</string>
+    <string name="system_reboot_confirm" msgid="1845950891544721359">"Ponovo pokrenuti sada?"</string>
     <string name="system_desc_reboot_confirm" msgid="1367498732529710136">"Za ažuriranje ove postavke potrebno je ponovo pokrenuti uređaj"</string>
     <string name="system_never_check" msgid="6666520460705041617">"Nikada ne provjeravaj"</string>
     <string name="system_check_for_drm_content_only" msgid="8716366734950874267">"Provjeri samo za DRM sadržaj"</string>
@@ -751,5 +754,5 @@
     <string name="picture_in_picture_empty_text" msgid="5592688180792300051">"Nijedna instalirana aplikacija ne podržava način rada Slika u slici"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Dozvoli aplikacijama kreiranje prozora u načinu rada Slika u slici dok je aplikacija otvorena ili nakon što je napustite (naprimjer, da nastavite gledati videozapis). Ovaj prozor se prikazuje preko drugih aplikacija koje koristite."</string>
     <string name="special_access" msgid="3513811566600299998">"Poseban pristup aplikacijama"</string>
-    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1s</xliff:g>, <xliff:g id="PART2">%2s</xliff:g>"</string>
+    <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
 </resources>
