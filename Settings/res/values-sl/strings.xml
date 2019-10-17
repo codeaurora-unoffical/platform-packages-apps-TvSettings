@@ -40,7 +40,8 @@
       <item quantity="few"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> računi</item>
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> računov</item>
     </plurals>
-    <string name="connectivity_network_category_title" msgid="4369211310335709727">"Omrežje in internet"</string>
+    <string name="connectivity_network_category_title" msgid="6005656364481347542">"Omrežje in internet"</string>
+    <string name="sound_category_title" msgid="4712268573174731554">"Zvok"</string>
     <string name="applications_category_title" msgid="3552921143969612110">"Aplikacije"</string>
     <string name="device_pref_category_title" msgid="5264163316572335776">"Nastavitve naprave"</string>
     <string name="remotes_and_accessories_category_title" msgid="3361463550113457913">"Daljinsko upravljanje in dodatki"</string>
@@ -664,7 +665,7 @@
     <string name="device_apps_app_management_open" msgid="8009823973422120839">"Odpiranje"</string>
     <string name="device_apps_app_management_force_stop" msgid="9195433885986760867">"Vsili ustavitev"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="3616902338964109665">"Če boste aplikacijo prisilno ustavili, morda ne bo pravilno delovala."</string>
-    <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Odstrani"</string>
+    <string name="device_apps_app_management_uninstall" msgid="531427430753359746">"Odmesti"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5151008748970915803">"Odstrani posodobitve"</string>
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="9165160845303755321">"Vse posodobitve te aplikacije sistema Android bodo odstranjene."</string>
     <string name="device_apps_app_management_disable" msgid="6136528600052941589">"Onemogoči"</string>
