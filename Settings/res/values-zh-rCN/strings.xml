@@ -88,7 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"系统声音"</string>
     <string name="device_apps" msgid="1971794537385509294">"应用"</string>
     <string name="device_storage" msgid="5536683600091277826">"存储空间"</string>
-    <string name="device_reset" msgid="1885840356489458285">"重置"</string>
+    <string name="device_reset" msgid="8260472343489104736">"恢复出厂设置"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"备份和还原"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"恢复出厂设置"</string>
     <string name="device_calibration" msgid="8632962533376605191">"校准"</string>
@@ -192,7 +192,7 @@
     <string name="sim_status_title" msgid="498929467188844611">"SIM 卡状态"</string>
     <string name="imei_information_title" msgid="5208860549282877136">"IMEI 信息"</string>
     <string name="status_bt_address" msgid="1571721865060122393">"蓝牙地址"</string>
-    <string name="status_up_time" msgid="1674116490191446110">"开机累计时间"</string>
+    <string name="status_up_time" msgid="1674116490191446110">"开机累计时长"</string>
     <string name="legal_information" msgid="2346024659831852038">"法律信息"</string>
     <string name="copyright_title" msgid="5564228453228549353">"版权"</string>
     <string name="license_title" msgid="4482927105870812604">"许可"</string>
@@ -526,7 +526,7 @@
     <string name="security_unknown_sources_title" msgid="769762478057744545">"未知来源"</string>
     <string name="security_unknown_sources_desc" msgid="7197053279914817124">"允许安装来自 Play 商店以外其他来源的应用"</string>
     <string name="security_unknown_sources_confirm_title" msgid="1249752174105198821">"允许安装来自未知来源的应用"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"您的设备和个人数据比较容易受到来源不明应用的攻击。您同意，对于因使用这类应用所导致的任何设备受损或数据丢失情况，您负有全部责任。"</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7167350583097191925">"您的设备和个人数据更容易受到来源不明的应用的攻击。您同意，对于因使用这类应用造成的设备损坏或数据丢失情况，您自行承担全部责任。"</string>
     <string name="security_verify_apps_title" msgid="5787946958632254988">"验证应用"</string>
     <string name="security_verify_apps_desc" msgid="1456317893117818733">"禁止安装可能会造成危害的应用，或在安装前提出警告"</string>
     <string name="system_hdcp_checking_never" msgid="1758043078676276985">"一律不检查"</string>
@@ -667,6 +667,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"没有默认操作"</string>
     <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"清除缓存"</string>
     <string name="device_apps_app_management_notifications" msgid="7291960671957440729">"通知"</string>
+    <string name="device_apps_app_management_licenses" msgid="8087633636434422908">"开源许可"</string>
     <string name="device_apps_app_management_permissions" msgid="1829808830974726081">"权限"</string>
     <string name="device_apps_app_management_not_available" msgid="1249731776661207047">"无法使用应用"</string>
     <string name="settings_ok" msgid="3321630456511355983">"确定"</string>
@@ -691,7 +692,7 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"此操作将会从您的设备的内部存储空间中清除所有数据，包括您的 Google 帐号、系统数据、应用数据、相关设置，以及已下载的应用"</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"要清除所有个人信息和已下载的应用吗？请注意，此操作无法撤消！"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"全部清除"</string>
-    <string name="select_device_name_title" msgid="5165800500130943604">"为您的 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 选择一个名称"</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"为您的 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 选择名称"</string>
     <string name="select_device_name_description" msgid="4939767901420114190">"为您的设备命名，以便在通过其他设备向其投射内容或与其建立连接时能够识别该设备。"</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
@@ -731,7 +732,7 @@
     <string name="high_power_system" msgid="7815843517656137656">"没有电源优化设置"</string>
     <string name="manage_notification_access_title" msgid="2051765294087620434">"通知使用权"</string>
     <string name="no_notification_listeners" msgid="4583789599075326886">"没有任何已安装的应用申请通知使用权。"</string>
-    <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"这些应用将能够读取所有通知（包括联系人姓名和您收到的消息文字等个人信息），还将可以关闭这些通知或触发通知中包含的操作按钮。"</string>
+    <string name="notification_listener_security_warning_summary" msgid="3647205635922300578">"这些应用将能够读取所有通知（包括联系人姓名和您收到的消息文字等个人信息），而且还能关闭这些通知或触发通知中包含的操作按钮。"</string>
     <string name="directory_access" msgid="7439168599298598101">"目录访问权限"</string>
     <string name="directory_access_description" msgid="878500352290246580">"这些应用有权访问特定目录。"</string>
     <string name="directory_on_volume" msgid="7169474174968288852">"<xliff:g id="VOLUME">%1$s</xliff:g>（<xliff:g id="DIRECTORY">%2$s</xliff:g>）"</string>
@@ -749,4 +750,13 @@
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"允许应用在您打开应用时或您离开应用后（例如继续观看视频）创建画中画窗口。这类窗口会显示在您当前使用的其他应用的上层。"</string>
     <string name="special_access" msgid="3513811566600299998">"特殊应用权限"</string>
     <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>，<xliff:g id="PART2">%2$s</xliff:g>"</string>
+    <string name="audio_category" msgid="943824924394588129">"音频"</string>
+    <string name="record_audio" msgid="101006980787931106">"录制音频"</string>
+    <string name="record_audio_summary_on" msgid="1995386730194606166">"停用即可停止录制音频"</string>
+    <string name="record_audio_summary_off" msgid="6973598627857674411">"启用即可立即开始录制音频"</string>
+    <string name="play_recorded_audio_title" msgid="8805406919960875194">"播放录制的音频"</string>
+    <string name="save_recorded_audio_title" msgid="3111382703478385229">"保存录制的音频"</string>
+    <string name="time_to_start_read_title" msgid="5187602349480841055">"开始读取时间"</string>
+    <string name="time_to_valid_audio_title" msgid="8823857730790811502">"音频数据有效时间"</string>
+    <string name="empty_audio_duration_title" msgid="1184267741804117852">"空白音频的时间长度"</string>
 </resources>

@@ -51,7 +51,7 @@
     <string name="help_and_feedback_category_title" msgid="6565641596360780888">"Ajuda e comentários"</string>
     <string name="add_account" msgid="4098060223200619258">"Adicionar conta"</string>
     <string name="account_header_remove_account" msgid="3288957118207682685">"Remover conta"</string>
-    <string name="account_sync" msgid="773808124331714965">"Escolher app sincronizadas"</string>
+    <string name="account_sync" msgid="773808124331714965">"Escolher apps sincronizadas"</string>
     <string name="sync_now" msgid="8732244492880016471">"Sincronizar agora"</string>
     <string name="sync_in_progress" msgid="1330721038775646022">"A sincronizar..."</string>
     <string name="last_synced" msgid="6178494892357077274">"Última sincronização: <xliff:g id="TIME">%1$s</xliff:g>"</string>
@@ -88,7 +88,7 @@
     <string name="device_sound_effects" msgid="7793281745920228622">"Sons do sistema"</string>
     <string name="device_apps" msgid="1971794537385509294">"Aplicações"</string>
     <string name="device_storage" msgid="5536683600091277826">"Armazenamento"</string>
-    <string name="device_reset" msgid="1885840356489458285">"Reposição"</string>
+    <string name="device_reset" msgid="8260472343489104736">"Reposição de dados de fábrica"</string>
     <string name="device_backup_restore" msgid="5627523987587511884">"Cópia de segurança e restauro"</string>
     <string name="device_factory_reset" msgid="6537106927211842545">"Reposição de dados de fábrica"</string>
     <string name="device_calibration" msgid="8632962533376605191">"Calibração"</string>
@@ -100,7 +100,7 @@
     <string name="surround_sound_format_dts_hd" msgid="3324695734675414927">"DTS-HD"</string>
     <string name="surround_sound_format_iec61937" msgid="1610948713240264858">"IEC61937"</string>
     <string name="surround_sound_auto_info" msgid="4957977219847012992">"A opção Automático pode não funcionar se o dispos. não indicar os formatos suportados corretamente."</string>
-    <string name="surround_sound_auto_summary" msgid="175387511376834034">"Automático: util. formatos indicados como suportados pelo disp. (recom.)"</string>
+    <string name="surround_sound_auto_summary" msgid="175387511376834034">"Automático: usar formatos que dispositivo indica suportar (recomendado)"</string>
     <string name="surround_sound_none_summary" msgid="4295042972785042496">"Nenhum: nunca utilizar o som surround"</string>
     <string name="surround_sound_manual_summary" msgid="9208540024024014501">"Manual: selecionar os formatos a utilizar"</string>
     <string name="device_storage_clear_cache_title" msgid="3365635664766067643">"Pretende limpar os dados em cache?"</string>
@@ -667,6 +667,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="196932966641339141">"Nenhuma predefinição definida"</string>
     <string name="device_apps_app_management_clear_cache" msgid="5392413180421013865">"Limpar cache"</string>
     <string name="device_apps_app_management_notifications" msgid="7291960671957440729">"Notificações"</string>
+    <string name="device_apps_app_management_licenses" msgid="8087633636434422908">"Licenças de código aberto"</string>
     <string name="device_apps_app_management_permissions" msgid="1829808830974726081">"Autorizações"</string>
     <string name="device_apps_app_management_not_available" msgid="1249731776661207047">"Aplicação indisponível"</string>
     <string name="settings_ok" msgid="3321630456511355983">"OK"</string>
@@ -691,7 +692,7 @@
     <string name="factory_reset_description" msgid="5381170999141355891">"Esta ação apaga todos os dados da memória de armazenamento interno do dispositivo, incluindo a sua Conta Google, os dados e as definições do sistema e das aplicações, e as aplicações transferidas."</string>
     <string name="confirm_factory_reset_description" msgid="1049842658625287303">"Pretende apagar todas as informações pessoais e aplicações transferidas? Não é possível reverter esta ação!"</string>
     <string name="confirm_factory_reset_device" msgid="8923287482399582268">"Apagar tudo"</string>
-    <string name="select_device_name_title" msgid="5165800500130943604">"Escolher um nome para o seu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
+    <string name="select_device_name_title" msgid="5165800500130943604">"Escolha um nome para o seu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="4939767901420114190">"Atribua um nome ao seu dispositivo para ser mais fácil identificá-lo aquando da transmissão ou ligação ao mesmo a partir de outros dispositivos."</string>
   <string-array name="rooms">
     <item msgid="9056203990862307284">"Android TV"</item>
@@ -749,4 +750,13 @@
     <string name="picture_in_picture_app_detail_summary" msgid="3478182415601436326">"Permitir que as aplicações criem uma janela de ecrã no ecrã enquanto as aplicações estão abertas ou depois de sair das mesmas (por exemplo, para continuar a ver um vídeo). Esta janela é apresentada sobre as outras aplicações que estiver a utilizar."</string>
     <string name="special_access" msgid="3513811566600299998">"Acesso especial a aplicações"</string>
     <string name="string_concat" msgid="5897947064488902904">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
+    <string name="audio_category" msgid="943824924394588129">"Áudio"</string>
+    <string name="record_audio" msgid="101006980787931106">"Gravar áudio"</string>
+    <string name="record_audio_summary_on" msgid="1995386730194606166">"Desativar para parar de gravar áudio"</string>
+    <string name="record_audio_summary_off" msgid="6973598627857674411">"Ativar para começar a gravar áudio imediatamente"</string>
+    <string name="play_recorded_audio_title" msgid="8805406919960875194">"Reproduzir áudio gravado"</string>
+    <string name="save_recorded_audio_title" msgid="3111382703478385229">"Guardar áudio gravado"</string>
+    <string name="time_to_start_read_title" msgid="5187602349480841055">"Tempo para começar a ler"</string>
+    <string name="time_to_valid_audio_title" msgid="8823857730790811502">"Tempo para dados de áudio válidos"</string>
+    <string name="empty_audio_duration_title" msgid="1184267741804117852">"Duração do áudio vazio"</string>
 </resources>
