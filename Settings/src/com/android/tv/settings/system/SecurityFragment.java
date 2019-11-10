@@ -32,7 +32,7 @@ import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.ServiceManager;
+import android.os.HandlerThread;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
@@ -49,14 +49,13 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.TwoStatePreference;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.widget.ILockSettings;
-import com.android.internal.widget.LockPatternUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.dialog.PinDialogFragment;
 import com.android.tv.settings.users.AppRestrictionsFragment;
 import com.android.tv.settings.users.RestrictedProfileModel;
 import com.android.tv.settings.users.RestrictedProfilePinDialogFragment;
+import com.android.tv.settings.users.RestrictedProfilePinStorage;
 import com.android.tv.settings.users.UserSwitchListenerService;
 
 import java.lang.annotation.Retention;
@@ -68,7 +67,7 @@ import java.util.List;
  */
 @Keep
 public class SecurityFragment extends SettingsPreferenceFragment
-        implements RestrictedProfilePinDialogFragment.Callback {
+        implements PinDialogFragment.ResultListener {
 
     private static final String TAG = "SecurityFragment";
 
@@ -112,10 +111,11 @@ public class SecurityFragment extends SettingsPreferenceFragment
     private Preference mRestrictedProfileCreatePref;
     private Preference mRestrictedProfileDeletePref;
 
-    private ILockSettings mLockSettingsService;
     private RestrictedProfileModel mRestrictedProfile;
 
     private boolean mCreatingRestrictedProfile;
+    private RestrictedProfilePinStorage mRestrictedProfilePinStorage;
+
     @SuppressLint("StaticFieldLeak")
     private static CreateRestrictedProfileTask sCreateRestrictedProfileTask;
     private final BroadcastReceiver mRestrictedProfileReceiver = new BroadcastReceiver() {
@@ -128,7 +128,9 @@ public class SecurityFragment extends SettingsPreferenceFragment
         }
     };
 
-    private final Handler mHandler = new Handler();
+    private Handler mUiThreadHandler;
+    private HandlerThread mBackgroundHandlerThread;
+    private Handler mBackgroundHandler;
 
     public static SecurityFragment newInstance() {
         return new SecurityFragment();
@@ -141,6 +143,23 @@ public class SecurityFragment extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
         mCreatingRestrictedProfile = savedInstanceState != null
                 && savedInstanceState.getBoolean(SAVESTATE_CREATING_RESTRICTED_PROFILE);
+
+        mUiThreadHandler = new Handler();
+        mBackgroundHandlerThread = new HandlerThread("SecurityFragmentBackgroundThread");
+        mBackgroundHandlerThread.start();
+        mBackgroundHandler = new Handler(mBackgroundHandlerThread.getLooper());
+    }
+
+    @Override
+    public void onDestroy() {
+        mBackgroundHandler = null;
+        mBackgroundHandlerThread.quitSafely();
+        mBackgroundHandlerThread = null;
+        mUiThreadHandler = null;
+
+        super.onDestroy();
+
+        mRestrictedProfile = null;
     }
 
     @Override
@@ -163,6 +182,20 @@ public class SecurityFragment extends SettingsPreferenceFragment
         super.onPause();
         LocalBroadcastManager.getInstance(getActivity())
                 .unregisterReceiver(mRestrictedProfileReceiver);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mRestrictedProfilePinStorage = RestrictedProfilePinStorage.newInstance(getContext());
+        mRestrictedProfilePinStorage.bind();
+    }
+
+    @Override
+    public void onDetach() {
+        mRestrictedProfilePinStorage.unbind();
+        mRestrictedProfilePinStorage = null;
+        super.onDetach();
     }
 
     @Override
@@ -263,27 +296,33 @@ public class SecurityFragment extends SettingsPreferenceFragment
                 }
                 return true;
             case KEY_RESTRICTED_PROFILE_EXIT:
-                if (hasLockscreenSecurity()) {
-                    launchPinDialog(PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT);
-                } else {
-                    pinFragmentDone(PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT, /* success= */ true);
-                }
+                launchPinDialog(PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT);
                 return true;
             case KEY_RESTRICTED_PROFILE_PIN:
                 launchPinDialog(PIN_MODE_RESTRICTED_PROFILE_CHANGE_PASSWORD);
                 return true;
             case KEY_RESTRICTED_PROFILE_CREATE:
-                if (hasLockscreenSecurity()) {
-                    addRestrictedUser();
-                } else {
-                    launchPinDialog(PIN_MODE_CHOOSE_LOCKSCREEN);
-                }
+                createRestrictedProfile();
                 return true;
             case KEY_RESTRICTED_PROFILE_DELETE:
                 launchPinDialog(PIN_MODE_RESTRICTED_PROFILE_DELETE);
                 return true;
         }
         return super.onPreferenceTreeClick(preference);
+    }
+
+    private void createRestrictedProfile() {
+        mBackgroundHandler.post(() -> {
+            boolean pinIsSet = mRestrictedProfilePinStorage.isPinSet();
+
+            mUiThreadHandler.post(() -> {
+                if (pinIsSet) {
+                    addRestrictedUser();
+                } else {
+                    launchPinDialog(PIN_MODE_CHOOSE_LOCKSCREEN);
+                }
+            });
+        });
     }
 
     private boolean isUnknownSourcesBlocked() {
@@ -344,62 +383,32 @@ public class SecurityFragment extends SettingsPreferenceFragment
     }
 
     @Override
-    public void saveLockPassword(String pin, String originalPin, int quality) {
-        new LockPatternUtils(getActivity())
-                .saveLockPassword(pin, originalPin, quality, getContext().getUserId());
-    }
-
-    @Override
-    public void clearLockPassword(String oldPin) {
-        byte[] oldPinBytes = oldPin != null ? oldPin.getBytes() : null;
-        new LockPatternUtils(getActivity()).clearLock(oldPinBytes, getContext().getUserId());
-    }
-
-    @Override
-    public boolean checkPassword(String password) {
-        return mRestrictedProfile.checkPassword(password);
-    }
-
-    @Override
-    public boolean hasLockscreenSecurity() {
-        return mRestrictedProfile.hasLockscreenSecurity();
-    }
-
-    private ILockSettings getLockSettings() {
-        if (mLockSettingsService == null) {
-            mLockSettingsService = ILockSettings.Stub.asInterface(
-                    ServiceManager.getService("lock_settings"));
-        }
-        return mLockSettingsService;
-    }
-
-    @Override
     public void pinFragmentDone(int requestCode, boolean success) {
+        if (!success) {
+            Log.d(TAG, "Request " + requestCode + " unsuccessful.");
+            return;
+        }
+
         switch (requestCode) {
             case PIN_MODE_CHOOSE_LOCKSCREEN:
-                if (success) {
-                    addRestrictedUser();
-                }
+                addRestrictedUser();
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT:
-                if (success) {
-                    mRestrictedProfile.exitUser();
-                    getActivity().finish();
-                }
+                mRestrictedProfile.exitUser();
+                getActivity().finish();
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_CHANGE_PASSWORD:
                 // do nothing
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_DELETE:
-                if (success) {
-                    mHandler.post(() -> {
-                        mRestrictedProfile.removeUser();
-                        UserSwitchListenerService.updateLaunchPoint(getActivity(), false);
-                        refresh();
-                    });
-
-                }
+                mUiThreadHandler.post(() -> {
+                    mRestrictedProfile.removeUser();
+                    UserSwitchListenerService.updateLaunchPoint(getActivity(), false);
+                    refresh();
+                });
                 break;
+            default:
+                Log.d(TAG, "Pin request code not recognised: " + requestCode);
         }
     }
 

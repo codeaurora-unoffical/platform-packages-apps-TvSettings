@@ -16,6 +16,11 @@
 
 package com.android.tv.twopanelsettings.slices.builders;
 
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.BUTTONSTYLE;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.CHECKMARK;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.RADIO;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.SWITCH;
+
 import android.app.PendingIntent;
 import android.content.Context;
 import android.net.Uri;
@@ -147,6 +152,12 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         return this;
     }
 
+    /** Add a preference which can be embedded in other settings items. **/
+    public PreferenceSliceBuilder setEmbeddedPreference(RowBuilder builder) {
+        mImpl.setEmbeddedPreference(builder);
+        return this;
+    }
+
     /** Indicates that the slice is not ready yet **/
     public PreferenceSliceBuilder setNotReady() {
         mImpl.setNotReady();
@@ -178,8 +189,8 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         private CharSequence mTargetSliceUri;
         private CharSequence mKey;
         private boolean mIconNeedsToBeProcessed;
-        private boolean mIsCheckMark;
-        private boolean mSelectable;
+        private @BUTTONSTYLE int mButtonStyle;
+        private boolean mEnabled;
 
         public static final int TYPE_ICON = 1;
         public static final int TYPE_ACTION = 2;
@@ -188,7 +199,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
          * Builder to construct a row.
          */
         public RowBuilder() {
-            mSelectable = true;
+            mEnabled = true;
             mUri = null;
         }
 
@@ -198,7 +209,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
          * @param uri Uri to tag for this slice.
          */
         public RowBuilder(Uri uri) {
-            mSelectable = true;
+            mEnabled = true;
             mUri = uri;
         }
 
@@ -437,6 +448,42 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         }
 
         /**
+         * Add a radio button to the RowBuilder.
+         * @param pendingIntent pendingIntent to launch when radio is clicked.
+         * @param isChecked Initial state of the radio button
+         */
+        public RowBuilder addRadioButton(
+                PendingIntent pendingIntent, boolean isChecked) {
+            return addButton(pendingIntent, isChecked, RADIO);
+        }
+
+        /**
+         * Add a checkmark to the RowBuilder.
+         * @param pendingIntent pendingIntent to launch when checkmark is clicked.
+         * @param isChecked Initial state of the check mark.
+         */
+        public RowBuilder addCheckMark(
+                PendingIntent pendingIntent, boolean isChecked) {
+            return addButton(pendingIntent, isChecked, CHECKMARK);
+        }
+
+        /**
+         * Add a switch to the RowBuilder.
+         * @param pendingIntent pendingIntent to launch when switch is clicked.
+         * @param isChecked Initial state of the switch.
+         */
+        public RowBuilder addSwitch(
+                PendingIntent pendingIntent, boolean isChecked) {
+            return addButton(pendingIntent, isChecked, SWITCH);
+        }
+
+        private RowBuilder addButton(
+                PendingIntent pendingIntent, boolean isChecked, @BUTTONSTYLE int style) {
+            SliceAction switchAction = new SliceAction(pendingIntent, "", isChecked);
+            mButtonStyle = style;
+            return addEndItem(switchAction);
+        }
+        /**
          * Add a switch for the preference.
          * @param pendingIntent pendingIntent
          * @param actionTitle title for the switch, also used for contentDescription.
@@ -447,6 +494,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         public PreferenceSliceBuilder.RowBuilder addSwitch(
                 PendingIntent pendingIntent, @NonNull CharSequence actionTitle, boolean isChecked) {
             SliceAction switchAction = new SliceAction(pendingIntent, actionTitle, isChecked);
+            mButtonStyle = SWITCH;
             return addEndItem(switchAction);
         }
 
@@ -524,11 +572,26 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
         /**
          * Set whether the toggle use a checkmark style. Otherwise, a switch style is used.
-         * @param isCheckMark use checkmark
+         * @param isCheckMark use checkmark.
+         * @deprecated use {@link PreferenceSliceBuilder.RowBuilder#setButtonStyle(int)}
          */
+        @Deprecated
         @NonNull
         public RowBuilder setCheckmark(boolean isCheckMark) {
-            mIsCheckMark = isCheckMark;
+            if (isCheckMark) {
+                mButtonStyle = CHECKMARK;
+            } else {
+                mButtonStyle = SWITCH;
+            }
+            return this;
+        }
+
+        /**
+         * Set the button style.
+         * @param buttonStyle
+         */
+        public RowBuilder setButtonStyle(@BUTTONSTYLE int buttonStyle) {
+            mButtonStyle = buttonStyle;
             return this;
         }
 
@@ -543,11 +606,11 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         }
 
         /**
-         * Set whether this item is focusable.
+         * Set whether this item is enabled.
          */
         @NonNull
-        public RowBuilder setSelectable(boolean selectable) {
-            mSelectable = selectable;
+        public RowBuilder setEnabled(boolean enabled) {
+            mEnabled = enabled;
             return this;
         }
 
@@ -561,8 +624,8 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
         /**
          *
          */
-        public boolean isCheckMark() {
-            return mIsCheckMark;
+        public int getButtonStyle() {
+            return mButtonStyle;
         }
 
         /**
@@ -593,8 +656,8 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
             return mHasDefaultToggle;
         }
 
-        public boolean isSelectable() {
-            return mSelectable;
+        public boolean isEnabled() {
+            return mEnabled;
         }
 
         public boolean isTitleItemLoading() {

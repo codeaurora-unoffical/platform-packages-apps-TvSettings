@@ -32,6 +32,7 @@
     <uses-permission android:name="android.permission.PEERS_MAC_ADDRESS"/>
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.REBOOT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS" />
@@ -53,7 +54,8 @@
         android:theme="@style/Theme.Settings"
         android:usesCleartextTraffic="true"
         android:defaultToDeviceProtectedStorage="true"
-        android:directBootAware="true">
+        android:directBootAware="true"
+        android:allowClearUserData="false">
 
         <activity
             android:name=".MainSettings"
@@ -205,6 +207,17 @@
             <intent-filter android:priority="1">
                 <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="android.settings.PICTURE_IN_PICTURE_SETTINGS" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".device.apps.specialaccess.SystemAlertActivity"
+                  android:theme="@style/Theme.Settings.Transparent"
+                  android:taskAffinity=""
+                  android:excludeFromRecents="true"
+                  android:exported="true">
+            <intent-filter android:priority="1">
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.settings.action.MANAGE_OVERLAY_PERMISSION" />
             </intent-filter>
         </activity>
 
@@ -591,6 +604,9 @@
                 <action android:name="com.google.android.tungsten.setupwraith.TV_SETTINGS_POST_SETUP" />
             </intent-filter>
         </receiver>
+
+        <service android:name=".users.RestrictedProfilePinService"
+            android:exported="false" />
 
         <service android:name=".device.storage.SettingsStorageService$Impl"
             android:exported="false" />
