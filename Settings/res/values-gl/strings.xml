@@ -92,6 +92,7 @@
     <string name="device_backup_restore" msgid="4552158624969018687">"Copia de seguranza e restauración"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Restablecemento dos datos de fábrica"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Calibración"</string>
+    <string name="device_energy_saver" msgid="1105023232841036991">"Aforrador de enerxía"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Seleccionar formatos"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Son envolvente"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
@@ -510,7 +511,7 @@
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Activar rexistro de busca de HCI de Bluetooth"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Modo de depuración de erros cando o USB está conectado"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"A aplicación depurada agarda a que o depurador se conecte antes de executarse"</string>
-    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Mostra os límites dos clips, as marxes, etc."</string>
+    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Mostra os límites dos clips, as marxes etc."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Actualizar as vistas das ventás creadas con GPU"</string>
     <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Iluminar capas de hardware en verde ao actualizarse"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"De mellor a peor: azul, verde, vermello claro, vermello"</string>
@@ -659,7 +660,7 @@
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"Almacenamento utilizado"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"Uso de <xliff:g id="SIZE">%1$s</xliff:g> no <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Borrar datos"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Eliminaranse todos os datos desta aplicación de forma permanente.\nIsto inclúe todos os ficheiros, as opcións de configuración, as contas, as bases de datos, etc."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Eliminaranse todos os datos desta aplicación de forma permanente.\nIsto inclúe todos os ficheiros, as opcións de configuración, as contas, as bases de datos etc."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"Borrar valores predeterminados"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"Definir que se abre para certas accións"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Valores predeterminados sen definir"</string>
@@ -678,8 +679,11 @@
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Cando comezar"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"O protector de pantalla comezará transcorrido este período de inactividade. Se non se selecciona ningún protector de pantalla, a pantalla apagarase."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Despois de <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> de inactividade"</string>
-    <string name="device_daydreams_screen_off" msgid="2513117894550171240">"Suspender o dispositivo"</string>
-    <string name="device_daydreams_screen_off_description" msgid="1520184410742621809">"A pantalla apágase despois deste período de inactividade."</string>
+    <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Apagar pantalla"</string>
+    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Despois de <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Apagar a pantalla despois de"</string>
+    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Permitir apagar a pantalla"</string>
+    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Durante a reprodución de contido multimedia"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Non hai ningunha conta que almacene datos da copia de seguranza neste momento"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Queres deixar de crear copias de seguranza dos datos de aplicacións, configuracións, marcadores e contrasinais das redes wifi e borrar todas as copias nos servidores de Google?"</string>
