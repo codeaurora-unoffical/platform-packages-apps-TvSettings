@@ -46,6 +46,7 @@ import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.tv.twopanelsettings.slices.InfoFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
 
@@ -71,11 +72,15 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             "com.android.tv.twopanelsettings.PREF_PANEL_IDX";
     private static final int[] frameResIds =
             {R.id.frame1, R.id.frame2, R.id.frame3, R.id.frame4, R.id.frame5, R.id.frame6,
-            R.id.frame7, R.id.frame8, R.id.frame9, R.id.frame10};
+                    R.id.frame7, R.id.frame8, R.id.frame9, R.id.frame10};
     private static final int[] frameResOverlayIds =
             {R.id.frame1_overlay, R.id.frame2_overlay, R.id.frame3_overlay, R.id.frame4_overlay,
             R.id.frame5_overlay, R.id.frame6_overlay, R.id.frame7_overlay, R.id.frame8_overlay,
             R.id.frame9_overlay, R.id.frame10_overlay};
+    private static final int[] frameResPaddingIds =
+            {R.id.frame1_padding, R.id.frame2_padding, R.id.frame3_padding, R.id.frame4_padding,
+            R.id.frame5_padding, R.id.frame6_padding, R.id.frame7_padding,
+            R.id.frame8_padding, R.id.frame9_padding};
     private static final long PANEL_ANIMATION_MS = 400;
     private static final long PANEL_ANIMATION_DELAY_MS = 200;
 
@@ -105,7 +110,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 public void onChildViewHolderSelectedAndPositioned(RecyclerView parent,
                         RecyclerView.ViewHolder child, int position, int subposition) {
                 }
-    };
+            };
 
     private OnGlobalLayoutListener mOnGlobalLayoutListener = new OnGlobalLayoutListener() {
         @Override
@@ -147,10 +152,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     /** Extend this method to provide the initial screen **/
     public abstract void onPreferenceStartInitialScreen();
 
-    private boolean isLeanbackPreferenceFragment(String fragment) {
+    private boolean shouldDisplay(String fragment) {
         try {
-            return LeanbackPreferenceFragment.class
-                    .isAssignableFrom(Class.forName(fragment));
+            return LeanbackPreferenceFragment.class.isAssignableFrom(Class.forName(fragment))
+                    || InfoFragment.class.isAssignableFrom(Class.forName(fragment));
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("Fragment class not found.", e);
         }
@@ -167,7 +172,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         Fragment preview = getChildFragmentManager().findFragmentById(
                 frameResIds[mPrefPanelIdx + 1]);
         if (preview != null && !(preview instanceof DummyFragment)) {
-            navigateToPreviewFragment();
+            if (!(preview instanceof InfoFragment)) {
+                navigateToPreviewFragment();
+            }
         } else {
             // If there is no corresponding slice provider, thus the corresponding fragment is not
             // created, return false to check the intent of the SlicePreference.
@@ -189,6 +196,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     public void navigateToPreviewFragment() {
         Fragment previewFragment = getChildFragmentManager().findFragmentById(
                 frameResIds[mPrefPanelIdx + 1]);
+        if (previewFragment instanceof NavigationCallback) {
+            ((NavigationCallback) previewFragment).onNavigateToPreview();
+        }
         if (previewFragment == null || previewFragment instanceof DummyFragment) {
             return;
         }
@@ -224,9 +234,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             return;
         }
         LeanbackPreferenceFragment leanbackPreferenceFragment =
-                    (LeanbackPreferenceFragment) fragment;
+                (LeanbackPreferenceFragment) fragment;
         VerticalGridView listView = (VerticalGridView) leanbackPreferenceFragment.getListView();
-        if (listView !=  null) {
+        if (listView != null) {
             if (isAddingListener) {
                 listView.setOnChildViewHolderSelectedListener(mOnChildViewHolderSelectedListener);
             } else {
@@ -237,6 +247,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
     /**
      * Displays left panel preference fragment to the user.
+     *
      * @param fragment Fragment instance to be added.
      */
     public void startPreferenceFragment(@NonNull Fragment fragment) {
@@ -271,6 +282,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         Fragment preview = getChildFragmentManager().findFragmentById(
                 frameResIds[mPrefPanelIdx + 1]);
         if (preview != null && !(preview instanceof DummyFragment)) {
+            if (preview instanceof NavigationCallback) {
+                ((NavigationCallback) preview).onNavigateToPreview();
+            }
             mPrefPanelIdx++;
             moveToPanel(mPrefPanelIdx, true);
             removeFragmentAndAddToBackStack(mPrefPanelIdx - 1);
@@ -341,7 +355,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         if (existingPreviewFragment != null
                 && existingPreviewFragment.getClass().equals(previewFragment.getClass())
                 && equalArguments(existingPreviewFragment.getArguments(),
-                    previewFragment.getArguments())) {
+                previewFragment.getArguments())) {
             if (isRTL() && mScrollView.getScrollX() == 0 && mPrefPanelIdx == 0) {
                 // For RTL we need to reclaim focus to the correct scroll position if a pref
                 // launches a new activity because the horizontal scroll goes back to 0.
@@ -426,25 +440,64 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }
     }
 
+    /**
+     * Implement this if fragment needs to handle DPAD_LEFT & DPAD_RIGHT itself in some cases
+     **/
+    public interface NavigationCallback {
+
+        /**
+         * Returns true if the fragment is in the state that can navigate back on receiving a
+         * navigation DPAD key. When true, TwoPanelSettings will initiate a back operation on
+         * receiving a left key. This method doesn't apply to back key: back key always initiates a
+         * back operation.
+         */
+        boolean canNavigateBackOnDPAD();
+
+        /**
+         * Callback when navigating to preview screen
+         */
+        void onNavigateToPreview();
+
+        /**
+         * Callback when returning to previous screen
+         */
+        void onNavigateBack();
+    }
+
     private class RootViewOnKeyListener implements View.OnKeyListener {
 
         @Override
         public boolean onKey(View v, int keyCode, KeyEvent event) {
+            Fragment prefFragment =
+                    getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
+            if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_BACK) {
+                return back(true);
+            }
+
             if (event.getAction() == KeyEvent.ACTION_DOWN
-                    && (keyCode == KeyEvent.KEYCODE_BACK
-                        || (!isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_LEFT)
-                        || (isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_RIGHT))) {
-                return back(keyCode == KeyEvent.KEYCODE_BACK);
-            } else if (event.getAction() == KeyEvent.ACTION_UP
+                    && ((!isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_LEFT)
+                    || (isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_RIGHT))) {
+                if (prefFragment instanceof NavigationCallback
+                        && !((NavigationCallback) prefFragment).canNavigateBackOnDPAD()) {
+                    return false;
+                }
+                return back(false);
+            }
+
+            if (event.getAction() == KeyEvent.ACTION_UP
                     && ((!isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_RIGHT)
-                        || (isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_LEFT))) {
+                    || (isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_LEFT))) {
                 if (shouldPerformClick()) {
                     v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN,
                             KeyEvent.KEYCODE_DPAD_CENTER));
                     v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP,
                             KeyEvent.KEYCODE_DPAD_CENTER));
                 } else {
-                    navigateToPreviewFragment();
+                    Fragment previewFragment = getChildFragmentManager()
+                            .findFragmentById(frameResIds[mPrefPanelIdx + 1]);
+                    if (!(previewFragment instanceof InfoFragment)) {
+                        navigateToPreviewFragment();
+                    }
                 }
                 return true;
             }
@@ -454,11 +507,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
     private boolean shouldPerformClick() {
         Fragment prefFragment =
-                    getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
+                getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
         Preference preference = getChosenPreference(prefFragment);
         if (preference instanceof SlicePreference
-                    && ((SlicePreference) preference).getSliceAction() != null
-                    && ((SlicePreference) preference).getUri() != null) {
+                && ((SlicePreference) preference).getSliceAction() != null
+                && ((SlicePreference) preference).getUri() != null) {
             return true;
         }
 
@@ -513,6 +566,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         mHandler.postDelayed(() -> {
             removeFragment(mPrefPanelIdx + 2);
             mIsNavigatingBack = false;
+            Fragment previewFragment =
+                    getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx + 1]);
+            if (previewFragment instanceof NavigationCallback) {
+                ((NavigationCallback) previewFragment).onNavigateBack();
+            }
         }, PANEL_ANIMATION_DELAY_MS + PANEL_ANIMATION_DELAY_MS);
         return true;
     }
@@ -532,7 +590,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         if (removePanel != null) {
             removePanel.setExitTransition(new Fade());
             getChildFragmentManager().beginTransaction().remove(removePanel)
-                .addToBackStack("remove " + removePanel.getClass().getName()).commit();
+                    .addToBackStack("remove " + removePanel.getClass().getName()).commit();
         }
     }
 
@@ -542,7 +600,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         int panelWidth = getResources().getDimensionPixelSize(
                 R.dimen.tp_settings_preference_pane_width);
         int panelPadding = getResources().getDimensionPixelSize(
-                R.dimen.preference_pane_padding_end);
+                R.dimen.preference_pane_padding_end) + getResources().getDimensionPixelSize(
+                R.dimen.preview_pane_padding_start) + getResources().getDimensionPixelSize(
+                R.dimen.preview_pane_padding_end);
         int result = frameResIds.length * panelWidth - scrollViewWidth + panelPadding;
         return result < 0 ? 0 : result;
     }
@@ -563,6 +623,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             boolean scrollsToPreview =
                     isRTL() ? mScrollView.getScrollX() >= mMaxScrollX - panelWidth * index
                             : mScrollView.getScrollX() <= panelWidth * index;
+            int paddingPanelIndex = -1;
             Fragment preview = getChildFragmentManager().findFragmentById(frameResIds[index + 1]);
             boolean hasPreviewFragment = preview != null && !(preview instanceof DummyFragment);
             if (smoothScroll) {
@@ -575,6 +636,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 slideAnim.start();
                 // Color animation
                 if (scrollsToPreview) {
+                    paddingPanelIndex = index - 1;
                     previewPanelOverlay.setAlpha(hasPreviewFragment ? 1f : 0f);
                     ObjectAnimator colorAnim = ObjectAnimator.ofFloat(scrollToPanelOverlay, "alpha",
                             scrollToPanelOverlay.getAlpha(), 0f);
@@ -582,6 +644,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     colorAnim.setDuration(PANEL_ANIMATION_MS);
                     colorAnim.start();
                 } else {
+                    paddingPanelIndex = index + 1;
                     scrollToPanelOverlay.setAlpha(0f);
                     ObjectAnimator colorAnim = ObjectAnimator.ofFloat(previewPanelOverlay, "alpha",
                             previewPanelOverlay.getAlpha(), hasPreviewFragment ? 1f : 0f);
@@ -594,6 +657,12 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 mScrollView.scrollTo(scrollToX, 0);
                 scrollToPanelOverlay.setAlpha(0f);
                 previewPanelOverlay.setAlpha(hasPreviewFragment ? 1f : 0f);
+            }
+            // add padding to separate the currently displayed frames
+            getView().findViewById(frameResPaddingIds[index]).setVisibility(View.VISIBLE);
+            if (paddingPanelIndex >= 0 && paddingPanelIndex < frameResPaddingIds.length) {
+                getView().findViewById(frameResPaddingIds[paddingPanelIndex]).setVisibility(
+                        View.GONE);
             }
             Fragment fragment = getChildFragmentManager().findFragmentById(frameResIds[index]);
             if (fragment != null && fragment.getView() != null) {
@@ -647,7 +716,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         if (chosenPreference == null) {
             return null;
         }
-        return  onCreatePreviewFragment(fragment, chosenPreference);
+        return onCreatePreviewFragment(fragment, chosenPreference);
     }
 
     private Preference getChosenPreference(Fragment fragment) {
@@ -672,7 +741,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     /** Creates preview preference fragment. */
     public Fragment onCreatePreviewFragment(Fragment caller, Preference preference) {
         if (preference.getFragment() != null) {
-            if (!isLeanbackPreferenceFragment(preference.getFragment())) {
+            if (!shouldDisplay(preference.getFragment())) {
                 return null;
             }
             if (preference instanceof SlicePreference) {
@@ -685,7 +754,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 b.putCharSequence(SlicesConstants.TAG_SCREEN_TITLE, slicePref.getTitle());
             }
             return Fragment.instantiate(getActivity(), preference.getFragment(),
-                preference.getExtras());
+                    preference.getExtras());
         } else {
             Fragment f = null;
             if (preference instanceof ListPreference) {

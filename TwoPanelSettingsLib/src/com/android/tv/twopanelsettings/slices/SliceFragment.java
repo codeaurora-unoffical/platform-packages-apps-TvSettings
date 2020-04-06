@@ -327,12 +327,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 IntentSender intentSender = pendingIntent.getIntentSender();
                 startIntentSenderForResult(
                         intentSender, SLICE_REQUEST_CODE, fillInIntent, 0, 0, 0, null);
-                for (int i = 0; i < getPreferenceScreen().getPreferenceCount(); i++) {
-                    Preference pref = getPreferenceScreen().getPreference(i);
-                    if (pref instanceof SliceRadioPreference && pref != preference) {
-                        ((SliceRadioPreference) pref).setChecked(false);
-                    }
-                }
+                radioPref.clearOtherRadioPreferences(getPreferenceScreen());
             } catch (SendIntentException e) {
                 Log.e(TAG, "PendingIntent for slice cannot be sent", e);
             }
@@ -472,9 +467,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
 
     private void setIcon(Icon icon) {
         View view = this.getView();
-        ImageView  decorIcon = view == null ? null : (ImageView) view.findViewById(R.id.decor_icon);
+        ImageView decorIcon = view == null ? null : (ImageView) view.findViewById(R.id.decor_icon);
         if (decorIcon != null && icon != null) {
+            TextView decorTitle = view.findViewById(R.id.decor_title);
+            decorTitle.setMaxWidth(getResources().getDimensionPixelSize(R.dimen.decor_title_width));
             decorIcon.setImageDrawable(icon.loadDrawable(mContextThemeWrapper));
+            decorIcon.setVisibility(View.VISIBLE);
+        } else {
+            decorIcon.setVisibility(View.GONE);
         }
         mScreenIcon = icon;
     }

@@ -29,6 +29,7 @@ import static android.app.slice.Slice.HINT_TITLE;
 import static android.app.slice.Slice.HINT_TTL;
 import static android.app.slice.Slice.SUBTYPE_CONTENT_DESCRIPTION;
 import static android.app.slice.Slice.SUBTYPE_LAYOUT_DIRECTION;
+import static android.app.slice.SliceItem.FORMAT_IMAGE;
 import static android.app.slice.SliceItem.FORMAT_INT;
 import static android.app.slice.SliceItem.FORMAT_TEXT;
 
@@ -38,6 +39,8 @@ import static androidx.slice.builders.ListBuilder.LARGE_IMAGE;
 import static androidx.slice.core.SliceHints.SUBTYPE_MILLIS;
 
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.BUTTONSTYLE;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_IMAGE;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
 
 import android.net.Uri;
 
@@ -73,6 +76,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     public static final String TYPE_PREFERENCE_RADIO = "TYPE_PREFERENCE_RADIO";
     public static final String TAG_TARGET_URI = "TAG_TARGET_URI";
     public static final String TAG_KEY = "TAG_KEY";
+    public static final String TAG_RADIO_GROUP = "TAG_RADIO_GROUP";
     public static final String SUBTYPE_INTENT = "SUBTYPE_INTENT";
     public static final String SUBTYPE_ICON_NEED_TO_BE_PROCESSED =
             "SUBTYPE_ICON_NEED_TO_BE_PROCESSED";
@@ -214,6 +218,9 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         private SliceItem mButtonStyleItem;
         private SliceItem mIsEnabledItem;
         private SliceItem mIsSelectableItem;
+        private SliceItem mRadioGroupItem;
+        private SliceItem mInfoTextItem;
+        private SliceItem mInfoImageItem;
 
         /**
          *
@@ -276,6 +283,15 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             }
             if (builder.getTitleIcon() != null) {
                 setIconNeedsToBeProcessed(builder.iconNeedsToBeProcessed());
+            }
+            if (builder.getRadioGroup() != null) {
+                setRadioGroup(builder.getRadioGroup());
+            }
+            if (builder.getInfoText() != null) {
+                setInfoText(builder.getInfoText());
+            }
+            if (builder.getInfoImage() != null) {
+                setInfoImage(builder.getInfoImage());
             }
             setButtonStyle(builder.getButtonStyle());
             setEnabled(builder.isEnabled());
@@ -412,6 +428,14 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         /**
          *
          */
+        public void setRadioGroup(CharSequence radioGroup) {
+            mRadioGroupItem = new SliceItem(
+                    radioGroup, FORMAT_TEXT, TAG_RADIO_GROUP, new String[]{});
+        }
+
+        /**
+         *
+         */
         public void setEnabled(boolean enabled) {
             mIsEnabledItem = new SliceItem(
                     enabled ? 1 : 0, FORMAT_INT, SUBTYPE_IS_ENABLED, new String[]{});
@@ -424,6 +448,16 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
 
         public void setKey(CharSequence key) {
             mKeyItem = new SliceItem(key, FORMAT_TEXT, TAG_KEY, new String[] {HINT_KEYWORDS});
+        }
+
+        public void setInfoText(CharSequence infoText) {
+            mInfoTextItem = new SliceItem(
+                    infoText, FORMAT_TEXT, EXTRA_PREFERENCE_INFO_TEXT, new String[]{});
+        }
+
+        public void setInfoImage(IconCompat infoImage) {
+            mInfoImageItem = new SliceItem(
+                    infoImage, FORMAT_IMAGE, EXTRA_PREFERENCE_INFO_IMAGE, new String[]{});
         }
 
         /**
@@ -529,6 +563,15 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
             }
             if (mIsSelectableItem != null) {
                 b.addItem(mIsSelectableItem);
+            }
+            if (mRadioGroupItem != null) {
+                b.addItem(mRadioGroupItem);
+            }
+            if (mInfoTextItem != null) {
+                b.addItem(mInfoTextItem);
+            }
+            if (mInfoImageItem != null) {
+                b.addItem(mInfoImageItem);
             }
             for (int i = 0; i < mEndItems.size(); i++) {
                 Slice item = mEndItems.get(i);

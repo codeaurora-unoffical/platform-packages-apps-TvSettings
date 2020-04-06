@@ -52,6 +52,7 @@ import com.android.settingslib.utils.IconCache;
 import com.android.tv.settings.HotwordSwitchController.HotwordStateListener;
 import com.android.tv.settings.accounts.AccountsFragment;
 import com.android.tv.settings.connectivity.ConnectivityListener;
+import com.android.tv.settings.overlay.FeatureFactory;
 import com.android.tv.settings.suggestions.SuggestionPreference;
 import com.android.tv.settings.system.SecurityFragment;
 import com.android.tv.settings.util.SliceUtils;
@@ -80,6 +81,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     static final String KEY_ACCESSORIES = "remotes_and_accessories";
     @VisibleForTesting
     static final String KEY_CONNECTED_DEVICES = "connected_devices";
+    private static final String KEY_CONNECTED_DEVICES_SLICE = "connected_devices_slice";
     @VisibleForTesting
     static final String KEY_NETWORK = "network";
     @VisibleForTesting
@@ -87,7 +89,10 @@ public class MainFragment extends PreferenceControllerFragment implements
     public static final String ACTION_SOUND = "com.android.tv.settings.SOUND";
     @VisibleForTesting
     static final String ACTION_CONNECTED_DEVICES = "com.android.tv.settings.CONNECTED_DEVICES";
-
+    @VisibleForTesting
+    static final String KEY_PRIVACY = "privacy";
+    @VisibleForTesting
+    static final String KEY_DISPLAY_AND_SOUND = "display_and_sound";
     @VisibleForTesting
     static final String KEY_QUICK_SETTINGS = "quick_settings";
 
@@ -263,6 +268,16 @@ public class MainFragment extends PreferenceControllerFragment implements
             Preference accessoryPreference = findPreference(KEY_ACCESSORIES);
             if (accessoryPreference != null) {
                 accessoryPreference.setVisible(false);
+            }
+        }
+        if (FeatureFactory.getFactory(getContext()).isTwoPanelLayout()) {
+            Preference displaySoundPref = findPreference(KEY_DISPLAY_AND_SOUND);
+            if (displaySoundPref != null) {
+                displaySoundPref.setVisible(true);
+            }
+            Preference privacyPref = findPreference(KEY_PRIVACY);
+            if (privacyPref != null) {
+                privacyPref.setVisible(true);
             }
         }
         mHotwordSwitchController.init(this);
@@ -497,8 +512,24 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     @VisibleForTesting
     void updateAccessoryPref() {
+        SlicePreference connectedDevicesSlicePreference =
+                (SlicePreference) findPreference(KEY_CONNECTED_DEVICES_SLICE);
         Preference accessoryPreference = findPreference(KEY_ACCESSORIES);
         Preference connectedDevicesPreference = findPreference(KEY_CONNECTED_DEVICES);
+        if (connectedDevicesSlicePreference != null
+                && FeatureFactory.getFactory(getContext()).isTwoPanelLayout()
+                && SliceUtils.isSliceProviderValid(
+                        getContext(), connectedDevicesSlicePreference.getUri())) {
+            connectedDevicesSlicePreference.setVisible(true);
+            connectedDevicesPreference.setVisible(false);
+            accessoryPreference.setVisible(false);
+            return;
+        }
+
+        if (connectedDevicesSlicePreference != null) {
+            connectedDevicesSlicePreference.setVisible(false);
+        }
+
         if (connectedDevicesPreference != null) {
             Intent intent = new Intent(ACTION_CONNECTED_DEVICES);
             ResolveInfo info = systemIntentIsHandled(getContext(), intent);

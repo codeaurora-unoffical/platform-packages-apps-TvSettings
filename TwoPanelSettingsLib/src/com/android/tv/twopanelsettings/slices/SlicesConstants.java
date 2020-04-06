@@ -32,6 +32,7 @@ public final class SlicesConstants {
     public static final String TAG_TARGET_URI = "TAG_TARGET_URI";
     public static final String TAG_SCREEN_TITLE = "TAG_SCREEN_TITLE";
     public static final String TAG_KEY = "TAG_KEY";
+    public static final String TAG_RADIO_GROUP = "TAG_RADIO_GROUP";
     public static final String SUBTYPE_INTENT = "SUBTYPE_INTENT";
     public static final String SUBTYPE_FOLLOWUP_INTENT = "SUBTYPE_FOLLOWUP_INTENT";
     public static final String SUBTYPE_ICON_NEED_TO_BE_PROCESSED =
@@ -47,7 +48,8 @@ public final class SlicesConstants {
     public static final String PARAMETER_ERROR = "error";
     public static final String PARAMETER_URI = "uri";
     public static final String EXTRA_PREFERENCE_KEY = "extra_preference_key";
-
+    public static final String EXTRA_PREFERENCE_INFO_TEXT= "extra_preference_info_text";
+    public static final String EXTRA_PREFERENCE_INFO_IMAGE = "extra_preference_info_image";
     public static final int SWITCH = 0;
     public static final int CHECKMARK = 1;
     public static final int RADIO = 2;
