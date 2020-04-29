@@ -118,6 +118,21 @@
             </intent-filter>
             -->
         </activity>
+
+        <activity
+            android:name=".connectivity.NetworkRequestDialogActivity"
+            android:theme="@style/Transparent"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=".connectivity.NetworkRequestDialogActivity"
+            android:exported="true"
+            android:permission="android.permission.NETWORK_SETTINGS">
+            <intent-filter>
+                <action android:name="com.android.settings.wifi.action.NETWORK_REQUEST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".connectivity.WifiConnectionActivity"
             android:clearTaskOnLaunch="true"
@@ -153,6 +168,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.ACCOUNT_SYNC_SETTINGS" />
+                <action android:name="android.settings.SYNC_SETTINGS" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

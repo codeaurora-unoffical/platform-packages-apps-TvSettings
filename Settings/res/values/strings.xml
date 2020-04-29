@@ -90,10 +90,10 @@
         <item quantity="one"><xliff:g id="accessories_number">%1$d</xliff:g> accessory</item>
         <item quantity="other"><xliff:g id="accessories_number">%1$d</xliff:g> accessories</item>
     </plurals>
-    <!-- Title for main screen preference for help and feedback [CHAR LIMIT=50] -->
-    <string name="help_and_feedback_category_title">Help &amp; feedback</string>
     <!-- Title for main screen preference for display & sound [CHAR LIMIT=50] -->
     <string name="display_and_sound_category_title">Display &amp; Sound</string>
+    <!-- Title for main screen preference for help and feedback [CHAR LIMIT=50] -->
+    <string name="help_and_feedback_category_title">Help &amp; Feedback</string>
     <!-- Title for main screen preference for privacy settings [CHAR LIMIT=50] -->
     <string name="privacy_category_title">Privacy</string>
     <!-- Summary for main screen preference for privacy settings [CHAR LIMIT=75] -->
@@ -291,7 +291,7 @@
     <!-- Help and feedback preferences -->
     <skip />
     <!-- Preference which manages sending feedback about an issue. [CHAR LIMIT=50] -->
-    <string name="send_feedback">Take bug report</string>
+    <string name="send_feedback">Send feedback</string>
     <!-- Preference which manages launching the help center. [CHAR LIMIT=50] -->
     <string name="launch_help">Help Center</string>
 
@@ -1734,4 +1734,18 @@
 
     <string name="default_admin_support_msg">If you have questions, contact your IT admin</string>
 
+    <!-- Title for Network connection request Dialog [CHAR LIMIT=60] -->
+    <string name="network_connection_request_dialog_title">Device to use with <xliff:g id="appName" example="ThirdPartyAppName">%1$s</xliff:g></string>
+    <!-- Message for Network connection timeout Dialog [CHAR LIMIT=NONE] -->
+    <string name="network_connection_timeout_dialog_message">No devices found. Make sure devices are turned on and available to connect.</string>
+    <!-- OK button for Network connection timeout Dialog [CHAR LIMIT=30] -->
+    <string name="network_connection_timeout_dialog_ok">Try again</string>
+    <!-- Message for Network connection error state Dialog [CHAR LIMIT=NONE] -->
+    <string name="network_connection_errorstate_dialog_message">Something came up. The application has cancelled the request to choose a device.</string>
+    <!-- Toast message when connection is successful [CHAR LIMIT=30] -->
+    <string name="network_connection_connect_successful">Connection successful</string>
+    <!-- Neutral button for Network connection request Dialog [CHAR LIMIT=30] -->
+    <string name="network_connection_request_dialog_showall">Show all</string>
+    <!--Bluetooth settings screen, text that appears in heading bar when scanning for devices -->
+    <string name="progress_scanning">Searching</string>
 </resources>
