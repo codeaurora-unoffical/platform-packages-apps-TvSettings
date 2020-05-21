@@ -46,6 +46,7 @@ import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.tv.twopanelsettings.slices.HasSliceUri;
 import com.android.tv.twopanelsettings.slices.InfoFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
@@ -77,10 +78,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             {R.id.frame1_overlay, R.id.frame2_overlay, R.id.frame3_overlay, R.id.frame4_overlay,
             R.id.frame5_overlay, R.id.frame6_overlay, R.id.frame7_overlay, R.id.frame8_overlay,
             R.id.frame9_overlay, R.id.frame10_overlay};
-    private static final int[] frameResPaddingIds =
-            {R.id.frame1_padding, R.id.frame2_padding, R.id.frame3_padding, R.id.frame4_padding,
-            R.id.frame5_padding, R.id.frame6_padding, R.id.frame7_padding,
-            R.id.frame8_padding, R.id.frame9_padding};
     private static final long PANEL_ANIMATION_MS = 400;
     private static final long PANEL_ANIMATION_DELAY_MS = 200;
 
@@ -349,7 +346,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             previewFragment.setTargetFragment(prefFragment, 0);
         }
 
-
         final Fragment existingPreviewFragment =
                 getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx + 1]);
         if (existingPreviewFragment != null
@@ -617,9 +613,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         int panelWidth = getResources().getDimensionPixelSize(
                 R.dimen.tp_settings_preference_pane_width);
         int panelPadding = getResources().getDimensionPixelSize(
-                R.dimen.preference_pane_padding_end) + getResources().getDimensionPixelSize(
-                R.dimen.preview_pane_padding_start) + getResources().getDimensionPixelSize(
-                R.dimen.preview_pane_padding_end);
+                R.dimen.preference_pane_extra_padding_start) * 2;
         int result = frameResIds.length * panelWidth - scrollViewWidth + panelPadding;
         return result < 0 ? 0 : result;
     }
@@ -648,7 +642,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             boolean scrollsToPreview =
                     isRTL() ? mScrollView.getScrollX() >= mMaxScrollX - panelWidth * index
                             : mScrollView.getScrollX() <= panelWidth * index;
-            int paddingPanelIndex = -1;
             boolean hasPreviewFragment = fragmentToBecomePreviewPanel != null
                     && !(fragmentToBecomePreviewPanel instanceof DummyFragment);
             if (smoothScroll) {
@@ -662,7 +655,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 slideAnim.start();
                 // Color animation
                 if (scrollsToPreview) {
-                    paddingPanelIndex = index - 1;
                     previewPanelOverlay.setAlpha(hasPreviewFragment ? 1f : 0f);
                     ObjectAnimator colorAnim = ObjectAnimator.ofFloat(scrollToPanelOverlay, "alpha",
                             scrollToPanelOverlay.getAlpha(), 0f);
@@ -670,7 +662,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     colorAnim.setDuration(PANEL_ANIMATION_MS);
                     colorAnim.start();
                 } else {
-                    paddingPanelIndex = index + 1;
                     scrollToPanelOverlay.setAlpha(0f);
                     ObjectAnimator colorAnim = ObjectAnimator.ofFloat(previewPanelOverlay, "alpha",
                             previewPanelOverlay.getAlpha(), hasPreviewFragment ? 1f : 0f);
@@ -684,12 +675,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 mScrollView.scrollTo(scrollToX, 0);
                 scrollToPanelOverlay.setAlpha(0f);
                 previewPanelOverlay.setAlpha(hasPreviewFragment ? 1f : 0f);
-            }
-            // add padding to separate the currently displayed frames
-            getView().findViewById(frameResPaddingIds[index]).setVisibility(View.VISIBLE);
-            if (paddingPanelIndex >= 0 && paddingPanelIndex < frameResPaddingIds.length) {
-                getView().findViewById(frameResPaddingIds[paddingPanelIndex]).setVisibility(
-                        View.GONE);
             }
             if (fragmentToBecomeMainPanel != null && fragmentToBecomeMainPanel.getView() != null) {
                 fragmentToBecomeMainPanel.getView().requestFocus();
@@ -755,7 +740,27 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         return onCreatePreviewFragment(fragment, chosenPreference);
     }
 
-    private Preference getChosenPreference(Fragment fragment) {
+    /**
+     * Refocus the current selected preference. When a preference is selected and its InfoFragment
+     * slice data changes. We need to call this method to make sure InfoFragment updates in time.
+     */
+    public void refocusPreference(Fragment fragment) {
+        if (!isFragmentInTheMainPanel(fragment)) {
+            return;
+        }
+        Preference chosenPreference = getChosenPreference(fragment);
+        try {
+            if (chosenPreference != null && chosenPreference.getFragment() != null
+                    && InfoFragment.class.isAssignableFrom(
+                    Class.forName(chosenPreference.getFragment()))) {
+                onPreferenceFocused(chosenPreference);
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static Preference getChosenPreference(Fragment fragment) {
         if (!(fragment instanceof LeanbackPreferenceFragment)) {
             return null;
         }
@@ -780,14 +785,14 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             if (!shouldDisplay(preference.getFragment())) {
                 return null;
             }
-            if (preference instanceof SlicePreference) {
-                SlicePreference slicePref = (SlicePreference) preference;
+            if (preference instanceof HasSliceUri) {
+                HasSliceUri slicePref = (HasSliceUri) preference;
                 if (slicePref.getUri() == null || !isUriValid(slicePref.getUri())) {
                     return null;
                 }
                 Bundle b = preference.getExtras();
                 b.putString(SlicesConstants.TAG_TARGET_URI, slicePref.getUri());
-                b.putCharSequence(SlicesConstants.TAG_SCREEN_TITLE, slicePref.getTitle());
+                b.putCharSequence(SlicesConstants.TAG_SCREEN_TITLE, preference.getTitle());
             }
             return Fragment.instantiate(getActivity(), preference.getFragment(),
                     preference.getExtras());

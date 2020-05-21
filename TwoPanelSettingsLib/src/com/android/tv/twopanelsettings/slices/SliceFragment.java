@@ -19,10 +19,13 @@ package com.android.tv.twopanelsettings.slices;
 import static android.app.slice.Slice.EXTRA_TOGGLE_STATE;
 import static android.app.slice.Slice.HINT_PARTIAL;
 
+import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logEntrySelected;
+import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logToggleInteracted;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_KEY;
 
 import android.app.PendingIntent;
 import android.app.PendingIntent.CanceledException;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.IntentSender.SendIntentException;
@@ -76,6 +79,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private Slice mSlice;
     private ContextThemeWrapper mContextThemeWrapper;
     private String mUriString = null;
+    private int mCurrentPageId;
     private CharSequence mScreenTitle;
     private CharSequence mScreenSubtitle;
     private Icon mScreenIcon;
@@ -190,6 +194,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             setTitle(mScreenTitle);
         } else {
             Data data = SlicePreferencesUtil.extract(screenTitleItem);
+            mCurrentPageId = SlicePreferencesUtil.getPageId(screenTitleItem);
             CharSequence title = SlicePreferencesUtil.getText(data.mTitleItem);
             if (!TextUtils.isEmpty(title)) {
                 setTitle(title);
@@ -218,6 +223,10 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         updatePreferenceScreen(preferenceScreen, newPrefs);
         if (mLastFocusedPreferenceKey != null) {
             scrollToPreference(mLastFocusedPreferenceKey);
+        }
+
+        if (getParentFragment() instanceof TwoPanelSettingsFragment) {
+            ((TwoPanelSettingsFragment) getParentFragment()).refocusPreference(this);
         }
     }
 
@@ -280,6 +289,8 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                         oldPref.setSummary(newPref.getSummary());
                         oldPref.setEnabled(newPref.isEnabled());
                         oldPref.setSelectable(newPref.isSelectable());
+                        oldPref.setFragment(newPref.getFragment());
+                        oldPref.getExtras().putAll(newPref.getExtras());
                         if ((oldPref instanceof TwoStatePreference)
                                 && (newPref instanceof TwoStatePreference)) {
                             ((TwoStatePreference) oldPref)
@@ -289,6 +300,11 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                                 && (newPref instanceof HasSliceAction)) {
                             ((HasSliceAction) oldPref)
                                     .setSliceAction(((HasSliceAction) newPref).getSliceAction());
+                        }
+                        if ((oldPref instanceof HasSliceUri)
+                                && (newPref instanceof HasSliceUri)) {
+                            ((HasSliceUri) oldPref)
+                                    .setUri(((HasSliceUri) newPref).getUri());
                         }
                         oldPref.setOrder(i);
                         neededToAddNewPref = false;
@@ -319,6 +335,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 return true;
             }
 
+            logEntrySelected(getPreferenceActionId(preference));
             try {
                 SliceActionImpl action = radioPref.getSliceAction();
                 PendingIntent pendingIntent = action.getAction();
@@ -331,6 +348,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             } catch (SendIntentException e) {
                 Log.e(TAG, "PendingIntent for slice cannot be sent", e);
             }
+            return true;
         } else if (preference instanceof TwoStatePreference
                 && preference instanceof HasSliceAction) {
             // TODO - Show loading indicator here?
@@ -339,6 +357,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 if (action.isToggle()) {
                     // Update the intent extra state
                     boolean isChecked = ((TwoStatePreference) preference).isChecked();
+                    logToggleInteracted(getPreferenceActionId(preference), isChecked);
                     Intent i = new Intent()
                             .putExtra(EXTRA_TOGGLE_STATE, isChecked)
                             .putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
@@ -355,6 +374,11 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             return true;
         } else if (preference instanceof SlicePreference) {
             SlicePreference actionPref = (SlicePreference) preference;
+            // In this case, we may intentionally ignore this entry selection to avoid double
+            // logging as the action should result in a PAGE_FOCUSED event being logged.
+            if (getPreferenceActionId(actionPref) != TvSettingsEnums.ENTRY_DEFAULT) {
+                logEntrySelected(getPreferenceActionId(actionPref));
+            }
             if (actionPref.getSliceAction() != null) {
                 try {
                     SliceActionImpl action = actionPref.getSliceAction();
@@ -520,5 +544,19 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (errorMessage != null) {
             Toast.makeText(getContext(), errorMessage, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private int getPreferenceActionId(Preference preference) {
+        if (preference instanceof HasSliceAction) {
+            return ((HasSliceAction) preference).getActionId() != 0
+                    ? ((HasSliceAction) preference).getActionId()
+                    : TvSettingsEnums.ENTRY_DEFAULT;
+        }
+        return TvSettingsEnums.ENTRY_DEFAULT;
+    }
+
+    @Override
+    protected int getPageId() {
+        return mCurrentPageId != 0 ? mCurrentPageId : TvSettingsEnums.PAGE_SLICE_DEFAULT;
     }
 }
