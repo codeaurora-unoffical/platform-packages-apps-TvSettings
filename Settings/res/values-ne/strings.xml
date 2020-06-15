@@ -87,6 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"असक्षम पारिएका एपहरू"</string>
     <string name="device_daydream" msgid="2631191946958113220">"स्क्रिन सेभर"</string>
     <string name="device_display" msgid="244634591698925025">"प्रदर्शन गर्नुहोस्"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"डिस्प्ले तथा ध्वनि"</string>
     <string name="device_sound" msgid="8616320533559404963">"ध्वनि"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"सराउन्ड ध्वनि"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"प्रणाली ध्वनिहरु"</string>
@@ -108,6 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"स्वतः: तपाईंको यन्त्रका रिपोर्टहरूले समर्थन गरिरहेका ढाँचाहरू प्रयोग गर्नुहोस् (सिफारिस गरिएको)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"कुनै पनि होइन: कहिले पनि सराउन्ड साउन्ड प्रयोग नगर्नुहोस्"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"म्यानुअल: प्रयोग गर्ने ढाँचाहरू चयन गर्नुहोस्"</string>
+    <string name="display_category_title" msgid="247804007525046312">"डिस्प्ले"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"डिस्प्लेसम्बन्धी उन्नत सेटिङ"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"ध्वनिसम्बन्धी उन्नत सेटिङ"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"गेम मोडलाई अनुमति दिनुहोस्"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"केस गरिएको डेटा हटाउने हो?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"यसले सबै अनुप्रयोगहरूको लागि केस गरिएको डेटा हटाउँछ।"</string>
     <string name="accessories_add" msgid="413764175035531452">"अतिरक्त सामानहरू थप्नुहोस्"</string>
@@ -209,8 +214,16 @@
     <item msgid="2713050260700175954">"राम्रो"</item>
     <item msgid="6005053494500517261">"उत्कृष्ट"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"म्याक ठेगाना"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"यन्त्रको MAC ठेगाना"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"क्रमरहित MAC ठेगाना"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"सिङ्केत क्षमता"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"गोपनीयता"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"क्रमरहित MAC प्रयोग गर्नुहोस् (पूर्वनिर्धारित)"</item>
+    <item msgid="2490415280467390067">"यन्त्रको MAC प्रयोग गर्नुहोस्"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"उपलब्ध छैन"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"क्रमरहित MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP ठेगाना"</string>
     <string name="title_ssid" msgid="255328048344188682">"Wi-Fi नेटवर्कको नाम प्रविष्टि गर्नुहोस्"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"इन्टरनेट जडान"</string>
@@ -292,7 +305,7 @@
     <string name="title_wifi_anonymous_identity" msgid="5965175781722004334">"<xliff:g id="SSID">%1$s</xliff:g> को अज्ञात पहिचान प्रविष्टि गर्नुहोस्"</string>
     <string name="wifi_setup_summary_title_connected" msgid="2725439590655448489">"तपाईं <xliff:g id="SSID">%1$s</xliff:g> मा जडान हुनुहुन्छ"</string>
     <string name="wifi_summary_title_connected" msgid="201105022065577659">"नेटवर्क जडान भयो"</string>
-    <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"नेटवर्क जडान भएको छैन"</string>
+    <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"नेटवर्क कनेक्ट भएको छैन"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"<xliff:g id="SSID">%1$s</xliff:g> मा पहिल्यै जडान भयो। एउटा अर्को नेटवर्कसँग जडान गर्नुहुन्छ?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"अज्ञात नेटवर्क"</string>
     <string name="title_ok" msgid="6500452958848127145">"ठिक छ"</string>
@@ -303,7 +316,7 @@
     <string name="storage_calculating_size" msgid="5716281278843281044">"गणना गर्दै ..."</string>
     <string name="storage_apps_usage" msgid="8659915575274468924">"एपहरू"</string>
     <string name="storage_downloads_usage" msgid="8429196848359517158">"डाउनलोडहरू"</string>
-    <string name="storage_dcim_usage" msgid="337290403400541958">"फोटाहरू र amp; भिडियोहरू"</string>
+    <string name="storage_dcim_usage" msgid="337290403400541958">"फोटोहरू र amp; भिडियोहरू"</string>
     <string name="storage_music_usage" msgid="5362871290115089474">"अडियो"</string>
     <string name="storage_media_misc_usage" msgid="3404230292054880339">"विविध"</string>
     <string name="storage_media_cache_usage" msgid="6397941751551207630">"क्यास गरेको डेटा"</string>
@@ -352,7 +365,7 @@
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="7763611380573099978">"अनुप्रयोगहरु र डेटा <xliff:g id="NAME">%1$s</xliff:g> मा भण्डारण गरियो"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="5741521038349239359">"<xliff:g id="SIZE">%1$s</xliff:g> उपलब्ध"</string>
     <string name="storage_wizard_eject_private_title" msgid="1336088625197134497">"यन्त्रको भण्डारण निकाल्नुहोस्"</string>
-    <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"यस यन्त्रका भण्डारणका अनुप्रयोगहरूले यसलाई निकालेपछि काम गर्न छोड्छन्। यो USB ड्राइभलाई यस यन्त्रमा मात्र कार्य गर्न फर्म्याट गरियो। यो अन्य कुनैमा चल्ने छैन।"</string>
+    <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"यस यन्त्रका भण्डारणका एपहरूले यसलाई निकालेपछि काम गर्न छोड्छन्। यो USB ड्राइभलाई यस यन्त्रमा मात्र कार्य गर्न फर्म्याट गरियो। यो अन्य कुनैमा चल्ने छैन।"</string>
     <string name="storage_wizard_eject_progress_title" msgid="6025569356827683446">"<xliff:g id="NAME">%1$s</xliff:g> लाई निकाल्दै…"</string>
     <string name="storage_wizard_move_app_title" msgid="6504922588346440942">"प्रयोग भएको भण्डारण"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7058465372227392453">"<xliff:g id="NAME">%1$s</xliff:g> सार्दै"</string>
@@ -396,7 +409,7 @@
     <string name="system_network_location_confirm" msgid="7128162421781085332">"स्थान सहमति"</string>
     <string name="location_mode_title" msgid="728244518174115443">"मोड"</string>
     <string name="location_category_recent_location_requests" msgid="4541924383164183490">"हालका स्थान अनुरोधहरू"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"हाल कुनै पनि अनुप्रयोगहरूले स्थान अनुरोध गरिएका छैनन्"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"अहिले कुनै पनि एपहरूले स्थानको जानकारी मागेका छैनन्"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"उच्च ब्याट्री प्रयोग"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"कम ब्याट्री प्रयोग"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"स्थान अनुमान गर्न Wi‑Fi प्रयोग गर्नुहोस्"</string>
@@ -411,7 +424,7 @@
     <string name="location_reporting_desc" msgid="1580018652781674608">"Google ले उत्पादनहरूमा यो सुविधा प्रयोग गर्दछ जस्तै Google Now र Google Maps । स्थान रिपोर्टिङ खोल्दै यो सुविधा स्टोर प्रयोग गर्ने तपाईंको  Google  खाता सन्दर्भमा आफ्नो उपकरणको सबै भन्दा भर्खरैको स्थान डेटाको प्रयोग गर्ने कुनै पनि Google उत्पादनले दिन्छ।"</string>
     <string name="location_history_desc" msgid="926674012916014270">"स्थानसम्बन्धी इतिहास यो खाताको लागि बन्द हुँदा Google ले तपाईंको अनुप्रयोगहरूद्वारा प्रयोगको लागि तपाईंको उपकरणको स्थान डेटा भण्डारण गर्न सक्छ। \n\n उदाहरणका लागि, Google Maps ले तपाईंलाई निर्देशन दिन सक्छ, र Google Now ले तपाईंलाई कम्युट ट्राफिकको बारेमा सूचित गर्न सक्छ। \n\n तपाईं कुनै पनि समयमा स्थानसम्बन्धी इतिहास बन्द गर्न सक्नुहुन्छ, तर यसले कार्य गर्दछ त्यसैले यसलाई मेट्नु हुँदैन।आफ्नो स्थानसम्बन्धी इतिहास हेर्न र  व्यवस्थित गर्न, maps.google.com/locationhistory को भ्रमण गर्नुहोस्।"</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"स्थानसम्बन्धी इतिहास मेटाउनुहोस्"</string>
-    <string name="delete_location_history_desc" msgid="4035229731487113147">"यसले यो Google खाताको लागि स्टोर भएको सबै स्थानसम्बन्धी इतिहास यो उपकरणबाट मेटाउने छ। तपाईं यो मेटाउने प्रकृया पूर्ववत गर्न सक्नुहुन्न। Google Now सहित केही अनुप्रयोगहरूले, कार्य गर्न बन्द गर्ने छ।"</string>
+    <string name="delete_location_history_desc" msgid="4035229731487113147">"यसले यो Google खाताको लागि स्टोर भएको सबै स्थानसम्बन्धी इतिहास यो उपकरणबाट मेटाउने छ। तपाईं यो मेटाउने प्रकृया पूर्ववत गर्न सक्नुहुन्न। Google Now सहित केही एपहरूले, कार्य गर्न बन्द गर्ने छ।"</string>
     <string name="system_services" msgid="5754310941186053151">"सेवाहरू"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"सेवा सेटिङहरू"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"उच्च कन्ट्रास्ट पाठ"</string>
@@ -581,7 +594,7 @@
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"यो कार्यको लागि यो विकल्प संधैं प्रयोग गर्ने?"</string>
     <string name="alwaysUseOption" msgid="8799609235198714441">"सँधै प्रयोग गर्नुहोस्"</string>
     <string name="justOnceOption" msgid="6714005843102804865">"एक चोटि मात्र"</string>
-    <string name="noApplications" msgid="7511175717026318399">"कुनै पनि अनुप्रयोगहरूले यो कार्य गर्न सक्दैनन्।"</string>
+    <string name="noApplications" msgid="7511175717026318399">"कुनै पनि एपहरूले यो कार्य गर्न सक्दैनन्।"</string>
     <string name="noAppsGoBack" msgid="2538480554615467065">"पछाडि"</string>
     <string name="inputs_inputs" msgid="8639408473661259307">"इनपुट"</string>
     <string name="inputs_header_cec" msgid="4139015942980115323">"उपभोक्ता इलेक्ट्रोनिक नियन्त्रण (CEC)"</string>
@@ -629,7 +642,7 @@
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"अनुमति दिएका एपहरू"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
       <item quantity="other">%d अनुप्रयोगहरूलाई अनुमति दिइयो</item>
-      <item quantity="one">1 अनुप्रयोगलाई अनुमति दिइयो</item>
+      <item quantity="one">1 एपलाई अनुमति दिइयो</item>
     </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"अनुमति गरिएको"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"अनुमति छैन"</string>
@@ -729,32 +742,32 @@
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"अनुमति प्राप्त"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"अनुमतिमा रोक लगाइएका"</string>
     <string name="usage_access" msgid="8402350645248312782">"प्रयोगसम्बन्धी पहुँच"</string>
-    <string name="usage_access_description" msgid="3276026988575551587">"प्रयोगसम्बन्धी पहुँचले कुनै अनुप्रयोगलाई तपाईंका सेवा प्रदायक, भाषाका सेटिङहरू र अन्य विवरणहरू ट्र्याक गर्न दिनुका साथै तपाईंले प्रयोग गरिरहनुभएका अन्य एपहरू र तिनीहरूको प्रयोगबीचको अन्तराल पहिल्याउन दिन्छ।"</string>
+    <string name="usage_access_description" msgid="3276026988575551587">"प्रयोगसम्बन्धी पहुँचले कुनै एपलाई तपाईंका सेवा प्रदायक, भाषाका सेटिङहरू र अन्य विवरणहरू ट्र्याक गर्न दिनुका साथै तपाईंले प्रयोग गरिरहनुभएका अन्य एपहरू र तिनीहरूको प्रयोगबीचको अन्तराल पहिल्याउन दिन्छ।"</string>
     <string name="high_power_apps" msgid="5841073958519976562">"पावरको अप्टिमाइजेसन"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"अनुप्रयोगहरूको पावरको प्रयोगलाई अप्टिमाइज गर्नुहोस्"</string>
-    <string name="high_power_apps_empty" msgid="3084512758421482051">"कुनै पनि अनुप्रयोगलाई अप्टिमाइज गर्न आवश्यक छैन"</string>
+    <string name="high_power_apps_empty" msgid="3084512758421482051">"कुनै पनि एपलाई अप्टिमाइज गर्न आवश्यक छैन"</string>
     <string name="high_power_on" msgid="3120162683093360951">"अप्टिमइज गरिएको छैन"</string>
     <string name="high_power_off" msgid="3588854600942236231">"पावरको प्रयोगलाई अप्टिमाइज गरिँदैछ"</string>
     <string name="high_power_system" msgid="6263052626979462255">"पावरको अप्टिमाइजेसन उपलब्ध छैन"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"सूचनामाथिको पहुँच"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"कुनै स्थापना गरिएको अनुप्रयोगले सूचनामाथिको पहुँचको लागि अनुरोध गरेका छैन।"</string>
-    <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"यी अनुप्रयोगहरूले सम्पर्कको नाम र तपाईंले प्राप्त गर्नुहुने पाठ सन्देशहरूलगायत सबै सूचनाहरू पढ्न सक्नेछन्। तिनीहरू सूचनाहरू खारेज गर्न वा तिनीहरूमा समावेश कारबाही बटनहरू ट्रिगर गर्न पनि सक्नेछन्।"</string>
+    <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"यी एपहरूले सम्पर्कको नाम र तपाईंले प्राप्त गर्नुहुने पाठ सन्देशहरूलगायत सबै सूचनाहरू पढ्न सक्नेछन्। तिनीहरू सूचनाहरू खारेज गर्न वा तिनीहरूमा समावेश कारबाही बटनहरू ट्रिगर गर्न पनि सक्नेछन्।"</string>
     <string name="directory_access" msgid="7338555825237012006">"निर्देशिकामाथिको पहुँच"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"यी अनुप्रयोगहरूसँग केही निर्देशिकाहरूमाथि पहुँच राख्ने अनुमति छ।"</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="system_alert_window_settings" msgid="5790572489650085051">"अन्य अनुप्रयोगमा देखाउनुहोस्"</string>
-    <string name="permit_draw_overlay" msgid="5312730681030266735">"अन्य अनुप्रयोगको माथिपट्टि देखिने अनुमति दिनु…"</string>
-    <string name="allow_overlay_description" msgid="5152329837278240259">"कुनै अनुप्रयोगलाई आफूले प्रयोग गरिरहेका अन्य अनुप्रयोगहरूको माथिपट्टि देखिन अनुमति दिनुहोस्। यस कार्यले तपाईंले गर्ने ती अनुप्रयोगहरूको प्रयोगमा हस्तक्षेप गर्न वा तिनीहरू देखा पर्ने वा तिनीहरूले काम गर्ने तरिकालाई परिवर्तन गर्न सक्छ।"</string>
+    <string name="permit_draw_overlay" msgid="5312730681030266735">"अन्य एपको माथिपट्टि देखिने अनुमति दिनु…"</string>
+    <string name="allow_overlay_description" msgid="5152329837278240259">"कुनै एपलाई आफूले प्रयोग गरिरहेका अन्य अनुप्रयोगहरूको माथिपट्टि देखिन अनुमति दिनुहोस्। यस कार्यले तपाईंले गर्ने ती अनुप्रयोगहरूको प्रयोगमा हस्तक्षेप गर्न वा तिनीहरू देखा पर्ने वा तिनीहरूले काम गर्ने तरिकालाई परिवर्तन गर्न सक्छ।"</string>
     <string name="write_system_settings" msgid="4284654265954461890">"प्रणालीसम्बन्धी सेटिङहरू परिमार्जन गर्नुहोस्"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"प्रणालीसम्बन्धी सेटिङहरू परिमार्जन गर्न सक्छ"</string>
-    <string name="write_settings_description" msgid="7382397926674265937">"यस अनुमतिले अनुप्रयोगलाई प्रणालीसम्बन्धी सेटिङहरू परिमार्जन गर्न दिन्छ।"</string>
+    <string name="write_settings_description" msgid="7382397926674265937">"यस अनुमतिले एपलाई प्रणालीसम्बन्धी सेटिङहरू परिमार्जन गर्न दिन्छ।"</string>
     <string name="write_settings_on" msgid="71675710746513956">"छ"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"छैन"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Picture-in-picture"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Picture-in-picture लाई अनुमति दिनुहोस्"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"स्थापना गरिएको कुनै पनि अनुप्रयोगले Picture-in-picture मोडलाई समर्थन गर्दैन"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"यो एप खुला रहेको अवस्थामा वा तपाईंले यसलाई छाडेपछि (उदाहरणका लागि, भिडियो हेर्ने कार्य जारी राख्न) यस एपलाई picture-in-picture विन्डो सिर्जना गर्न अनुमति दिनुहोस्। यो विन्डो तपाईंले प्रयोग गरिरहनुभएका अन्य एपहरूको माथि देखिन्छ।"</string>
-    <string name="special_access" msgid="21806055758289916">"अनुप्रयोगलाई विशेष पहुँच"</string>
+    <string name="special_access" msgid="21806055758289916">"एपलाई विशेष पहुँच"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"अडियो"</string>
     <string name="record_audio" msgid="5035689290259575229">"अडियो रेकर्ड गर्नुहोस्"</string>
@@ -770,7 +783,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"डेटा सेभर"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"कम मोबाइल डेटा प्रयोग गर्न भिडियोको गुणस्तर स्वतः समायोजन गर्नुहोस्"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"डेटाको प्रयोग र सतर्कताहरू"</string>
-    <string name="disabled_by_policy_title" msgid="2220484346213756472">"कार्यलाई अनुमति छैन"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"यो कार्य गर्न मिल्दैन"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"भोल्युम परिवर्तन गर्न सकिँदैन"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"कल गर्न अनुमति छैन"</string>
     <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"SMS लाई अनुमति छैन"</string>

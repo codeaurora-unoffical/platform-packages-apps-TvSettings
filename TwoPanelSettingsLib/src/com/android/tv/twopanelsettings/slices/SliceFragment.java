@@ -22,6 +22,7 @@ import static android.app.slice.Slice.HINT_PARTIAL;
 import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logToggleInteracted;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_KEY;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_SLICE_FOLLOWUP;
 
 import android.app.PendingIntent;
 import android.app.PendingIntent.CanceledException;
@@ -34,10 +35,12 @@ import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Parcelable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,6 +89,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private PendingIntent mPreferenceFollowupIntent;
     private int mFollowupPendingIntentResultCode;
     private Intent mFollowupPendingIntentExtras;
+    private Intent mFollowupPendingIntentExtrasCopy;
     private String mLastFocusedPreferenceKey;
 
     private static final String KEY_PREFERENCE_FOLLOWUP_INTENT = "key_preference_followup_intent";
@@ -136,16 +140,37 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     }
 
     private void fireFollowupPendingIntent() {
-        if (mPreferenceFollowupIntent == null) {
+        if (mFollowupPendingIntentExtras == null) {
             return;
         }
+        // If there is followup pendingIntent returned from initial activity, send it.
+        // Otherwise send the followup pendingIntent provided by slice api.
+        Parcelable followupPendingIntent;
         try {
-            mPreferenceFollowupIntent.send(getContext(),
-                    mFollowupPendingIntentResultCode, mFollowupPendingIntentExtras);
-        } catch (CanceledException e) {
-            Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e);
+            followupPendingIntent = mFollowupPendingIntentExtrasCopy.getParcelableExtra(
+                    EXTRA_SLICE_FOLLOWUP);
+        } catch (Throwable ex) {
+            // unable to parse, the Intent has custom Parcelable, fallback
+            followupPendingIntent = null;
         }
-        mPreferenceFollowupIntent = null;
+        if (followupPendingIntent instanceof PendingIntent) {
+            try {
+                ((PendingIntent) followupPendingIntent).send();
+            } catch (CanceledException e) {
+                Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e);
+            }
+        } else {
+            if (mPreferenceFollowupIntent == null) {
+                return;
+            }
+            try {
+                mPreferenceFollowupIntent.send(getContext(),
+                        mFollowupPendingIntentResultCode, mFollowupPendingIntentExtras);
+            } catch (CanceledException e) {
+                Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e);
+            }
+            mPreferenceFollowupIntent = null;
+        }
     }
 
     @Override
@@ -419,6 +444,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             return;
         }
         mFollowupPendingIntentExtras = data;
+        mFollowupPendingIntentExtrasCopy = data == null ? null : new Intent(data);
         mFollowupPendingIntentResultCode = resultCode;
     }
 
@@ -491,6 +517,12 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 ? null
                 : (TextView) view.findViewById(R.id.decor_subtitle);
         if (decorSubtitle != null) {
+            // This is to remedy some complicated RTL scenario such as Hebrew RTL Account slice with
+            // English account name subtitle.
+            if (getResources().getConfiguration().getLayoutDirection()
+                    == View.LAYOUT_DIRECTION_RTL) {
+                decorSubtitle.setGravity(Gravity.TOP | Gravity.RIGHT);
+            }
             if (TextUtils.isEmpty(subtitle)) {
                 decorSubtitle.setVisibility(View.GONE);
             } else {
