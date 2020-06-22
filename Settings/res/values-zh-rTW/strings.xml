@@ -87,6 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"已停用的應用程式"</string>
     <string name="device_daydream" msgid="2631191946958113220">"螢幕保護程式"</string>
     <string name="device_display" msgid="244634591698925025">"螢幕"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"顯示和音效"</string>
     <string name="device_sound" msgid="8616320533559404963">"音效"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"環繞音效"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"系統音效"</string>
@@ -108,6 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"自動：使用裝置回報的支援格式 (建議)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"無：一律不使用環繞音效"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"手動：選取要使用的格式"</string>
+    <string name="display_category_title" msgid="247804007525046312">"顯示"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"進階顯示設定"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"進階音效設定"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"允許遊戲模式"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"清除快取資料？"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"這項操作會清除所有應用程式的快取資料。"</string>
     <string name="accessories_add" msgid="413764175035531452">"新增配件"</string>
@@ -170,11 +175,11 @@
     <string name="about_serial" msgid="3432319328808745459">"序號"</string>
     <string name="about_build" msgid="1139171613038225768">"版次"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="other">只要完成剩下的 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 個步驟，您就能成為開發人員</item>
-      <item quantity="one">只要完成剩下的 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 個步驟，您就能成為開發人員</item>
+      <item quantity="other">只要再 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 個步驟即可啟用開發人員設定</item>
+      <item quantity="one">只要再 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 個步驟即可啟用開發人員設定</item>
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"廣告"</string>
-    <string name="show_dev_on" msgid="612741433124106067">"您現在已成為開發人員！"</string>
+    <string name="show_dev_on" msgid="612741433124106067">"開發人員設定已啟用！"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"不需要了，您已經是開發人員"</string>
     <string name="device_info_default" msgid="2374506935205518448">"不明"</string>
     <string name="selinux_status" msgid="1146662734953021410">"SELinux 狀態"</string>
@@ -209,8 +214,16 @@
     <item msgid="2713050260700175954">"佳"</item>
     <item msgid="6005053494500517261">"極優"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC 位址"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"裝置的 MAC 位址"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"隨機化 MAC 位址"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"訊號強度"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"隱私權"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"使用隨機化 MAC (預設)"</item>
+    <item msgid="2490415280467390067">"使用裝置 MAC"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"無法取得"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"隨機化 MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP 位址"</string>
     <string name="title_ssid" msgid="255328048344188682">"輸入 Wi-Fi 網路名稱"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"網際網路連線"</string>
@@ -778,18 +791,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"不允許使用螢幕畫面擷取功能"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"無法開啟這個應用程式"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"如有任何問題，請與你的 IT 管理員聯絡"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"搭配「<xliff:g id="APPNAME">%1$s</xliff:g>」使用的裝置"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"找不到裝置。請確認裝置已經開啟並可連線。"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"再試一次"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"網路連線發生錯誤，因此應用程式已取消選擇裝置的要求。"</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"連線成功"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"全部顯示"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"搜尋中"</string>
 </resources>

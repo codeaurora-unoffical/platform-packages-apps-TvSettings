@@ -89,6 +89,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Atspējotās lietotnes"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Ekrānsaudzētājs"</string>
     <string name="device_display" msgid="244634591698925025">"Displejs"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Displejs un skaņa"</string>
     <string name="device_sound" msgid="8616320533559404963">"Skaņa"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Ieskaujošā skaņa"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Sistēmas signāli"</string>
@@ -110,6 +111,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automātiski: izmantot ierīcē atbalstītos formātus (ieteicams)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Nav: nekad neizmantot ieskaujošo skaņu"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manuāli: atlasīt izmantojamos formātus"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Displejs"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Displeja papildiestatījumi"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Skaņas papildiestatījumi"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Atļaut spēles režīmu"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Vai dzēst kešatmiņā ievietotos datus?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Tiks dzēsti kešatmiņā ievietotie lietotņu dati."</string>
     <string name="accessories_add" msgid="413764175035531452">"Pievienot piederumu"</string>
@@ -212,8 +217,16 @@
     <item msgid="2713050260700175954">"Spēcīgs"</item>
     <item msgid="6005053494500517261">"Izcils"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC adrese"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Ierīces MAC adrese"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Nejauši atlasīta MAC adrese"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Signāla stiprums"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Konfidencialitāte"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Izmantot nejauši atlasītu MAC adresi (noklusējums)"</item>
+    <item msgid="2490415280467390067">"Izmantot ierīces MAC adresi"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Nav pieejama"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Nejauši atlasīta MAC adrese"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP adrese"</string>
     <string name="title_ssid" msgid="255328048344188682">"Ievadiet Wi-Fi tīkla nosaukumu"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Interneta savienojums"</string>
@@ -462,7 +475,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"Iespējot"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Konfigurācija"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Izmantot <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"Pakalpojumā <xliff:g id="SERVICE">%1$s</xliff:g> var tikt apkopots viss jūsu ievadītais teksts, izņemot paroles. Tas attiecas arī uz personas datiem, piemēram, kredītkartes numuru."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"Pakalpojumā <xliff:g id="SERVICE">%1$s</xliff:g> var tikt vākts viss jūsu ievadītais teksts, izņemot paroles. Tas attiecas arī uz personas datiem, piemēram, kredītkartes numuru."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Vai apturēt pakalpojuma <xliff:g id="SERVICE">%1$s</xliff:g> darbību?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Atlasot “Labi”, pakalpojuma <xliff:g id="SERVICE">%1$s</xliff:g> darbība tiks pārtraukta."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Teksta pārvēršana runā"</string>
@@ -785,18 +798,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Nav atļauts veikt ekrānuzņēmumus"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Nevar atvērt šo lietotni"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Ja jums ir kādi jautājumi, sazinieties ar savu IT administratoru."</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Ierīce izmantošanai ar lietotni <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Nav atrasta neviena ierīce. Ierīcēm ir jābūt ieslēgtām un pieejamām savienojuma izveidei."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Mēģināt vēlreiz"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Radās kļūda. Lietojumprogramma atsauca ierīces atlases pieprasījumu."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Savienojums sekmīgi izveidots."</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Rādīt visu"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Notiek meklēšana"</string>
 </resources>

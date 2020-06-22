@@ -77,7 +77,7 @@
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Google লোকেশন পরিষেবা এবং অন্যান্য অ্যাপকে নেটওয়ার্কের জন্য স্ক্যান করতে দিন, এমনকি ওয়াই-ফাই বন্ধ থাকা সত্ত্বেও"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"ওয়াই-ফাই"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"নেটওয়ার্কে কানেক্ট করুন"</string>
-    <string name="apps_recently_used_category_title" msgid="7877660412428813933">"সম্প্রতি চালু করা অ্যাপ"</string>
+    <string name="apps_recently_used_category_title" msgid="7877660412428813933">"সম্প্রতি ব্যবহার করা অ্যাপ"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"সমস্ত অ্যাপ দেখুন"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"অনুমতি"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"সব অ্যাপ"</string>
@@ -87,6 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"বন্ধ করা অ্যাপগুলি"</string>
     <string name="device_daydream" msgid="2631191946958113220">"স্ক্রিন সেভার"</string>
     <string name="device_display" msgid="244634591698925025">"প্রদর্শন"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"ডিসপ্লে এবং সাউন্ড"</string>
     <string name="device_sound" msgid="8616320533559404963">"সাউন্ড"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"সারাউন্ড সাউন্ড"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"সিস্টেম সাউন্ড"</string>
@@ -108,6 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"অটো: আপনার ডিভাইসটি সমর্থন করে এমন ফর্ম্যাটগুলি ব্যবহার করুন (প্রস্তাবিত)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"নেই: কখনই চারিপাশের সাউন্ড ব্যবহার করবেন না"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"ম্যানুয়াল: কোন ফর্ম্যাট ব্যবহার করবেন বেছে নিন"</string>
+    <string name="display_category_title" msgid="247804007525046312">"ডিসপ্লে"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"উন্নত ডিসপ্লে সেটিংস"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"উন্নত সাউন্ড সেটিংস"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"গেম মোডে অনুমতি দিন"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"ক্যাশে করা ডেটা সাফ করবেন?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"এটি সব অ্যাপ্লিকেশানগুলি থেকে ক্যাশে করা ডেটা সাফ করে দেবে।"</string>
     <string name="accessories_add" msgid="413764175035531452">"আনুষঙ্গিক উপকরণ জুড়ুন"</string>
@@ -209,8 +214,16 @@
     <item msgid="2713050260700175954">"ভালো"</item>
     <item msgid="6005053494500517261">"অসাধারণ"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC অ্যাড্রেস"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"ডিভাইস MAC অ্যাড্রেস"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"র‌্যান্ডামাইজ করা MAC অ্যাড্রেস"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"সিগন্যাল ক্ষমতা"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"গোপনীয়তা"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"র‍্যান্ডমাইজ করা MAC ব্যবহার করুন (ডিফল্ট)"</item>
+    <item msgid="2490415280467390067">"MAC ডিভাইস ব্যবহার করুন"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"উপলভ্য নয়"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"র‌্যান্ডামাইজ করা MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP অ্যাড্রেস"</string>
     <string name="title_ssid" msgid="255328048344188682">"ওয়াই-ফাই নেটওয়ার্কের নাম লিখুন"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"ইন্টারনেট কানেকশন"</string>
@@ -778,18 +791,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"স্ক্রিনশটের অনুমতি নেই"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"এই অ্যাপটি চালু করা যাবে না"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"কোনও প্রশ্ন থাকলে আপনার আইটি অ্যাডমিনের সাথে যোগাযোগ করুন"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> ব্যবহার করা যাবে এমন ডিভাইস"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"কোনও ডিভাইস খুঁজে পাওয়া যায়নি। ডিভাইস চালু আছে এবং কানেক্ট করার জন্য তৈরি কিনা তা ভাল করে দেখে নিন।"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"আবার চেষ্টা করুন"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"কোনও সমস্যা হয়েছে। ডিভাইস বেছে নেওয়ার আবেদনটি এই অ্যাপ্লিকেশনের মাধ্যমে বাতিল করা হয়েছে।"</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"কানেক্ট করা হয়েছে"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"সব দেখুন"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"সার্চ করা হচ্ছে"</string>
 </resources>

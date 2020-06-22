@@ -23,13 +23,25 @@ import androidx.slice.core.SliceActionImpl;
 /**
  * Slice version of RadioPreference.
  */
-public class SliceRadioPreference extends RadioPreference implements HasSliceAction {
+public class SliceRadioPreference extends RadioPreference implements HasSliceAction, HasSliceUri {
+    private int mActionId;
     private SliceActionImpl mSliceAction;
+    private String mUri;
 
     public SliceRadioPreference(Context context, SliceActionImpl action) {
         super(context);
         mSliceAction = action;
         update();
+    }
+
+    @Override
+    public int getActionId() {
+        return mActionId;
+    }
+
+    @Override
+    public void setActionId(int actionId) {
+        mActionId = actionId;
     }
 
     @Override
@@ -54,5 +66,15 @@ public class SliceRadioPreference extends RadioPreference implements HasSliceAct
 
     private void update() {
         this.setChecked(mSliceAction.isChecked());
+    }
+
+    @Override
+    public void setUri(String uri) {
+        this.mUri = uri;
+    }
+
+    @Override
+    public String getUri() {
+        return mUri;
     }
 }

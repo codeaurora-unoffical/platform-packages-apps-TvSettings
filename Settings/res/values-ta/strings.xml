@@ -87,6 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"முடக்கிய ஆப்ஸ்"</string>
     <string name="device_daydream" msgid="2631191946958113220">"ஸ்கிரீன் சேவர்"</string>
     <string name="device_display" msgid="244634591698925025">"காட்சி"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"காட்சி &amp; ஒலி"</string>
     <string name="device_sound" msgid="8616320533559404963">"ஒலி"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"சரவுண்ட் ஒலி"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"முறைமை ஒலிகள்"</string>
@@ -108,6 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"தானியங்கு: உங்கள் சாதனம் ஆதரிக்கும் வடிவங்களைப் பயன்படுத்தும் (பரிந்துரைக்கப்படுவது)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"ஏதுமில்லை: சரவுண்ட் சவுண்ட்டை ஒருபோதும் பயன்படுத்தாது"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"கைமுறை: பயன்படுத்த வேண்டிய வடிவங்களைத் தேர்வுசெய்க"</string>
+    <string name="display_category_title" msgid="247804007525046312">"காட்சி அமைப்புகள்"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"மேம்பட்ட காட்சி அமைப்புகள்"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"மேம்பட்ட ஒலி அமைப்புகள்"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"கேம் பயன்முறையை அனுமதி"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"தற்காலிகச் சேமிப்பு தரவை அழிக்கவா?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"இது, எல்லா ஆப்ஸின் தற்காலிகச் சேமிப்பு தரவை அழிக்கும்."</string>
     <string name="accessories_add" msgid="413764175035531452">"துணைக்கருவியைச் சேர்"</string>
@@ -209,8 +214,16 @@
     <item msgid="2713050260700175954">"நன்று"</item>
     <item msgid="6005053494500517261">"பிரமாதம்"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC முகவரி"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"சாதனத்தின் MAC முகவரி"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"ரேண்டமாக்கப்பட்ட MAC முகவரி"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"சிக்னலின் வலிமை"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"தனியுரிமை"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"ரேண்டமாக்கப்பட்ட MACகைப் பயன்படுத்து (இயல்புநிலை)"</item>
+    <item msgid="2490415280467390067">"சாதன MACகைப் பயன்படுத்து"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"MAC முகவரி இல்லை"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"ரேண்டமாக்கப்பட்ட MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP முகவரி"</string>
     <string name="title_ssid" msgid="255328048344188682">"வைஃபை நெட்வொர்க்கின் பெயரை உள்ளிடவும்"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"இணைய இணைப்பு"</string>
@@ -396,7 +409,7 @@
     <string name="system_network_location_confirm" msgid="7128162421781085332">"இட ஒப்புதல்"</string>
     <string name="location_mode_title" msgid="728244518174115443">"நிலை"</string>
     <string name="location_category_recent_location_requests" msgid="4541924383164183490">"சமீபத்திய இருப்பிடக் கோரிக்கைகள்"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"எந்தப் பயன்பாடுகளும் சமீபத்தில் இருப்பிடத்தைக் கோரவில்லை"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"எந்த ஆப்ஸும் சமீபத்தில் இருப்பிடத்தைக் கோரவில்லை"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"அதிக பேட்டரி பயன்பாடு"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"குறைவான பேட்டரி பயன்பாடு"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"இடத்தைக் கண்டறிய வைஃபையைப் பயன்படுத்தவும்"</string>
@@ -778,18 +791,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"ஸ்கிரீன்ஷாட் அனுமதிக்கப்படவில்லை"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"இந்தப் பயன்பாட்டைத் திறக்க முடியாது"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"கேள்விகள் இருந்தால், IT நிர்வாகியைத் தொடர்புகொள்ளவும்"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> உடன் பயன்படுத்தக்கூடிய சாதனம்"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"சாதனங்கள் எதுவும் இல்லை. சாதனங்கள் ஆன் செய்யப்பட்டு இணைப்பதற்குத் தயாராக உள்ளனவா என்பதை உறுதிப்படுத்தவும்."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"மீண்டும் முயலவும்"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"ஏதோ அறிவிப்பு வந்துள்ளது. ஒரு சாதனத்தைத் தேர்வுசெய்வதற்கான கோரிக்கையை இந்த ஆப்ஸ் ரத்துசெய்துள்ளது."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"இணைப்பு வெற்றியடைந்தது"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"அனைத்தையும் காட்டு"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"தேடுகிறது"</string>
 </resources>

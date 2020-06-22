@@ -87,6 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"已停用的应用"</string>
     <string name="device_daydream" msgid="2631191946958113220">"屏保"</string>
     <string name="device_display" msgid="244634591698925025">"显示"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"显示和声音"</string>
     <string name="device_sound" msgid="8616320533559404963">"声音"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"环绕声"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"系统声音"</string>
@@ -108,6 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"自动：使用设备报告的支持格式（建议）"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"无：一律不使用环绕声"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"手动：选择要使用的格式"</string>
+    <string name="display_category_title" msgid="247804007525046312">"显示"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"高级显示设置"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"高级声音设置"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"允许游戏模式"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"要清除缓存的数据吗？"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"此操作会清除所有应用的缓存数据。"</string>
     <string name="accessories_add" msgid="413764175035531452">"添加配件"</string>
@@ -209,8 +214,16 @@
     <item msgid="2713050260700175954">"强"</item>
     <item msgid="6005053494500517261">"极强"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC 地址"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"设备 MAC 地址"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"随机 MAC 地址"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"信号强度"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"隐私设置"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"使用随机 MAC（默认）"</item>
+    <item msgid="2490415280467390067">"使用设备 MAC"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"不可用"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"随机 MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP 地址"</string>
     <string name="title_ssid" msgid="255328048344188682">"输入 WLAN 网络名称"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"互联网连接"</string>
@@ -778,18 +791,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"不允许使用屏幕截图功能"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"无法打开此应用"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"如有任何问题，请与您的 IT 管理员联系"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"要与<xliff:g id="APPNAME">%1$s</xliff:g>搭配使用的设备"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"找不到设备。请确保设备已开启并可连接到网络。"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"重试"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"出了点问题。该应用已取消选择设备的请求。"</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"连接成功"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"全部显示"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"正在搜索"</string>
 </resources>

@@ -87,6 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Mga naka-disable na app"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Screen saver"</string>
     <string name="device_display" msgid="244634591698925025">"Display"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Display at Tunog"</string>
     <string name="device_sound" msgid="8616320533559404963">"Tunog"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Surround sound"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Mga tunog ng system"</string>
@@ -108,6 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Auto: Gamitin ang format na suportado ayon sa device (inirerekomenda)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Wala: Huwag kailanman gumamit ng surround sound"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manual: Piliin ang mga gagamiting format"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Display"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Advanced na mga setting ng display"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Advanced na mga setting ng tunog"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Payagan ang game mode"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"I-clear ang naka-cache na data?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"I-clear nito ang naka-cache na data para sa app."</string>
     <string name="accessories_add" msgid="413764175035531452">"Magdagdag ng accessory"</string>
@@ -197,7 +202,7 @@
     <string name="sim_status_title" msgid="1704273079796640946">"Status ng SIM"</string>
     <string name="imei_information_title" msgid="3790368306353698724">"Impormasyon ng IMEI"</string>
     <string name="status_bt_address" msgid="7190052214963950844">"Address ng bluetooth"</string>
-    <string name="status_up_time" msgid="1758102680983108313">"Oras na naka-up"</string>
+    <string name="status_up_time" msgid="1758102680983108313">"Up time"</string>
     <string name="legal_information" msgid="1087445528481370874">"Legal na impormasyon"</string>
     <string name="copyright_title" msgid="5879660711078649518">"Copyright"</string>
     <string name="license_title" msgid="4032466200355435641">"Lisensya"</string>
@@ -209,8 +214,16 @@
     <item msgid="2713050260700175954">"Mahusay"</item>
     <item msgid="6005053494500517261">"Napakahusay"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC address"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"MAC address ng device"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Naka-randomize na MAC address"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Lakas ng signal"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Privacy"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Gamitin ang na-randomize na MAC (default)"</item>
+    <item msgid="2490415280467390067">"Gamitin ang MAC ng device"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Hindi available"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Na-randomize na MAC"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP address"</string>
     <string name="title_ssid" msgid="255328048344188682">"Ilagay ang pangalan ng Wi-Fi network"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Koneksyon sa internet"</string>
@@ -778,18 +791,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Hindi pinapayagan ang pag-screenshot"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Hindi mabubuksan ang app na ito"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Kung mayroon kang mga tanong, makipag-ugnayan sa iyong IT admin"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Device na gagamitin sa <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Walang nahanap na device. Tiyaking naka-on at available na kumonekta ang mga device."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Subukan ulit"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Nagkaproblema. Kinansela ng application ang kahilingang pumili ng device."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Nakakonekta na"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Ipakita lahat"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Naghahanap"</string>
 </resources>

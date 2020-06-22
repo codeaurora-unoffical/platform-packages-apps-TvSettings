@@ -351,7 +351,7 @@
             </intent-filter>
         </activity-alias>
         <activity
-            android:name=".device.sound.SoundActivity"
+            android:name=".device.displaysound.SoundActivity"
             android:theme="@style/Theme.Settings.Transparent"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
@@ -824,6 +824,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".deviceadmin.DeviceAdminAdd"
+              android:excludeFromRecents="true"
+              android:clearTaskOnLaunch="true">
+            <intent-filter>
+                <action android:name="android.app.action.ADD_DEVICE_ADMIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -23,12 +23,18 @@ import static androidx.lifecycle.Lifecycle.Event.ON_RESUME;
 import static androidx.lifecycle.Lifecycle.Event.ON_START;
 import static androidx.lifecycle.Lifecycle.Event.ON_STOP;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logPageFocused;
+
 import android.annotation.CallSuper;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.leanback.preference.LeanbackPreferenceFragment;
@@ -46,7 +52,8 @@ import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
  * and allow for instrumentation.
  */
 public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragment
-        implements LifecycleOwner, Instrumentable {
+        implements LifecycleOwner, Instrumentable,
+        TwoPanelSettingsFragment.PreviewableComponentCallback {
     private final Lifecycle mLifecycle = new Lifecycle(this);
     private final VisibilityLoggerMixin mVisibilityLoggerMixin;
     protected MetricsFeatureProvider mMetricsFeatureProvider;
@@ -77,6 +84,32 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
         mLifecycle.onCreate(savedInstanceState);
         mLifecycle.handleLifecycleEvent(ON_CREATE);
         super.onCreate(savedInstanceState);
+        if (getCallbackFragment() != null
+                && !(getCallbackFragment() instanceof TwoPanelSettingsFragment)) {
+            logPageFocused(getPageId(), true);
+        }
+    }
+
+    // While the default of relying on text language to determine gravity works well in general,
+    // some page titles (e.g., SSID as Wifi details page title) are dynamic and can be in different
+    // languages. This can cause some complex gravity issues. For example, Wifi details page in RTL
+    // showing an English SSID title would by default align the title to the left, which is
+    // incorrectly considered as START in RTL.
+    // We explicitly set the title gravity to RIGHT in RTL cases to remedy this issue.
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        if (view != null) {
+            TextView titleView = view.findViewById(R.id.decor_title);
+            // We rely on getResources().getConfiguration().getLayoutDirection() instead of
+            // view.isLayoutRtl() as the latter could return false in some complex scenarios even if
+            // it is RTL.
+            if (titleView != null
+                    && getResources().getConfiguration().getLayoutDirection()
+                            == View.LAYOUT_DIRECTION_RTL) {
+                titleView.setGravity(Gravity.RIGHT);
+            }
+        }
     }
 
     @Override
@@ -98,6 +131,7 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
         mLifecycle.handleLifecycleEvent(ON_START);
         super.onStart();
     }
+
     @CallSuper
     @Override
     public void onResume() {
@@ -109,6 +143,13 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
                     (TwoPanelSettingsFragment) getCallbackFragment();
             parentFragment.addListenerForFragment(this);
         }
+    }
+
+    // This should only be invoked if the parent Fragment is TwoPanelSettingsFragment.
+    @CallSuper
+    @Override
+    public void onArriveAtMainPanel(boolean forward) {
+        logPageFocused(getPageId(), forward);
     }
 
     @CallSuper
@@ -159,5 +200,10 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
             return super.onOptionsItemSelected(menuItem);
         }
         return lifecycleHandled;
+    }
+
+    /** Subclasses should override this to use their own PageId for Westworld logging. */
+    protected int getPageId() {
+        return TvSettingsEnums.PAGE_CLASSIC_DEFAULT;
     }
 }

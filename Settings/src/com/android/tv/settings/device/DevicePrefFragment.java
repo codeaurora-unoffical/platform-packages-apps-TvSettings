@@ -16,7 +16,10 @@
 
 package com.android.tv.settings.device;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
 import android.app.Fragment;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -47,7 +50,6 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.about.RebootConfirmFragment;
 import com.android.tv.settings.autofill.AutofillHelper;
-import com.android.tv.settings.device.sound.SoundFragment;
 import com.android.tv.settings.inputmethod.InputMethodHelper;
 import com.android.tv.settings.system.SecurityFragment;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
@@ -60,19 +62,18 @@ import java.util.List;
 @Keep
 public class DevicePrefFragment extends SettingsPreferenceFragment implements
         LongClickPreference.OnLongClickListener {
-    private static final String TAG = "DeviceFragment";
-
     @VisibleForTesting
     static final String KEY_DEVELOPER = "developer";
+    @VisibleForTesting
+    static final String KEY_CAST_SETTINGS = "cast";
+    @VisibleForTesting
+    static final String KEY_KEYBOARD = "keyboard";
+    private static final String TAG = "DeviceFragment";
     private static final String KEY_USAGE = "usageAndDiag";
     private static final String KEY_INPUTS = "inputs";
     private static final String KEY_SOUNDS = "sound_effects";
-    @VisibleForTesting
-    static final String KEY_CAST_SETTINGS = "cast";
     private static final String KEY_GOOGLE_SETTINGS = "google_settings";
     private static final String KEY_HOME_SETTINGS = "home";
-    @VisibleForTesting
-    static final String KEY_KEYBOARD = "keyboard";
     private static final String KEY_REBOOT = "reboot";
 
     private Preference mSoundsPref;
@@ -91,7 +92,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
         if (inputPref != null) {
             inputPref.setVisible(mInputSettingNeeded);
         }
-        final LongClickPreference restartPref = (LongClickPreference) findPreference(KEY_REBOOT);
+        final LongClickPreference restartPref = findPreference(KEY_REBOOT);
         if (restartPref != null) {
             restartPref.setLongClickListener(this);
         }
@@ -132,8 +133,28 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     }
 
     @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        switch (preference.getKey()) {
+            case KEY_HOME_SETTINGS:
+                logEntrySelected(TvSettingsEnums.PREFERENCES_HOME_SCREEN);
+                break;
+            case KEY_GOOGLE_SETTINGS:
+                logEntrySelected(TvSettingsEnums.PREFERENCES_ASSISTANT);
+                break;
+            case KEY_CAST_SETTINGS:
+                logEntrySelected(TvSettingsEnums.PREFERENCES_CHROMECAST_SHELL);
+                break;
+            case KEY_REBOOT:
+                logEntrySelected(TvSettingsEnums.SYSTEM_REBOOT);
+                break;
+        }
+        return super.onPreferenceTreeClick(preference);
+    }
+
+    @Override
     public boolean onPreferenceLongClick(Preference preference) {
         if (TextUtils.equals(preference.getKey(), KEY_REBOOT)) {
+            logEntrySelected(TvSettingsEnums.SYSTEM_REBOOT);
             Fragment fragment = getCallbackFragment();
             if (fragment instanceof LeanbackSettingsFragment) {
                 ((LeanbackSettingsFragment) fragment).startImmersiveFragment(
@@ -181,8 +202,6 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
             return;
         }
 
-        mSoundsPref.setIcon(SoundFragment.getSoundEffectsEnabled(getContext().getContentResolver())
-                ? R.drawable.ic_volume_up : R.drawable.ic_volume_off);
         Intent soundIntent = new Intent(MainFragment.ACTION_SOUND);
         final ResolveInfo info = MainFragment.systemIntentIsHandled(getContext(), soundIntent);
         if (info != null) {
@@ -210,7 +229,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
         final Preference castPref = findPreference(KEY_CAST_SETTINGS);
         if (castPref != null) {
             final ResolveInfo info = MainFragment.systemIntentIsHandled(
-                        getContext(), castPref.getIntent());
+                    getContext(), castPref.getIntent());
             if (info != null) {
                 try {
                     final Context targetContext = getContext()
@@ -262,5 +281,10 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
             }
         }
         keyboardPref.setSummary(summary);
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM;
     }
 }

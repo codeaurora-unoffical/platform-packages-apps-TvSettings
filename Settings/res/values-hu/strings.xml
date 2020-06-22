@@ -87,6 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Letiltott alkalmazások"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Képernyővédő"</string>
     <string name="device_display" msgid="244634591698925025">"Képernyő"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Kijelző és hang"</string>
     <string name="device_sound" msgid="8616320533559404963">"Hang"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Térhatású hangzás"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Rendszerhangok"</string>
@@ -108,6 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automatikus: Az eszköz által támogatott formátumok használata (javasolt)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Nincs: Soha ne használjon térhatású hangzást"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manuális: A használandó formátumok kiválasztása"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Kijelző"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Speciális kijelzőbeállítások"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Speciális hangbeállítások"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Játékmód engedélyezése"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Törli a gyorsítótárban tárolt adatokat?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Ez törli minden alkalmazás gyorsítótárban tárolt adatait"</string>
     <string name="accessories_add" msgid="413764175035531452">"Tartozék hozzáadása"</string>
@@ -209,8 +214,16 @@
     <item msgid="2713050260700175954">"Jó"</item>
     <item msgid="6005053494500517261">"Kiváló"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC-cím"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Az eszköz MAC-címe"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Véletlenszerű MAC-cím"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Jelerősség"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Adatvédelem"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Véletlenszerű MAC-cím használata (alapértelmezett)"</item>
+    <item msgid="2490415280467390067">"Az eszköz MAC-címének használata"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Nem áll rendelkezésre"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Véletlenszerű MAC-cím"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP-cím"</string>
     <string name="title_ssid" msgid="255328048344188682">"Adja meg a Wi-Fi-hálózat nevét"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Internetkapcsolat"</string>
@@ -717,7 +730,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Alkalmazásengedélyek"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_1">%2$d</xliff:g><xliff:g id="COUNT_0">%1$d</xliff:g> alkalmazás engedélyezve"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetooth-engedély kérése"</string>
-    <string name="security_patch" msgid="5468261708915367254">"Androidos biztonsági hibajavító csomag szintje"</string>
+    <string name="security_patch" msgid="5468261708915367254">"Androidos biztonsági hibajavító csomag"</string>
     <string name="choose_application" msgid="2375936782103669988">"Alkalmazás kiválasztása"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Kísérleti)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Újraindítás csökkentett módban"</string>
@@ -778,18 +791,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Képernyőkép készítése nem engedélyezett"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Nem lehet megnyitni az alkalmazást"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Ha kérdése van, forduljon a rendszergazdához"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"A(z) <xliff:g id="APPNAME">%1$s</xliff:g> alkalmazással használandó eszköz"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Nem találhatók eszközök. Ellenőrizze, hogy be vannak-e kapcsolva az eszközök, és lehetséges-e a hozzájuk való csatlakozás."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Újra"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Valami történt. Az alkalmazás megszakította az eszköz kiválasztására irányuló kérést."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Sikeres kapcsolódás"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Összes mutatása"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Keresés"</string>
 </resources>

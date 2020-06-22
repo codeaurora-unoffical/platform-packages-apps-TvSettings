@@ -87,6 +87,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Aplikacionet e çaktivizuara"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Mbrojtësi i ekranit"</string>
     <string name="device_display" msgid="244634591698925025">"Ekrani"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Ekrani dhe tingulli"</string>
     <string name="device_sound" msgid="8616320533559404963">"Tingulli"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Tingulli rrethues"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Tingujt e sistemit"</string>
@@ -108,6 +109,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Automatike: Përdor formatet që pajisja jote raporton se mbështet (rekomandohet)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Asnjë: Asnjëherë mos përdor tingull rrethues"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Manuale: Zgjidh se cilat formate do të përdorësh"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Ekrani"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Cilësimet e përparuara të ekranit"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Cilësimet e përparuara të tingullit"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Lejo modalitetin e lojës"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Të pastrohen të dhënat e memories specifike?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Kjo do të pastrojë të dhënat e memories specifike për të gjitha aplikacionet."</string>
     <string name="accessories_add" msgid="413764175035531452">"Shto një aksesor"</string>
@@ -170,8 +175,8 @@
     <string name="about_serial" msgid="3432319328808745459">"Numri i serisë"</string>
     <string name="about_build" msgid="1139171613038225768">"Ndërtimi"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="other">Tani të duhen edhe <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> hapa që të bëhesh zhvillues</item>
-      <item quantity="one">Tani të duhet edhe <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> hap që të bëhesh zhvillues</item>
+      <item quantity="other">Tani të duhen edhe <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> hapa për t\'u bërë zhvillues</item>
+      <item quantity="one">Tani të duhet edhe <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> hap për t\'u bërë zhvillues</item>
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Reklamat"</string>
     <string name="show_dev_on" msgid="612741433124106067">"Tani je zhvillues!"</string>
@@ -209,8 +214,16 @@
     <item msgid="2713050260700175954">"I mirë"</item>
     <item msgid="6005053494500517261">"I shkëlqyer"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"Adresa MAC"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"Adresa MAC e pajisjes"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Adresa MAC e rastësishme"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Fuqia e sinjalit"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Privatësia"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Përdor adresë MAC të rastësishme (parazgjedhje)"</item>
+    <item msgid="2490415280467390067">"Përdor adresën MAC të pajisjes"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Nuk ofrohet"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Adresa MAC e rastësishme"</string>
     <string name="title_ip_address" msgid="705842159484772807">"Adresa e IP-së"</string>
     <string name="title_ssid" msgid="255328048344188682">"Fut emrin e rrjetit Wi-Fi"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Lidhje me internetin"</string>
@@ -778,18 +791,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Pamja e ekranit nuk lejohet"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Ky aplikacion nuk mund të hapet"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Nëse ke pyetje, kontakto me administratorin e teknologjisë së informacionit"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Pajisja që do të përdoret me <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Nuk u gjet asnjë pajisje. Sigurohu që pajisjet të jenë të ndezura dhe të gatshme për t\'u lidhur."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Provo sërish"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Ndodhi diçka. Aplikacioni ka anuluar kërkesën për të zgjedhur një pajisje."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Lidhja ishte e suksesshme"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Shfaq të gjitha"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Po kërkon"</string>
 </resources>

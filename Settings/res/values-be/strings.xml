@@ -91,6 +91,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Адключаныя праграмы"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Экранная застаўка"</string>
     <string name="device_display" msgid="244634591698925025">"Экран"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Дысплэй і гук"</string>
     <string name="device_sound" msgid="8616320533559404963">"Гук"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Аб\'ёмны гук"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Сістэмныя гукі"</string>
@@ -112,6 +113,10 @@
     <string name="surround_sound_auto_summary" msgid="5559552398163510156">"Аўта: ужываць фарматы прылады (рэкамендавана)"</string>
     <string name="surround_sound_none_summary" msgid="2791597033750908940">"Не: ніколі не выкарыстоўваць аб\'ёмны гук"</string>
     <string name="surround_sound_manual_summary" msgid="8945926149168263067">"Уручную: выбіраць фарматы"</string>
+    <string name="display_category_title" msgid="247804007525046312">"Дысплэй"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Пашыраныя налады дысплэя"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Пашыраныя налады гуку"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Дазволіць рэжым гульні"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Ачысціць кэшаваныя даныя?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Гэта ачысціць кэшаваныя даныя для ўсіх праграм."</string>
     <string name="accessories_add" msgid="413764175035531452">"Дадаць аксэсуар"</string>
@@ -215,8 +220,16 @@
     <item msgid="2713050260700175954">"Добры"</item>
     <item msgid="6005053494500517261">"Выдатны"</item>
   </string-array>
-    <string name="title_mac_address" msgid="3758483076549542257">"MAC-адрас"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"MAC-адрас прылады"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Выпадковы MAC-адрас"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Сіла сігналу"</string>
+    <string name="title_random_mac_settings" msgid="6685812569356353378">"Прыватнасць"</string>
+  <string-array name="random_mac_settings_entries">
+    <item msgid="3457228452595715533">"Выкарыстоўваць выпадковы MAC-адрас (стандартна)"</item>
+    <item msgid="2490415280467390067">"Выкарыстоўваць прыладу MAC"</item>
+  </string-array>
+    <string name="mac_address_not_available" msgid="2992935344891853369">"Недаступна"</string>
+    <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Выпадковы MAC-адрас"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP-адрас"</string>
     <string name="title_ssid" msgid="255328048344188682">"Увядзіце імя сеткі Wi-Fi"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Падключэнне да інтэрнэту"</string>
@@ -288,7 +301,7 @@
     <string name="proxy_error_empty_port" msgid="692020249267351015">"Поле порта не можа быць пустым"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"Калі поле вузла пустое, пакіньце поле порта пустым"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"Порт несапраўдны"</string>
-    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Проксі HTTP выкарыстоўваецца браўзерам, але ён не можа выкарыстоўвацца іншымі праграмамі"</string>
+    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Проксі HTTP выкарыстоўваецца браўзерам, але не можа выкарыстоўвацца іншымі праграмамі"</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"Увядзіце сапраўдны порт.\nПрыклад: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Увядзіце спіс выключаных даменаў праз коску або пакіньце поле пустым.\nПрыклад: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"Увядзіце сапраўдную назву вузла.\nПрыклад: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -784,7 +797,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Эканомія трафіка"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Аўтаматычна рэгуляваць якасць відэа, каб эканоміць на мабільнай перадачы даных"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Выкарыстанне трафіка і абвесткі"</string>
-    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Дзеянне не дапускаецца"</string>
+    <string name="disabled_by_policy_title" msgid="2220484346213756472">"Дзеянне забаронена"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Не ўдалося змяніць гучнасць"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Выклікі забаронены"</string>
     <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"Адпраўка SMS забаронена"</string>
@@ -792,18 +805,11 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Здымкі экрана забаронены"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Не ўдалося адкрыць праграму"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"Калі ў вас ёсць пытанні, звярніцеся да ІТ-адміністратара"</string>
-    <!-- no translation found for network_connection_request_dialog_title (4103963119407212989) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (8408857135950230472) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (5374522862360880609) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (3346121178275518630) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (2981223044343511313) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (2653775399674126208) -->
-    <skip />
-    <!-- no translation found for progress_scanning (3323638586482686516) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Прылада для выкарыстання з праграмай \"<xliff:g id="APPNAME">%1$s</xliff:g>\""</string>
+    <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Прылады не знойдзены. Пераканайцеся, што прылады ўключаны і даступныя для падключэння."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Паўтарыць спробу"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Нешта пайшло не так. Праграма скасавала запыт на выбар прылады."</string>
+    <string name="network_connection_connect_successful" msgid="2981223044343511313">"Падключэнне выканана"</string>
+    <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Паказаць усе"</string>
+    <string name="progress_scanning" msgid="3323638586482686516">"Ідзе пошук"</string>
 </resources>
