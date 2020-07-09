@@ -96,6 +96,10 @@
     <string name="help_and_feedback_category_title">Help &amp; Feedback</string>
     <!-- Title for main screen preference for privacy settings [CHAR LIMIT=50] -->
     <string name="privacy_category_title">Privacy</string>
+    <!-- Title for device-related privacy settings category [CHAR LIMIT=50] -->
+    <string name="privacy_device_settings_category">Device Settings</string>
+    <!-- Title for application-related privacy settings category [CHAR LIMIT=50] -->
+    <string name="privacy_app_settings_category">App Settings</string>
     <!-- Summary for main screen preference for privacy settings [CHAR LIMIT=75] -->
     <string name="privacy_category_summary">Location, Usage &amp; Diagnostics, Ads</string>
 
@@ -1749,6 +1753,8 @@
     <!-- Slice uri for "hdr settings" -->
     <string name="hdr_settings_slice_uri" translatable="false"/>
 
+    <string name="storage_summary_fragment_name" translatable="false"/>
+
     <!-- Title for dialog displayed when user selects on a setting locked by an admin [CHAR LIMIT=30 BACKUP_MESSAGE_ID:4867639270211833535] -->
     <string name="disabled_by_policy_title">Action not allowed</string>
     <!-- Title for dialog displayed to tell user that changing volume was disallowed by an admin [CHAR LIMIT=50] -->
@@ -1780,4 +1786,5 @@
     <string name="network_connection_request_dialog_showall">Show all</string>
     <!--Bluetooth settings screen, text that appears in heading bar when scanning for devices -->
     <string name="progress_scanning">Searching</string>
+
 </resources>
