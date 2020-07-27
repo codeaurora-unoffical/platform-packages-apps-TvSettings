@@ -407,10 +407,10 @@
     <string name="system_services" msgid="7230571820151215779">"சேவைகள்"</string>
     <string name="accessibility_service_settings" msgid="322888335240595695">"சேவை அமைப்புகள்"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="4970438261747914408">"அதிக ஒளி மாறுபாடுடைய உரை"</string>
-    <string name="accessibility_shortcut" msgid="6726361991387558828">"அணுகல்தன்மைக் குறுக்குவழி"</string>
-    <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"அணுகல்தன்மைக் குறுக்குவழியை இயக்கு"</string>
-    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"குறுக்குவழிச் சேவை"</string>
-    <string name="accessibility_shortcut_description" msgid="514995490967241715">"குறுக்குவழி அம்சம் இயக்கத்தில் இருக்கும்போது, பின்செல் பொத்தான் மற்றும் ஒலியைக் குறைக்கும் பொத்தான் இரண்டையும் 3 வினாடிகள் அழுத்திப் பிடித்தால், அணுகல்தன்மை அம்சத்தை இயக்க முடியும்."</string>
+    <string name="accessibility_shortcut" msgid="6726361991387558828">"அணுகல்தன்மைக் ஷார்ட்கட்"</string>
+    <string name="accessibility_shortcut_enable" msgid="1801656084705223078">"அணுகல்தன்மைக் ஷார்ட்கட்டை இயக்கு"</string>
+    <string name="accessibility_shortcut_service" msgid="1978686501861996601">"ஷார்ட்கட் சேவை"</string>
+    <string name="accessibility_shortcut_description" msgid="514995490967241715">"ஷார்ட்கட் அம்சம் இயக்கத்தில் இருக்கும்போது, பின்செல் பொத்தான் மற்றும் ஒலியைக் குறைக்கும் பொத்தான் இரண்டையும் 3 வினாடிகள் அழுத்திப் பிடித்தால், அணுகல்தன்மை அம்சத்தை இயக்க முடியும்."</string>
     <string name="accessibility_captions" msgid="6133896463407851079">"தலைப்புகள்"</string>
     <string name="accessibility_captions_description" msgid="4290317621720499628">"வீடியோவில் தோன்றும் வசனங்களுக்கான அமைப்புகள்"</string>
     <string name="captions_display" msgid="735692527287125548">"காட்சி"</string>
@@ -462,7 +462,7 @@
     <string name="system_play_sample" msgid="7187293932891811148">"மாதிரியை இயக்கு"</string>
     <string name="system_install_voice_data" msgid="8920883886563714355">"குரல் தரவை நிறுவு"</string>
     <string name="system_general" msgid="3535958631591158282">"பொது"</string>
-    <string name="system_debugging" msgid="7204447785851191331">"பிழைத்திருத்தம்"</string>
+    <string name="system_debugging" msgid="7204447785851191331">"பிழைதிருத்தம்"</string>
     <string name="system_input" msgid="6164987320529039626">"உள்ளீடு"</string>
     <string name="system_drawing" msgid="6573389872154957039">"வரைதல்"</string>
     <string name="system_monitoring" msgid="8424072546138094053">"கண்காணி"</string>
@@ -477,7 +477,7 @@
     <string name="system_always_check" msgid="1866566828098009853">"எப்போதும் சரிபார்"</string>
     <string name="system_bt_hci_log" msgid="2425757846046504431">"புளுடூத் HCI பதிவு"</string>
     <string name="system_email_address" msgid="8669468986250302378">"மின்னஞ்சல் முகவரி"</string>
-    <string name="system_usb_debugging" msgid="3777895294421924323">"USB பிழைத்திருத்தம்"</string>
+    <string name="system_usb_debugging" msgid="3777895294421924323">"USB பிழைதிருத்தம்"</string>
     <string name="system_allow_mock_locations" msgid="3635672039775772910">"போலி இருப்பிடங்களை அனுமதி"</string>
     <string name="system_select_debug_app" msgid="8592021815119618485">"பிழைத்திருத்தப் பயன்பாட்டைத் தேர்வுசெய்க"</string>
     <string name="system_wait_for_debugger" msgid="4007354935701089555">"பிழைத்திருத்திக்குக் காத்திருக்கவும்"</string>
@@ -492,8 +492,8 @@
     <string name="system_show_hardware_layer" msgid="7301942527058509453">"வன்பொருள் லேயரைக் காட்டு"</string>
     <string name="system_show_gpu_overdraw" msgid="707861254106800199">"GPU ஓவர்டிராவைக் காட்டு"</string>
     <string name="system_show_surface_updates" msgid="8878834675712192327">"மேலோட்ட புதுப்பிப்புகளைக் காட்டு"</string>
-    <string name="system_window_animation_scale" msgid="3213952676672537856">"சாளர அனிமேஷன் அளவு"</string>
-    <string name="system_transition_animation_scale" msgid="2964817709721784757">"அனிமேஷன் மாற்றத்தின் அளவு"</string>
+    <string name="system_window_animation_scale" msgid="3213952676672537856">"சாளர அனிமேஷன் வேகம்"</string>
+    <string name="system_transition_animation_scale" msgid="2964817709721784757">"அனிமேஷன் மாற்றத்தின் வேகம்"</string>
     <string name="system_animator_duration_scale" msgid="7413512458963984521">"அனிமேட்டர் கால அளவு"</string>
     <string name="system_strict_mode_enabled" msgid="5728680397806673270">"நிலையான பயன்முறை இயக்கப்பட்டது"</string>
     <string name="system_profile_gpu_rendering" msgid="3438771015102629799">"சுயவிவர GPU வழங்கல்"</string>
@@ -538,12 +538,12 @@
     <string name="enable_opengl_traces_none" msgid="6074804146602749420">"ஏதுமில்லை"</string>
   <string-array name="animation_scale_entries">
     <item msgid="7477134110460336436">"அனிமேஷனை முடக்கு"</item>
-    <item msgid="8327257151534006014">"அனிமேஷன் அளவு .5x"</item>
-    <item msgid="2105786719544636780">"அனிமேஷன் அளவு 1x"</item>
-    <item msgid="5290554136790336403">"அனிமேஷன் அளவு 1.5x"</item>
-    <item msgid="1232929590838082483">"அனிமேஷன் அளவு 2x"</item>
-    <item msgid="1889239009419613796">"அனிமேஷன் அளவு 5x"</item>
-    <item msgid="7268894934484547297">"அனிமேஷன் அளவு 10x"</item>
+    <item msgid="8327257151534006014">"அனிமேஷன் வேகம் .5x"</item>
+    <item msgid="2105786719544636780">"அனிமேஷன் வேகம் 1x"</item>
+    <item msgid="5290554136790336403">"அனிமேஷன் வேகம் 1.5x"</item>
+    <item msgid="1232929590838082483">"அனிமேஷன் வேகம் 2x"</item>
+    <item msgid="1889239009419613796">"அனிமேஷன் வேகம் 5x"</item>
+    <item msgid="7268894934484547297">"அனிமேஷன் வேகம் 10x"</item>
   </string-array>
     <string name="track_frame_time_off" msgid="5050360262132715904">"முடக்கு"</string>
     <string name="track_frame_time_bars" msgid="4470692840177888414">"திரையைப் பட்டிகளாக இயக்கு"</string>
@@ -719,7 +719,7 @@
     <string name="app_permission_summary_allowed" msgid="1618833359547333078">"அனுமதிக்கப்பட்டது"</string>
     <string name="app_permission_summary_not_allowed" msgid="3667663331476577913">"அனுமதிக்கப்படவில்லை"</string>
     <string name="usage_access" msgid="1914242907684452328">"உபயோக அணுகல்"</string>
-    <string name="usage_access_description" msgid="6290001769893747651">"உபயோக அணுகலானது நீங்கள் பயன்படுத்தும் பிற பயன்பாடுகள், அவற்றை எவ்வளவு அடிக்கடிப் பயன்படுத்துகிறீர்கள் என்பதையும், அத்துடன் தொலைத்தொடர்பு நிறுவனம், மொழி அமைப்புகள், பிற விவரங்களையும் கண்காணிக்க, பயன்பாட்டை அனுமதிக்கும்."</string>
+    <string name="usage_access_description" msgid="6290001769893747651">"உபயோக அணுகலானது, நீங்கள் வேறு எந்தெந்த ஆப்ஸை எவ்வளவு அடிக்கடி பயன்படுத்துகிறீர்கள் என்று அறியும் அனுமதியை ஒரு ஆப்ஸுக்கு வழங்குகிறது. உங்கள் மொபைல் நிறுவனம், மொழி அமைப்புகள் மற்றும் பிற விவரங்களையும் அறிந்து கொள்ளும் அனுமதியும் இதில் அடங்கும்."</string>
     <string name="high_power_apps" msgid="7796096221999495077">"பேட்டரி ஆற்றலை மேம்படுத்துதல்"</string>
     <string name="high_power_apps_description" msgid="1990016812115792282">"பேட்டரியைக் குறைவாகப் பயன்படுத்த, ஆப்ஸின் ஆற்றல் உபயோகத்தை மேம்படுத்துதல்"</string>
     <string name="high_power_apps_empty" msgid="1355906551507153470">"பேட்டரியைக் குறைவாகப் பயன்படுத்துவதற்காக, ஆற்றல் மேம்படுத்தப்பட வேண்டிய ஆப்ஸ் எதுவும் இல்லை"</string>
