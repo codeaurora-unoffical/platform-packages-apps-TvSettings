@@ -23,7 +23,7 @@
     <string name="header_category_suggestions" msgid="6732367439328586933">"Sugerencias"</string>
     <string name="header_category_quick_settings" msgid="6626141045575946920">"Ajustes rápidos"</string>
     <string name="header_category_general_settings" msgid="1208946854116876918">"Ajustes generales"</string>
-    <string name="dismiss_suggestion" msgid="8288127823132069828">"Ignorar la sugerencia"</string>
+    <string name="dismiss_suggestion" msgid="8288127823132069828">"Cerrar la sugerencia"</string>
     <string name="hotwording_title" msgid="1984130766527626626">"Detección de \"Ok Google\""</string>
     <string name="hotwording_summary" msgid="2863751845299261441">"Habla con el Asistente de Google cuando quieras"</string>
     <string name="header_category_device" msgid="4855983928659541345">"Dispositivo"</string>
@@ -176,7 +176,7 @@
     <string name="device_status" msgid="4379924151946190768">"Estado"</string>
     <string name="device_status_summary" msgid="180586140242936323">"Red, números de serie y otra información"</string>
     <string name="manual" msgid="4957388668881541669">"Manual"</string>
-    <string name="regulatory_information" msgid="5448865708097003189">"Normativas"</string>
+    <string name="regulatory_information" msgid="5448865708097003189">"Información normativa"</string>
     <string name="device_feedback" msgid="209146642122579479">"Enviar opinión sobre el dispositivo"</string>
     <string name="fcc_equipment_id" msgid="8295142996591094301">"ID de equipo"</string>
     <string name="baseband_version" msgid="2229081246529676107">"Versión de banda base"</string>
